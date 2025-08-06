@@ -35,25 +35,6 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  services.xserver.videoDrivers = [ "nvidia" ];
-
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = true;
-    nvidiaSettings = true;
-    open = false; # Use the proprietary driver (better Wayland support)
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-  };
-
-  environment.sessionVariables = {
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    GBM_BACKEND = "nvidia-drm";
-    __GL_GSYNC_ALLOWED = "1";
-    __GL_VRR_ALLOWED = "1";
-    WLR_NO_HARDWARE_CURSORS = "1"; # Workaround for cursor bugs on some compositors
-    WLR_DRM_NO_ATOMIC = "1";       # Sometimes needed, compositor-specific
-  };	
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users = {
     tom = {
@@ -76,28 +57,32 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
 
   environment = {
     systemPackages = with pkgs; [
       neofetch
       neovim
+      bash
       egl-wayland
     ];
     sessionVariables = {
-#      ELECTRON_OZONE_PLATFORM_HINT = "1";
-#      WLR_NO_HARDWARE_CURSORS = "1";
-#      NIXOS_OZONE_WL = "1";
+      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+      GBM_BACKEND = "nvidia-drm";
+      __GL_GSYNC_ALLOWED = "1";
+      __GL_VRR_ALLOWED = "1";
+      WLR_NO_HARDWARE_CURSORS = "1"; # Workaround for cursor bugs on some compositors
+      WLR_DRM_NO_ATOMIC = "1";       # Sometimes needed, compositor-specific
     };
   };
 
 
   services = {
-    # Configure keymap in X11
-    xserver.xkb = {
-      layout = "us";
-      variant = "";
+    xserver = {
+      videoDrivers = [ "nvidia" ];
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
     };
     syncthing = {
       enable = true;
@@ -134,6 +119,15 @@
   };
 
 
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = true;
+    nvidiaSettings = true;
+    open = false; # Use the proprietary driver (better Wayland support)
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -148,13 +142,8 @@
   };
 
 
-#  hardware = {
-#    graphics.enable = true;
-#    nvidia.modesetting.enable = true;
-#  };
 
-
-   # Some programs need SUID wrappers, can be configured further or are
+  # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
