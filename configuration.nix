@@ -46,6 +46,9 @@
         ghostty	
         brave
 	keepassxc
+	libgcc
+	clang
+	zig
       ];
     };
     syncthing = {
