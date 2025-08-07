@@ -9,9 +9,18 @@
       lib = nixpkgs.lib;
     in {
     nixosConfigurations = {
-      nixos = lib.nixosSystem {
+      laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [ ./configuration.nix ];
+        modules = [
+          ./laptop.nix
+        ];
+      };
+
+      pc = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./pc.nix
+        ];
       };
     };
   };
