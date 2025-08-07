@@ -86,14 +86,6 @@
     tmux.enable = true;
   };
 
-#  services.pulseaudio.enable = true;
-#  services.pipewire.enable = false;
-
-#  hardware.bluetooth.enable = true;
-
-#  hardware.alsa.enable = true;
-#  boot.kernelModules = [ "snd_hda_intel" ];
-
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -104,6 +96,8 @@
     jack.enable = true;
     wireplumber.enable = true;
   };
+
+  hardware.bluetooth.enable = true;
 
   networking = {
     networkmanager.enable = true;
