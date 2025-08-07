@@ -12,16 +12,16 @@
       laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./laptop.nix
-	  ./configuration.nix
+          ./nixos/laptop.nix
+	  ./nixos/configuration.nix
         ];
       };
 
       pc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./pc.nix
-	  ./configuration.nix
+          ./nixos/pc.nix
+	  ./nixos/configuration.nix
         ];
       };
     };
