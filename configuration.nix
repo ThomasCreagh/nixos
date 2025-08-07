@@ -12,14 +12,14 @@
 
   # Bootloader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sdc";
+  boot.loader.grub.device = "/dev/nvme0n1";
   boot.loader.grub.useOSProber = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Dublin";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_IE.UTF-8";
+  i18n.defaultLocale = "en_GB.UTF-8";
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_IE.UTF-8";
@@ -68,22 +68,13 @@
       bash
       egl-wayland
     ];
-    sessionVariables = {
-      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-      GBM_BACKEND = "nvidia-drm";
-      __GL_GSYNC_ALLOWED = "1";
-      __GL_VRR_ALLOWED = "1";
-      WLR_NO_HARDWARE_CURSORS = "1"; # Workaround for cursor bugs on some compositors
-      WLR_DRM_NO_ATOMIC = "1";       # Sometimes needed, compositor-specific
-    };
   };
 
 
   services = {
     xserver = {
-      videoDrivers = [ "nvidia" ];
       xkb = {
-        layout = "us";
+        layout = "ie";
         variant = "";
       };
     };
@@ -119,15 +110,6 @@
     fish.enable = true;
     git.enable = true;
     tmux.enable = true;
-  };
-
-
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = true;
-    nvidiaSettings = true;
-    open = false; # Use the proprietary driver (better Wayland support)
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
 
