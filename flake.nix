@@ -13,6 +13,7 @@
         system = "x86_64-linux";
         modules = [
           ./laptop.nix
+	  ./configuration.nix
         ];
       };
 
@@ -20,6 +21,7 @@
         system = "x86_64-linux";
         modules = [
           ./pc.nix
+	  ./configuration.nix
         ];
       };
     };
