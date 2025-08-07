@@ -82,7 +82,7 @@
       };
       libinput = {
         enable = true;
-        touchpad.naturalScrolling = false;
+        touchpad.naturalScrolling = true;
       };
     };
     syncthing = {
