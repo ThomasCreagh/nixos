@@ -3,6 +3,9 @@
   description = "nixos";
   inputs = {
     nixpkg.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+
+    home-manager.url = "github:nix-community/home-manager/release-23.11";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs = { self, nixpkgs, ... }:
     let
