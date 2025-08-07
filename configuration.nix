@@ -81,7 +81,7 @@
         variant = "";
       };
     };
-    libinput.touchpad.naturalScrolling = true;
+    libinput.touchpad.naturalScrolling = false;
     syncthing = {
       enable = true;
       user = "tom";
