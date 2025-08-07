@@ -85,13 +85,24 @@
     tmux.enable = true;
   };
 
-  services.pulseaudio.enable = true;
-  services.pipewire.enable = false;
+#  services.pulseaudio.enable = true;
+#  services.pipewire.enable = false;
 
-  hardware.bluetooth.enable = true;
+#  hardware.bluetooth.enable = true;
 
 #  hardware.alsa.enable = true;
 #  boot.kernelModules = [ "snd_hda_intel" ];
+
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    audio.enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+    wireplumber.enable = true;
+  };
 
   networking = {
     networkmanager.enable = true;
