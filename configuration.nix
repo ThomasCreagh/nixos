@@ -68,6 +68,9 @@
       bash
       egl-wayland
     ];
+    sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+    };
   };
 
 
