@@ -1,16 +1,50 @@
 warning: Git tree '/home/tom/.dotfiles' is dirty
 building the system configuration...
 warning: Git tree '/home/tom/.dotfiles' is dirty
-updating GRUB 2 menu...
-Warning: os-prober will be executed to detect other bootable partitions.
-Its output will be used to detect bootable binaries on them and create new boot entries.
-lsblk: /dev/mapper/no*[0-9]: not a block device
-lsblk: /dev/mapper/block*[0-9]: not a block device
-lsblk: /dev/mapper/devices*[0-9]: not a block device
-lsblk: /dev/mapper/found*[0-9]: not a block device
-activating the configuration...
-setting up /etc...
-reloading user units for tom...
-restarting sysinit-reactivation.target
-the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/lv2krc2frmghcflhqya0lb52v95qdqfq-nixos-system-nixos-25.11.20250804.cab7782
+error:
+       … while calling the 'head' builtin
+         at /nix/store/cxm2pydim6pkc7nh5qkbl7q21ipp5bmz-source/lib/attrsets.nix:1534:13:
+         1533|           if length values == 1 || pred here (elemAt values 1) (head values) then
+         1534|             head values
+             |             ^
+         1535|           else
+
+       … while evaluating the attribute 'value'
+         at /nix/store/cxm2pydim6pkc7nh5qkbl7q21ipp5bmz-source/lib/modules.nix:1091:7:
+         1090|     // {
+         1091|       value = addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |       ^
+         1092|       inherit (res.defsFinal') highestPrio;
+
+       … while evaluating the option `system.build.toplevel':
+
+       … while evaluating definitions from `/nix/store/cxm2pydim6pkc7nh5qkbl7q21ipp5bmz-source/nixos/modules/system/activation/top-level.nix':
+
+       … while evaluating the option `assertions':
+
+       … while evaluating definitions from `/nix/store/cxm2pydim6pkc7nh5qkbl7q21ipp5bmz-source/nixos/modules/system/boot/systemd.nix':
+
+       … while evaluating the option `systemd.services':
+
+       … while evaluating definitions from `/nix/store/cxm2pydim6pkc7nh5qkbl7q21ipp5bmz-source/nixos/modules/services/logging/logrotate.nix':
+
+       … while evaluating the option `services.logrotate.enable':
+
+       … while evaluating the option `users.groups':
+
+       … while evaluating definitions from `/nix/store/cxm2pydim6pkc7nh5qkbl7q21ipp5bmz-source/nixos/modules/config/resolvconf.nix':
+
+       … while evaluating the option `networking.resolvconf.enable':
+
+       … while evaluating the option `environment.etc':
+
+       … while evaluating definitions from `/nix/store/cxm2pydim6pkc7nh5qkbl7q21ipp5bmz-source/nixos/modules/config/users-groups.nix':
+
+       (stack trace truncated; use '--show-trace' to show the full, detailed trace)
+
+       error: The option `users.users.tom.groups' does not exist. Definition values:
+       - In `/nix/store/j4l1zbscq3i67j6igdc673s5sarkvj01-source/nixos/configuration.nix':
+           [
+             "audio"
+           ]
+Command 'nix --extra-experimental-features 'nix-command flakes' build --print-out-paths '.#nixosConfigurations."laptop".config.system.build.toplevel' --no-link' returned non-zero exit status 1.

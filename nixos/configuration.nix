@@ -25,7 +25,7 @@
       shell = pkgs.fish;
       isNormalUser = true;
       description = "tom";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "audio" ];
       packages = with pkgs; [
         ghostty
         brave
@@ -85,6 +85,13 @@
     tmux.enable = true;
   };
 
+  services.pulseaudio.enable = true;
+  services.pipewire.enable = false;
+
+  hardware.bluetooth.enable = true;
+
+#  hardware.alsa.enable = true;
+#  boot.kernelModules = [ "snd_hda_intel" ];
 
   networking = {
     networkmanager.enable = true;
