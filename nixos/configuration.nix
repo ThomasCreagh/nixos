@@ -33,7 +33,7 @@
         libgcc
         clang
         zig
-#        pavucontrol
+        pavucontrol
       ];
     };
     syncthing = {
