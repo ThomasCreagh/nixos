@@ -80,7 +80,7 @@
         layout = "ie";
         variant = "";
       };
-      libinput.touchpad.naturalScrolling = true;
+      libinput.touchpad.naturalScrolling = false;
     };
     syncthing = {
       enable = true;
