@@ -3,9 +3,6 @@ if [ -z "$1" ]; then
 	echo "No system type provided! (laptop, pc)"
   exit 1
 fi
-
-# Access the first argument
-echo "You passed the argument: $1"
 set -e
 pushd ~/.dotfiles
 nvim flake.nix
