@@ -34,6 +34,7 @@
         clang
         zig
         pavucontrol
+        obsidian
       ];
     };
     syncthing = {
