@@ -35,6 +35,7 @@
         zig
         pavucontrol
         obsidian
+	home-manager
       ];
     };
     syncthing = {
