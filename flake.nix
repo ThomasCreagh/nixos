@@ -1,34 +1,38 @@
 {
 
   description = "nixos";
+
   inputs = {
     nixpkg.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = { self, nixpkgs, ... }:
-    let
-      lib = nixpkgs.lib;
-    in {
+  outputs = { self, nixpkgs, home-manager, ... }:
+  let
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
+  in
+  {
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
         modules = [
           ./nixos/laptop.nix
-	  ./nixos/configuration.nix
-
+          ./nixos/configuration.nix
         ];
       };
-
       pc = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
         modules = [
           ./nixos/pc.nix
-	  ./nixos/configuration.nix
+          ./nixos/configuration.nix
         ];
       };
     };
+    homeConfigurations."tom" = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      modules = [ ./home.nix ];
+    };
   };
-
 }

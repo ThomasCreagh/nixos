@@ -10,6 +10,7 @@ git add .
 git diff -U0 *.nix
 echo "Rebuilding Nixos..."
 sudo nixos-rebuild switch --flake .#$1 &>nixos-switch.log || (cat nixos-switch.log | grep --color error && false)
+home-manager --flake . &>home-switch.log || (cat home-switch.log | grep --color error && false)
 gen=$(nixos-rebuild list-generations | grep True | grep -o "[0-9]*-[0-9]*-[0-9]* [0-9]*:[0-9]*:[0-9]*  [0-9\.a-zA-Z]*")
 git commit -m "$gen"
 popd
