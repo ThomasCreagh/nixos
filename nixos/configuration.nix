@@ -86,7 +86,6 @@
     fish.enable = true;
     git.enable = true;
     tmux.enable = true;
-		#waybar.enable = true;
   };
 
   security.rtkit.enable = true;
