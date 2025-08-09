@@ -27,7 +27,6 @@
       description = "tom";
       extraGroups = [ "networkmanager" "wheel" "audio" ];
       packages = with pkgs; [
-        ghostty
         brave
         keepassxc
         libgcc
@@ -35,7 +34,7 @@
         zig
         pavucontrol
         obsidian
-	home-manager
+        home-manager
       ];
     };
     syncthing = {

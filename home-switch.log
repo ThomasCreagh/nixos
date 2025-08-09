@@ -1,3 +1,10 @@
+these 3 derivations will be built:
+  /nix/store/8p0yb7h4y9ijw4bkp4azsn665c3x36il-home-manager-path.drv
+  /nix/store/hidjgj71kg1xk5rf3yw5w62228a8sfxa-activation-script.drv
+  /nix/store/kvnxhrqphybnc1cpa2cv74dbfwpj4pwn-home-manager-generation.drv
+building '/nix/store/8p0yb7h4y9ijw4bkp4azsn665c3x36il-home-manager-path.drv'...
+building '/nix/store/hidjgj71kg1xk5rf3yw5w62228a8sfxa-activation-script.drv'...
+building '/nix/store/kvnxhrqphybnc1cpa2cv74dbfwpj4pwn-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -5,6 +12,7 @@ Activating writeBoundary
 Activating installPackages
 replacing old 'home-manager-path'
 installing 'home-manager-path'
+building '/nix/store/mpiyyci715ikjyjb8l7775vpr6yg1cwn-user-environment.drv'...
 Activating linkGeneration
 Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
