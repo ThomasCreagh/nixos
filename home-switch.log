@@ -1,13 +1,3 @@
-these 3 derivations will be built:
-  /nix/store/yn0k9rplhsxb71aqjrgkjb33cfwmxfdf-home-manager-path.drv
-  /nix/store/4dy97xrvvsrn2ds67zl76k9fssx0ibmn-activation-script.drv
-  /nix/store/20nwx7npl4m1wixr2cvyc364s7fswp14-home-manager-generation.drv
-this path will be fetched (8.62 MiB download, 222.53 MiB unpacked):
-  /nix/store/7aabpn5bp9y4drq95wddsi4av4sjkw3k-nerd-fonts-jetbrains-mono-3.4.0+2.304
-copying path '/nix/store/7aabpn5bp9y4drq95wddsi4av4sjkw3k-nerd-fonts-jetbrains-mono-3.4.0+2.304' from 'https://cache.nixos.org'...
-building '/nix/store/yn0k9rplhsxb71aqjrgkjb33cfwmxfdf-home-manager-path.drv'...
-building '/nix/store/4dy97xrvvsrn2ds67zl76k9fssx0ibmn-activation-script.drv'...
-building '/nix/store/20nwx7npl4m1wixr2cvyc364s7fswp14-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -15,7 +5,6 @@ Activating writeBoundary
 Activating installPackages
 replacing old 'home-manager-path'
 installing 'home-manager-path'
-building '/nix/store/yn8x28ydlm0x3nxajixi25gf1vig47xb-user-environment.drv'...
 Activating linkGeneration
 Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
