@@ -176,8 +176,8 @@
 
       exec-once = [
         "waybar &"
-        "swww init &"
-        "nm-applet &"
+#        "swww init &"
+#        "nm-applet &"
       ];
 
       bind = [
@@ -204,7 +204,6 @@
           size = 8;
           passes = 2;
         };
-        drop_shadow = true;
       };
     };
   };
