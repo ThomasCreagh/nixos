@@ -73,7 +73,14 @@
 
   # programs
   programs.waybar.enable = true;
-  programs.ghostty.enable = true;
+  programs.ghostty = {
+    enable = true;
+    enableFishIntegration = true;
+    installVimSyntax = true;
+    settings = {
+      theme = "GruvboxDark";
+    };
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

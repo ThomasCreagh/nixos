@@ -6,7 +6,7 @@ fi
 set -e
 pushd ~/.dotfiles
 nvim flake.nix
-git diff -U0 *.nix
+git diff -U0 -- . ':(exclude)*.log'
 echo "Rebuilding Nixos..."
 sudo nixos-rebuild switch --flake path:.#$1 &>nixos-switch.log || (cat nixos-switch.log | grep --color error && false)
 home-manager switch --flake path:. &>home-switch.log || (cat home-switch.log | grep --color error && false)
