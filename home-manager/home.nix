@@ -164,7 +164,48 @@
     userName = "Thomas Creagh";
   };
 
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # hyprland
+  wayland.windowManager.hyprland = {
+    enable = true;
+
+    settings = {
+      "$mod" = "SUPER";
+
+      exec-once = [
+        "waybar &"
+        "swww init &"
+        "nm-applet &"
+      ];
+
+      bind = [
+        "$mod, Q, exec, ghostty"
+        "$mod, W, exec, brave"
+        "$mod, K, exec, keepassxc"
+        "$mod, C, killactive"
+        "$mod, M, exit"
+        "$mod, F, togglefloating"
+      ];
+
+      monitor = [
+        "eDP-1, preferred, auto, 1"
+      ];
+
+      input = {
+        kb_layout = "ie";
+      };
+
+      decoration = {
+        rounding = 8;
+        blur = {
+          enabled = true;
+          size = 8;
+          passes = 2;
+        };
+        drop_shadow = true;
+      };
+    };
+  };
 }
