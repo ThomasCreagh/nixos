@@ -1,6 +1,4 @@
-warning: Git tree '/home/tom/.dotfiles' is dirty
 building the system configuration...
-warning: Git tree '/home/tom/.dotfiles' is dirty
 updating GRUB 2 menu...
 Warning: os-prober will be executed to detect other bootable partitions.
 Its output will be used to detect bootable binaries on them and create new boot entries.
