@@ -195,6 +195,9 @@
 
       input = {
         kb_layout = "ie";
+        touchpad = {
+          natural_scroll = true;
+        };
       };
 
       decoration = {
