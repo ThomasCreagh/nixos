@@ -78,7 +78,7 @@
     enableFishIntegration = true;
     installVimSyntax = true;
     settings = {
-      theme = "GruvboxDark";
+      theme = "tokyonight_night";
     };
   };
 
