@@ -1,85 +1,21 @@
-Usage: /etc/profiles/per-user/tom/bin/home-manager [OPTION] COMMAND
+warning: Git tree '/home/tom/.dotfiles' is dirty
+warning: Git tree '/home/tom/.dotfiles' is dirty
+warning: Git tree '/home/tom/.dotfiles' is dirty
+warning: Git tree '/home/tom/.dotfiles' is dirty
+Starting Home Manager activation
+Activating checkFilesChanged
+Activating checkLinkTargets
+Activating writeBoundary
+Activating installPackages
+replacing old 'home-manager-path'
+installing 'home-manager-path'
+Activating linkGeneration
+Cleaning up orphan links from /home/tom
+Creating home file links in /home/tom
+Activating onFilesChange
+Activating reloadSystemd
+warning: Git tree '/home/tom/.dotfiles' is dirty
 
-Options
+There are 250 unread and relevant news items.
+Read them by running the command "home-manager news".
 
-  -f FILE           The home configuration file.
-                    Default is '~/.config/nixpkgs/home.nix'.
-  -A ATTRIBUTE      Optional attribute that selects a configuration
-                    expression in the configuration file.
-  -I PATH           Add a path to the Nix expression search path.
-  --flake flake-uri Use Home Manager configuration at flake-uri
-                    Default is '~/.config/home-manager'.
-  -b EXT            Move existing files to new path rather than fail.
-  -v                Verbose output
-  -n                Do a dry run, only prints what actions would be taken
-  -h                Print this help
-  --version         Print the Home Manager version
-
-Options passed on to nix-build(1)
-
-  --arg(str) NAME VALUE    Override inputs passed to home-manager.nix
-  --cores NUM
-  --debug
-  --impure
-  --keep-failed
-  --keep-going
-  -j, --max-jobs NUM
-  --option NAME VALUE
-  -L, --print-build-logs
-  --log-format FORMAT
-  --show-trace
-  --(no-)substitute
-  --no-out-link            Do not create a symlink to the output path
-  --no-write-lock-file
-  --builders VALUE
-  --refresh                Consider all previously downloaded files out-of-date
-
-Commands
-
-  help         Print this help
-
-  edit         Open the home configuration in $VISUAL or $EDITOR
-
-  option OPTION.NAME
-               Inspect configuration option named OPTION.NAME.
-
-  build        Build configuration into result directory
-
-  init [--switch] [DIR]
-      Initializes a configuration in the given directory. If the directory
-      does not exist, then it will be created. The default directory is
-      '~/.config/home-manager'.
-
-      --switch      Immediately activate the generated configuration.
-
-  instantiate  Instantiate the configuration and print the resulting derivation
-
-  switch [OPTION]
-      Build and activate configuration
-
-      --rollback    Do not build a new configuration, instead roll back to
-                    the configuration prior to the current configuration.
-
-      -c, --specialisation NAME
-                    Activates the named specialisation; when not specified,
-                    switching will activate the unspecialised configuration.
-
-  generations  List all home environment generations
-
-  remove-generations ID...
-      Remove indicated generations. Use 'generations' command to
-      find suitable generation numbers.
-
-  repl
-      Opens the configuration in `nix repl`
-
-  expire-generations TIMESTAMP
-      Remove generations older than TIMESTAMP where TIMESTAMP is
-      interpreted as in the -d argument of the date tool. For
-      example "-30 days" or "2018-01-01".
-
-  packages     List all packages installed in home-manager-path
-
-  news         Show news entries in a pager
-
-  uninstall    Remove Home Manager

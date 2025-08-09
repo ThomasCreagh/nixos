@@ -50,6 +50,7 @@
       neovim
       bash
       egl-wayland
+      tree
     ];
   };
 
@@ -86,7 +87,7 @@
     fish.enable = true;
     git.enable = true;
     tmux.enable = true;
-    waybar.enable = true;
+		#waybar.enable = true;
   };
 
   security.rtkit.enable = true;
