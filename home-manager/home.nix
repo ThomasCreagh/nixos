@@ -125,7 +125,7 @@
     style = ''
       * {
         font-family: "JetBrainsMono Nerd Font", monospace;
-        font-size: 13px;
+        font-size: 25px;
         color: #ffffff;
       }
 
