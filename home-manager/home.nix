@@ -72,6 +72,22 @@
   };
 
   # programs
+  gtk = {
+    enable = true;
+    theme.name = "Adwaita";
+    iconTheme.name = "Adwaita";
+    font.name = "Cantarell 14";
+  };
+qt = {
+  enable = true;
+  platformTheme = "gnome"; # Or "kde"
+  style.name = "Breeze";
+};
+xresources.properties = {
+  "Xft.dpi" = 144;
+};
+
+
   programs.waybar = {
     enable = true;
 
@@ -155,6 +171,7 @@
     enableFishIntegration = true;
     installVimSyntax = true;
     settings = {
+      font-size = 13;
       theme = "tokyonight_night";
     };
   };
