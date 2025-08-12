@@ -1,12 +1,12 @@
 these 4 derivations will be built:
-  /nix/store/r1n0svlc9wlmbvrc5273n1fi1ivvjz1g-hm_hyprhyprland.conf.drv
-  /nix/store/az6if7bzn0jvxlnhs1qj8r3cis5nczn1-home-manager-files.drv
-  /nix/store/zazp7y3mvfx52wbk26agsk4vimi7hbkp-activation-script.drv
-  /nix/store/h5kqifv2da8g48mp7xp8qc35bzr8lg04-home-manager-generation.drv
-building '/nix/store/r1n0svlc9wlmbvrc5273n1fi1ivvjz1g-hm_hyprhyprland.conf.drv'...
-building '/nix/store/zazp7y3mvfx52wbk26agsk4vimi7hbkp-activation-script.drv'...
-building '/nix/store/az6if7bzn0jvxlnhs1qj8r3cis5nczn1-home-manager-files.drv'...
-building '/nix/store/h5kqifv2da8g48mp7xp8qc35bzr8lg04-home-manager-generation.drv'...
+  /nix/store/xyqw6cydf0ns3zxh3xrkd4z8fv8vi8f7-hm_hyprhyprland.conf.drv
+  /nix/store/4ps9ksryayab848rm881rcimbkzjkadz-home-manager-files.drv
+  /nix/store/6dgwykb71ppmdsy1r1lsy809llxklrvz-activation-script.drv
+  /nix/store/f082ji3a0fkdlykpag03pxki6x5lsp53-home-manager-generation.drv
+building '/nix/store/xyqw6cydf0ns3zxh3xrkd4z8fv8vi8f7-hm_hyprhyprland.conf.drv'...
+building '/nix/store/6dgwykb71ppmdsy1r1lsy809llxklrvz-activation-script.drv'...
+building '/nix/store/4ps9ksryayab848rm881rcimbkzjkadz-home-manager-files.drv'...
+building '/nix/store/f082ji3a0fkdlykpag03pxki6x5lsp53-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -22,8 +22,8 @@ Activating onFilesChange
 ok
 Activating reloadSystemd
 The user systemd session is degraded:
-  UNIT                                LOAD   ACTIVE SUB    DESCRIPTION
-● xdg-desktop-portal-hyprland.service loaded failed failed Portal service (Hyprland implementation)
+  UNIT                           LOAD   ACTIVE SUB    DESCRIPTION
+● xdg-desktop-portal-gtk.service loaded failed failed Portal service (GTK/GNOME implementation)
 
 Legend: LOAD   → Reflects whether the unit definition was properly loaded.
         ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
@@ -32,7 +32,7 @@ Legend: LOAD   → Reflects whether the unit definition was properly loaded.
 1 loaded units listed.
 Attempting to reload services anyway...
 The service manager is degraded.
-Failed services: xdg-desktop-portal-hyprland.service
+Failed services: xdg-desktop-portal-gtk.service
 Attempting to continue anyway...
 
 There are 251 unread and relevant news items.
