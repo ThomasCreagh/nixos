@@ -73,6 +73,8 @@
   };
 
   # programs
+
+  # nvim
   programs.neovim = {
     enable = true;
 
@@ -80,13 +82,8 @@
     vimAlias = true;
     vimdiffAlias = true;
     defaultEditor = true;
-    # extraConfig = ''
-    #   source ../nvim/init.lua
-    # '';
-    extraLuaConfig = ''
-      ${builtins.readFile ../nvim/init.lua}
-    '';
   };
+  home.file.".config/nvim".source = ../nvim;
 
   programs.imv.enable = true; # image viewer
 
