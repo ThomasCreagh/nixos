@@ -203,7 +203,7 @@ xresources.properties = {
 
       exec-once = [
         "waybar &"
-        "wbg ~/Documents/Pictures/wallpaper.png"
+        "wbg ~/.dotfiles/wallpapers/0.png"
 #        "swww init &"
 #        "nm-applet &"
       ];
