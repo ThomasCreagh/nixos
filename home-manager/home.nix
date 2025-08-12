@@ -73,7 +73,7 @@
   };
 
   # programs
-  programs.imv.enable = true;
+  programs.imv.enable = true; # image viewer
 
   gtk = {
     enable = true;
@@ -204,7 +204,7 @@
 
       exec-once = [
         "waybar &"
-        "wbg ~/.dotfiles/wallpapers/0.png"
+        "wbg ~/.dotfiles/wallpapers/0.jpg"
 #        "swww init &"
 #        "nm-applet &"
       ];
