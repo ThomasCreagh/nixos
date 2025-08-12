@@ -187,6 +187,12 @@ xresources.properties = {
   wayland.windowManager.hyprland = {
     enable = true;
 
+    extraConfig = ''
+      animations {
+        enabled = no
+      }
+    '';
+
     settings = {
       "$mod" = "SUPER";
       "$terminal" = "ghostty";
@@ -269,7 +275,6 @@ xresources.properties = {
         ", XF86AudioPlay, exec, playerctl play-pause"
         ", XF86AudioPrev, exec, playerctl previous"
       ];
-
 
       monitor = [
         "eDP-1, preferred, auto, 1"

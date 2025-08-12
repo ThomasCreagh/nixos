@@ -1,21 +1,12 @@
-these 6 derivations will be built:
-  /nix/store/n689lj4gq4rifs8gmr5jnxk1s5zavha3-hm-session-vars.sh.drv
-  /nix/store/rmkwv9472x64pwdn0r9c8k5lvcrkg4rf-home-manager-path.drv
-  /nix/store/4vsjg25h9hz59xhhcp6cm34ism3w1c4b-activation-script.drv
-  /nix/store/670akri4pfn6yxf99ciik052s09l4541-hm_environment.d10homemanager.conf.drv
-  /nix/store/6856amz2sw95yq2h1kk14lyv11n9mrah-home-manager-files.drv
-  /nix/store/rad3z4hzjdvh4y6fbh5s9lc09jr0hdpj-home-manager-generation.drv
-these 2 paths will be fetched (0.09 MiB download, 0.36 MiB unpacked):
-  /nix/store/5pqd4bx6zpa722p9qxwjqpkkwvfvrf6l-qadwaitadecorations-0.1.6
-  /nix/store/lv702xnrbwnp0ab29vnrgy7i5xwsyw29-qadwaitadecorations-0.1.6
-copying path '/nix/store/5pqd4bx6zpa722p9qxwjqpkkwvfvrf6l-qadwaitadecorations-0.1.6' from 'https://cache.nixos.org'...
-copying path '/nix/store/lv702xnrbwnp0ab29vnrgy7i5xwsyw29-qadwaitadecorations-0.1.6' from 'https://cache.nixos.org'...
-building '/nix/store/n689lj4gq4rifs8gmr5jnxk1s5zavha3-hm-session-vars.sh.drv'...
-building '/nix/store/670akri4pfn6yxf99ciik052s09l4541-hm_environment.d10homemanager.conf.drv'...
-building '/nix/store/6856amz2sw95yq2h1kk14lyv11n9mrah-home-manager-files.drv'...
-building '/nix/store/rmkwv9472x64pwdn0r9c8k5lvcrkg4rf-home-manager-path.drv'...
-building '/nix/store/4vsjg25h9hz59xhhcp6cm34ism3w1c4b-activation-script.drv'...
-building '/nix/store/rad3z4hzjdvh4y6fbh5s9lc09jr0hdpj-home-manager-generation.drv'...
+these 4 derivations will be built:
+  /nix/store/i77dwa69i69c3548h32sk4s1gafi1ap7-hm_hyprhyprland.conf.drv
+  /nix/store/h4wz2zcsr6q1xpwn48899gr3zf0f5bwx-activation-script.drv
+  /nix/store/nk0s87a5x7h9sh39x32bgpk8q36dp0cs-home-manager-files.drv
+  /nix/store/82sf1sn55x842f7213rgb5qi39la2zy1-home-manager-generation.drv
+building '/nix/store/i77dwa69i69c3548h32sk4s1gafi1ap7-hm_hyprhyprland.conf.drv'...
+building '/nix/store/h4wz2zcsr6q1xpwn48899gr3zf0f5bwx-activation-script.drv'...
+building '/nix/store/nk0s87a5x7h9sh39x32bgpk8q36dp0cs-home-manager-files.drv'...
+building '/nix/store/82sf1sn55x842f7213rgb5qi39la2zy1-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -23,12 +14,12 @@ Activating writeBoundary
 Activating installPackages
 replacing old 'home-manager-path'
 installing 'home-manager-path'
-building '/nix/store/q9xvd5l30mgi9jm1wqybr7z9f8kk3liz-user-environment.drv'...
 Activating dconfSettings
 Activating linkGeneration
 Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
+ok
 Activating reloadSystemd
 
 There are 251 unread and relevant news items.
