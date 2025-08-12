@@ -1,12 +1,12 @@
 these 4 derivations will be built:
-  /nix/store/xyqw6cydf0ns3zxh3xrkd4z8fv8vi8f7-hm_hyprhyprland.conf.drv
-  /nix/store/4ps9ksryayab848rm881rcimbkzjkadz-home-manager-files.drv
-  /nix/store/6dgwykb71ppmdsy1r1lsy809llxklrvz-activation-script.drv
-  /nix/store/f082ji3a0fkdlykpag03pxki6x5lsp53-home-manager-generation.drv
-building '/nix/store/xyqw6cydf0ns3zxh3xrkd4z8fv8vi8f7-hm_hyprhyprland.conf.drv'...
-building '/nix/store/6dgwykb71ppmdsy1r1lsy809llxklrvz-activation-script.drv'...
-building '/nix/store/4ps9ksryayab848rm881rcimbkzjkadz-home-manager-files.drv'...
-building '/nix/store/f082ji3a0fkdlykpag03pxki6x5lsp53-home-manager-generation.drv'...
+  /nix/store/r1zl6z26lqpfrhql5mmb8q2vywp8nhsg-hm_hyprhyprland.conf.drv
+  /nix/store/06hryh2il6zxnns5phv1wcdmgidrjp1w-activation-script.drv
+  /nix/store/hahdl4f27kx62cdcqh5axx6dnsbqsamb-home-manager-files.drv
+  /nix/store/g94x3fgnsr83y9nm7vjqvqz7bszb0lp1-home-manager-generation.drv
+building '/nix/store/r1zl6z26lqpfrhql5mmb8q2vywp8nhsg-hm_hyprhyprland.conf.drv'...
+building '/nix/store/06hryh2il6zxnns5phv1wcdmgidrjp1w-activation-script.drv'...
+building '/nix/store/hahdl4f27kx62cdcqh5axx6dnsbqsamb-home-manager-files.drv'...
+building '/nix/store/g94x3fgnsr83y9nm7vjqvqz7bszb0lp1-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -21,19 +21,6 @@ Creating home file links in /home/tom
 Activating onFilesChange
 ok
 Activating reloadSystemd
-The user systemd session is degraded:
-  UNIT                           LOAD   ACTIVE SUB    DESCRIPTION
-● xdg-desktop-portal-gtk.service loaded failed failed Portal service (GTK/GNOME implementation)
-
-Legend: LOAD   → Reflects whether the unit definition was properly loaded.
-        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
-        SUB    → The low-level unit activation state, values depend on unit type.
-
-1 loaded units listed.
-Attempting to reload services anyway...
-The service manager is degraded.
-Failed services: xdg-desktop-portal-gtk.service
-Attempting to continue anyway...
 
 There are 251 unread and relevant news items.
 Read them by running the command "home-manager news".
