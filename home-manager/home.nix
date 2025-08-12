@@ -80,7 +80,7 @@
   };
 qt = {
   enable = true;
-  platformTheme = "gnome"; # Or "kde"
+  platformTheme.name = "adwaita";
   style.name = "Breeze";
 };
 xresources.properties = {
@@ -91,7 +91,6 @@ xresources.properties = {
   programs.waybar = {
     enable = true;
 
-    # Optional: install custom config and style
     settings = {
       mainBar = {
         layer = "top";
