@@ -163,7 +163,6 @@
       window#waybar {
         background: rgba(30, 30, 46, 0.75); /* 50% opacity */
         border-radius: 6px;
-        margin: 10px 20px 0px 20px; /* top, right, bottom, left */
       }
 
       #clock, #battery, #pulseaudio, #network {
