@@ -161,6 +161,7 @@
       window {
         background: rgba(30, 30, 46, 0.9);
         border-radius: 6px;
+        margin: 10px;
       }
 
       #clock, #battery, #pulseaudio, #network {
