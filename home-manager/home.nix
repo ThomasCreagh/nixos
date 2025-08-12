@@ -80,8 +80,11 @@
     vimAlias = true;
     vimdiffAlias = true;
     defaultEditor = true;
-    extraConfig = ''
-      source ../nvim/init.lua
+    # extraConfig = ''
+    #   source ../nvim/init.lua
+    # '';
+    extraLuaConfig = ''
+      ${builtins.readFile ../nvim/init.lua}
     '';
   };
 
