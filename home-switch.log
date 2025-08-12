@@ -1,12 +1,19 @@
-these 4 derivations will be built:
-  /nix/store/i7q86f5l3irla7akz2adm8hyf9jyshjy-hm_hyprhyprland.conf.drv
-  /nix/store/indh30jf1v6vg383qbxjjlkdn539ss2r-home-manager-files.drv
-  /nix/store/myrhfakl294znljc79ya8p44lx2781bm-activation-script.drv
-  /nix/store/828w1d5l8s7l3amm6qb89myqqq4684yj-home-manager-generation.drv
-building '/nix/store/i7q86f5l3irla7akz2adm8hyf9jyshjy-hm_hyprhyprland.conf.drv'...
-building '/nix/store/myrhfakl294znljc79ya8p44lx2781bm-activation-script.drv'...
-building '/nix/store/indh30jf1v6vg383qbxjjlkdn539ss2r-home-manager-files.drv'...
-building '/nix/store/828w1d5l8s7l3amm6qb89myqqq4684yj-home-manager-generation.drv'...
+these 3 derivations will be built:
+  /nix/store/a5bjzbh7jfrvxgq5wdj7rqdfwkk3s8sj-home-manager-path.drv
+  /nix/store/584yc12lyn4fjn6rhbcn5768fbnkf63y-activation-script.drv
+  /nix/store/yal4xnwwsckhvhc7c47lccn1ncxhr7kd-home-manager-generation.drv
+these 4 paths will be fetched (9.39 MiB download, 37.53 MiB unpacked):
+  /nix/store/1dvni3akxbccjy1hfnf2kg8zm0xwrf28-icu4c-75.1
+  /nix/store/2nyvh1nd7ly6i5sigz4n95kflaiha6xf-imv-4.5.0
+  /nix/store/aajjjq0bdzbk15w7wi96syfmfg8iagri-imv-4.5.0-man
+  /nix/store/k22ylbgfashxg4iv3klk1531h337g83i-inih-60
+copying path '/nix/store/aajjjq0bdzbk15w7wi96syfmfg8iagri-imv-4.5.0-man' from 'https://cache.nixos.org'...
+copying path '/nix/store/1dvni3akxbccjy1hfnf2kg8zm0xwrf28-icu4c-75.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/k22ylbgfashxg4iv3klk1531h337g83i-inih-60' from 'https://cache.nixos.org'...
+copying path '/nix/store/2nyvh1nd7ly6i5sigz4n95kflaiha6xf-imv-4.5.0' from 'https://cache.nixos.org'...
+building '/nix/store/a5bjzbh7jfrvxgq5wdj7rqdfwkk3s8sj-home-manager-path.drv'...
+building '/nix/store/584yc12lyn4fjn6rhbcn5768fbnkf63y-activation-script.drv'...
+building '/nix/store/yal4xnwwsckhvhc7c47lccn1ncxhr7kd-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -14,12 +21,12 @@ Activating writeBoundary
 Activating installPackages
 replacing old 'home-manager-path'
 installing 'home-manager-path'
+building '/nix/store/fb4srcnl3ikd9jp2arb7m032a4p806b5-user-environment.drv'...
 Activating dconfSettings
 Activating linkGeneration
 Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
-ok
 Activating reloadSystemd
 
 There are 251 unread and relevant news items.

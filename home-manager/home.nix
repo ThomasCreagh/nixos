@@ -73,21 +73,22 @@
   };
 
   # programs
+  programs.imv.enable = true;
+
   gtk = {
     enable = true;
     theme.name = "Adwaita";
     iconTheme.name = "Adwaita";
     font.name = "Cantarell 14";
   };
-qt = {
-  enable = true;
-  platformTheme.name = "adwaita";
-  style.name = "Breeze";
-};
-xresources.properties = {
-  "Xft.dpi" = 144;
-};
-
+  qt = {
+    enable = true;
+    platformTheme.name = "adwaita";
+    style.name = "Breeze";
+  };
+  xresources.properties = {
+    "Xft.dpi" = 144;
+  };
 
   programs.waybar = {
     enable = true;
