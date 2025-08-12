@@ -35,6 +35,7 @@
         pavucontrol
         obsidian
         home-manager
+        unzip
       ];
     };
     syncthing = {

@@ -1,8 +1,3 @@
-these 2 derivations will be built:
-  /nix/store/gj2mjjpm8zncg87s6kz7v0l3v5aaxxih-home-manager-files.drv
-  /nix/store/8rjgg2rbdjwfh3qp0kl2blw6dcm34903-home-manager-generation.drv
-building '/nix/store/gj2mjjpm8zncg87s6kz7v0l3v5aaxxih-home-manager-files.drv'...
-building '/nix/store/8rjgg2rbdjwfh3qp0kl2blw6dcm34903-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
