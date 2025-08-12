@@ -1,12 +1,12 @@
 these 4 derivations will be built:
-  /nix/store/2a3b54b8q8zlz5m7wqjk1qzzi4clxz4l-waybar-style.css.drv
-  /nix/store/92vcnvpvksn69p6jnas8nrsa6rmcja63-activation-script.drv
-  /nix/store/k2bladnz6y1v2bbdlaiss8pm7pqw7ddc-home-manager-files.drv
-  /nix/store/m5dbn6px8wzn39lhs7inzrg003vrqlh2-home-manager-generation.drv
-building '/nix/store/2a3b54b8q8zlz5m7wqjk1qzzi4clxz4l-waybar-style.css.drv'...
-building '/nix/store/92vcnvpvksn69p6jnas8nrsa6rmcja63-activation-script.drv'...
-building '/nix/store/k2bladnz6y1v2bbdlaiss8pm7pqw7ddc-home-manager-files.drv'...
-building '/nix/store/m5dbn6px8wzn39lhs7inzrg003vrqlh2-home-manager-generation.drv'...
+  /nix/store/32ix8pgqv40xn4671qmfngz5cv1kssw2-hm_hyprhyprland.conf.drv
+  /nix/store/5bbva7ymi9iih0c02rg3rlv3lmgma65r-home-manager-files.drv
+  /nix/store/990z5pcq8g15n66afb36rxcc6612axb5-activation-script.drv
+  /nix/store/q41y3zf1rd7wb1nd6pyixdjzx3vcym6v-home-manager-generation.drv
+building '/nix/store/32ix8pgqv40xn4671qmfngz5cv1kssw2-hm_hyprhyprland.conf.drv'...
+building '/nix/store/990z5pcq8g15n66afb36rxcc6612axb5-activation-script.drv'...
+building '/nix/store/5bbva7ymi9iih0c02rg3rlv3lmgma65r-home-manager-files.drv'...
+building '/nix/store/q41y3zf1rd7wb1nd6pyixdjzx3vcym6v-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -19,6 +19,7 @@ Activating linkGeneration
 Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
+ok
 Activating reloadSystemd
 
 There are 251 unread and relevant news items.

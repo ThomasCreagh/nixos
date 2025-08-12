@@ -219,7 +219,7 @@
 
       exec-once = [
         "waybar &"
-        "wbg ~/.dotfiles/wallpapers/1.jpg"
+        "wbg ~/.dotfiles/wallpapers/0.jpg"
 #        "swww init &"
 #        "nm-applet &"
       ];
