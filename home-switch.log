@@ -1,12 +1,12 @@
 these 4 derivations will be built:
-  /nix/store/lygj5by674six9x8x1c82bw4x77954ws-hm_hyprhyprland.conf.drv
-  /nix/store/aim9jjm615vsy5cg28ry15dm2qgajxi6-activation-script.drv
-  /nix/store/llgnjaa6447sf0gslcnyzagqmdq6c9sm-home-manager-files.drv
-  /nix/store/2yia6fvf00naizv9g0w5r71scqqg2wpf-home-manager-generation.drv
-building '/nix/store/lygj5by674six9x8x1c82bw4x77954ws-hm_hyprhyprland.conf.drv'...
-building '/nix/store/aim9jjm615vsy5cg28ry15dm2qgajxi6-activation-script.drv'...
-building '/nix/store/llgnjaa6447sf0gslcnyzagqmdq6c9sm-home-manager-files.drv'...
-building '/nix/store/2yia6fvf00naizv9g0w5r71scqqg2wpf-home-manager-generation.drv'...
+  /nix/store/r1n0svlc9wlmbvrc5273n1fi1ivvjz1g-hm_hyprhyprland.conf.drv
+  /nix/store/az6if7bzn0jvxlnhs1qj8r3cis5nczn1-home-manager-files.drv
+  /nix/store/zazp7y3mvfx52wbk26agsk4vimi7hbkp-activation-script.drv
+  /nix/store/h5kqifv2da8g48mp7xp8qc35bzr8lg04-home-manager-generation.drv
+building '/nix/store/r1n0svlc9wlmbvrc5273n1fi1ivvjz1g-hm_hyprhyprland.conf.drv'...
+building '/nix/store/zazp7y3mvfx52wbk26agsk4vimi7hbkp-activation-script.drv'...
+building '/nix/store/az6if7bzn0jvxlnhs1qj8r3cis5nczn1-home-manager-files.drv'...
+building '/nix/store/h5kqifv2da8g48mp7xp8qc35bzr8lg04-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -21,6 +21,19 @@ Creating home file links in /home/tom
 Activating onFilesChange
 ok
 Activating reloadSystemd
+The user systemd session is degraded:
+  UNIT                                LOAD   ACTIVE SUB    DESCRIPTION
+● xdg-desktop-portal-hyprland.service loaded failed failed Portal service (Hyprland implementation)
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+1 loaded units listed.
+Attempting to reload services anyway...
+The service manager is degraded.
+Failed services: xdg-desktop-portal-hyprland.service
+Attempting to continue anyway...
 
 There are 251 unread and relevant news items.
 Read them by running the command "home-manager news".
