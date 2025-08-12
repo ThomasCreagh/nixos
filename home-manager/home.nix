@@ -110,6 +110,8 @@
         layer = "top";
         position = "top";
         height = 30;
+
+        # These won't add gaps themselves, but are required context
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
         modules-right = [ "pulseaudio" "battery" "network" ];
@@ -125,7 +127,7 @@
           on-click = "pavucontrol";
         };
 
-        "battery" = {
+       "battery" = {
           format = "{capacity}% {icon}";
           format-icons = [ "" "" "" "" "" ];
           interval = 60;
@@ -158,10 +160,10 @@
         color: #ffffff;
       }
 
-      window {
-        background: rgba(30, 30, 46, 0.9);
+      window#waybar {
+        background: rgba(30, 30, 46, 0.5); /* 50% opacity */
         border-radius: 6px;
-        margin: 10px;
+        margin: 10px 20px 0px 20px; /* top, right, bottom, left */
       }
 
       #clock, #battery, #pulseaudio, #network {
@@ -180,6 +182,7 @@
       }
     '';
   };
+
   programs.ghostty = {
     enable = true;
     enableFishIntegration = true;
