@@ -1,12 +1,3 @@
-these 4 derivations will be built:
-  /nix/store/r1zl6z26lqpfrhql5mmb8q2vywp8nhsg-hm_hyprhyprland.conf.drv
-  /nix/store/06hryh2il6zxnns5phv1wcdmgidrjp1w-activation-script.drv
-  /nix/store/hahdl4f27kx62cdcqh5axx6dnsbqsamb-home-manager-files.drv
-  /nix/store/g94x3fgnsr83y9nm7vjqvqz7bszb0lp1-home-manager-generation.drv
-building '/nix/store/r1zl6z26lqpfrhql5mmb8q2vywp8nhsg-hm_hyprhyprland.conf.drv'...
-building '/nix/store/06hryh2il6zxnns5phv1wcdmgidrjp1w-activation-script.drv'...
-building '/nix/store/hahdl4f27kx62cdcqh5axx6dnsbqsamb-home-manager-files.drv'...
-building '/nix/store/g94x3fgnsr83y9nm7vjqvqz7bszb0lp1-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -14,13 +5,26 @@ Activating writeBoundary
 Activating installPackages
 replacing old 'home-manager-path'
 installing 'home-manager-path'
+building '/nix/store/cyrbqs9ch56gzzw74jjjnxcsplr8qhl7-user-environment.drv'...
 Activating dconfSettings
 Activating linkGeneration
 Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
-ok
 Activating reloadSystemd
+The user systemd session is degraded:
+  UNIT                                LOAD   ACTIVE SUB    DESCRIPTION
+● xdg-desktop-portal-hyprland.service loaded failed failed Portal service (Hyprland implementation)
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+1 loaded units listed.
+Attempting to reload services anyway...
+The service manager is degraded.
+Failed services: xdg-desktop-portal-hyprland.service
+Attempting to continue anyway...
 
 There are 251 unread and relevant news items.
 Read them by running the command "home-manager news".

@@ -79,7 +79,7 @@
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
-    defaultEditor = true;
+    programs.neovim.defaultEditor = true;
     extraConfig = ''
       source ../nvim/init.lua
     '';
