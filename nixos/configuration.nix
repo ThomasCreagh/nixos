@@ -36,6 +36,7 @@
         obsidian
         home-manager
         unzip
+        discord
       ];
     };
     syncthing = {

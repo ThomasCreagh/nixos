@@ -225,6 +225,8 @@
         "$mod, Q, exec, $terminal"
         "$mod, W, exec, $webBrowser"
         "$mod, K, exec, keepassxc"
+        "$mod, O, exec, obsidian"
+        "$mod, D, exec, discord"
         "$mod, C, killactive"
         "$mod, M, exit"
         "$mod, E, exec, $fileManager"
