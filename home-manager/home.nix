@@ -187,7 +187,7 @@
     enableFishIntegration = true;
     installVimSyntax = true;
     settings = {
-      font-size = 13;
+      font-size = 20;
       theme = "tokyonight_night";
     };
   };
