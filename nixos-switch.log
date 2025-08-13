@@ -3,11 +3,12 @@ updating GRUB 2 menu...
 Warning: os-prober will be executed to detect other bootable partitions.
 Its output will be used to detect bootable binaries on them and create new boot entries.
 lsblk: /dev/mapper/no*[0-9]: not a block device
-lsblk: /dev/mapper/raid*[0-9]: not a block device
-lsblk: /dev/mapper/disks*[0-9]: not a block device
+lsblk: /dev/mapper/block*[0-9]: not a block device
+lsblk: /dev/mapper/devices*[0-9]: not a block device
+lsblk: /dev/mapper/found*[0-9]: not a block device
 activating the configuration...
 setting up /etc...
 reloading user units for tom...
 restarting sysinit-reactivation.target
-the following new units were started: NetworkManager-dispatcher.service, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
-Done. The new configuration is /nix/store/hafid7kc0bsx853982i3w2gsipm2n8lf-nixos-system-nixos-25.11.20250804.cab7782
+the following new units were started: NetworkManager-dispatcher.service
+Done. The new configuration is /nix/store/3j44igbys31dvhjgaj6h7shk83i4snbw-nixos-system-nixos-25.11.20250804.cab7782
