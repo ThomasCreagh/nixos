@@ -2,11 +2,11 @@ evaluation warning: Firefox bookmarks have been refactored into a submodule that
 
                     Replace:
 
-                    programs.firefox.profiles.tom.bookmarks = [ ... ];
+                    programs.firefox.profiles.default.bookmarks = [ ... ];
 
                     With:
 
-                    programs.firefox.profiles.tom.bookmarks = {
+                    programs.firefox.profiles.default.bookmarks = {
                       force = true;
                       settings = [ ... ];
                     };
@@ -14,11 +14,11 @@ evaluation warning: Firefox bookmarks have been refactored into a submodule that
 
                     Replace:
 
-                    programs.firefox.profiles.tom.bookmarks = [ ... ];
+                    programs.firefox.profiles.default.bookmarks = [ ... ];
 
                     With:
 
-                    programs.firefox.profiles.tom.bookmarks = {
+                    programs.firefox.profiles.default.bookmarks = {
                       force = true;
                       settings = [ ... ];
                     };
@@ -27,41 +27,21 @@ evaluation warning: In order to support declarative extension configuration,
                     programs.firefox.profiles.<profile>.extensions
                     to
                     programs.firefox.profiles.<profile>.extensions.packages
-these 17 derivations will be built:
-  /nix/store/0fnpcdiy085pra30w4wwn4fkx8z43nsb-bookmarks.html.drv
-  /nix/store/0lliizk95xa5kzvnpw25lrnn31xnsvrl-youtube_shorts_block-1.5.3.xpi.drv
-  /nix/store/wc0kg4d75cjh5wcf2yi12j0l25ap3ckc-ublock_origin-1.65.0.xpi.drv
-  /nix/store/4rii65yfr61wpijbijcmgdrsr3ziacpf-ublock-origin-1.65.0.drv
-  /nix/store/kr8lf57rjbxn9vn7v4kk7k4grzxwyid9-youtube-shorts-block-1.5.3.drv
-  /nix/store/9jdv0qv445rasarawmp7g79il9fw0ic3-sponsorblock-5.14.xpi.drv
-  /nix/store/zgiwnfg2qvbancw86rkj1bngs29118dk-sponsorblock-5.14.drv
-  /nix/store/5yn4zh002qq9cnp2737k28kvv57kn363-hm-firefox-extensions.drv
-  /nix/store/8bnih5m7k1012fl0vij5xcirlnn162m9-check-link-targets.sh.drv
-  /nix/store/lz8303wxyjzh7m6v0kv0bgziw1wbhlf3-policies.json.drv
-  /nix/store/xwsn91nz607vjfwwamkag7av7akl09d8-firefox-141.0.drv
-  /nix/store/8gjcqn291dm7qg1wcf5vls1zx04ml8hs-home-manager-path.drv
-  /nix/store/hfnarbf9m6z4h2iwmzl11zgrm8izsg6v-mozilla-native-messaging-hosts.drv
-  /nix/store/hj41rks2fxgi6fs4qdbgjk12baby7yhg-hm_.mozillafirefoxtomuser.js.drv
-  /nix/store/jvdycf60a74kcypkyyiv4i9p1zpgr3l3-activation-script.drv
-  /nix/store/zxqyw7kps7di0hy34r6qlvm1mwvchi78-home-manager-files.drv
-  /nix/store/vpyd23q5i1pzsbdyfr97rv0gacrqr94b-home-manager-generation.drv
-building '/nix/store/8bnih5m7k1012fl0vij5xcirlnn162m9-check-link-targets.sh.drv'...
-building '/nix/store/0fnpcdiy085pra30w4wwn4fkx8z43nsb-bookmarks.html.drv'...
-building '/nix/store/lz8303wxyjzh7m6v0kv0bgziw1wbhlf3-policies.json.drv'...
-building '/nix/store/9jdv0qv445rasarawmp7g79il9fw0ic3-sponsorblock-5.14.xpi.drv'...
-building '/nix/store/wc0kg4d75cjh5wcf2yi12j0l25ap3ckc-ublock_origin-1.65.0.xpi.drv'...
-building '/nix/store/0lliizk95xa5kzvnpw25lrnn31xnsvrl-youtube_shorts_block-1.5.3.xpi.drv'...
-building '/nix/store/hj41rks2fxgi6fs4qdbgjk12baby7yhg-hm_.mozillafirefoxtomuser.js.drv'...
-building '/nix/store/xwsn91nz607vjfwwamkag7av7akl09d8-firefox-141.0.drv'...
-building '/nix/store/kr8lf57rjbxn9vn7v4kk7k4grzxwyid9-youtube-shorts-block-1.5.3.drv'...
-building '/nix/store/8gjcqn291dm7qg1wcf5vls1zx04ml8hs-home-manager-path.drv'...
-building '/nix/store/hfnarbf9m6z4h2iwmzl11zgrm8izsg6v-mozilla-native-messaging-hosts.drv'...
-building '/nix/store/jvdycf60a74kcypkyyiv4i9p1zpgr3l3-activation-script.drv'...
-building '/nix/store/zgiwnfg2qvbancw86rkj1bngs29118dk-sponsorblock-5.14.drv'...
-building '/nix/store/4rii65yfr61wpijbijcmgdrsr3ziacpf-ublock-origin-1.65.0.drv'...
-building '/nix/store/5yn4zh002qq9cnp2737k28kvv57kn363-hm-firefox-extensions.drv'...
-building '/nix/store/zxqyw7kps7di0hy34r6qlvm1mwvchi78-home-manager-files.drv'...
-building '/nix/store/vpyd23q5i1pzsbdyfr97rv0gacrqr94b-home-manager-generation.drv'...
+these 7 derivations will be built:
+  /nix/store/83a9s2dsr95fc3zn29cr98jn47yjk98r-hm_.mozillafirefoxprofiles.ini.drv
+  /nix/store/bkfz934hh3lynqxn7fwk8lknq42wsi1p-hm_.mozillafirefoxdefaultuser.js.drv
+  /nix/store/fqqwjdhbcxrmmysvbb1xg84cfpyzs150-hm_.mozillafirefoxdefault.keep.drv
+  /nix/store/9iamrqy4c92yqfwany3cwzf85sm7yb96-home-manager-files.drv
+  /nix/store/mn608plf5jp27g0y6lab6fnkr3pai7wd-check-link-targets.sh.drv
+  /nix/store/cj8hfcy33cnp9mmxhbhll2g6150fg5k1-activation-script.drv
+  /nix/store/pjgj0rzvp4fg8cad44vdsgxm23pqjgxb-home-manager-generation.drv
+building '/nix/store/mn608plf5jp27g0y6lab6fnkr3pai7wd-check-link-targets.sh.drv'...
+building '/nix/store/fqqwjdhbcxrmmysvbb1xg84cfpyzs150-hm_.mozillafirefoxdefault.keep.drv'...
+building '/nix/store/bkfz934hh3lynqxn7fwk8lknq42wsi1p-hm_.mozillafirefoxdefaultuser.js.drv'...
+building '/nix/store/83a9s2dsr95fc3zn29cr98jn47yjk98r-hm_.mozillafirefoxprofiles.ini.drv'...
+building '/nix/store/9iamrqy4c92yqfwany3cwzf85sm7yb96-home-manager-files.drv'...
+building '/nix/store/cj8hfcy33cnp9mmxhbhll2g6150fg5k1-activation-script.drv'...
+building '/nix/store/pjgj0rzvp4fg8cad44vdsgxm23pqjgxb-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -69,7 +49,6 @@ Activating writeBoundary
 Activating installPackages
 replacing old 'home-manager-path'
 installing 'home-manager-path'
-building '/nix/store/vca4c4hx02bxbpjaz9pmg222iizpwl8y-user-environment.drv'...
 Activating dconfSettings
 Activating linkGeneration
 Cleaning up orphan links from /home/tom
@@ -80,11 +59,11 @@ evaluation warning: Firefox bookmarks have been refactored into a submodule that
 
                     Replace:
 
-                    programs.firefox.profiles.tom.bookmarks = [ ... ];
+                    programs.firefox.profiles.default.bookmarks = [ ... ];
 
                     With:
 
-                    programs.firefox.profiles.tom.bookmarks = {
+                    programs.firefox.profiles.default.bookmarks = {
                       force = true;
                       settings = [ ... ];
                     };
@@ -92,11 +71,11 @@ evaluation warning: Firefox bookmarks have been refactored into a submodule that
 
                     Replace:
 
-                    programs.firefox.profiles.tom.bookmarks = [ ... ];
+                    programs.firefox.profiles.default.bookmarks = [ ... ];
 
                     With:
 
-                    programs.firefox.profiles.tom.bookmarks = {
+                    programs.firefox.profiles.default.bookmarks = {
                       force = true;
                       settings = [ ... ];
                     };

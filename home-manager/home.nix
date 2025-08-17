@@ -202,7 +202,7 @@
 
   programs.firefox = {
     enable = true;
-    profiles.tom = {
+    profiles.default = {
       bookmarks = [
         {
           name = "";
