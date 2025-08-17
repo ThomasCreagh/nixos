@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -203,7 +203,20 @@
   programs.firefox = {
     enable = true;
     profiles.tom = {
-      settings = {};
+      bookmarks = [
+        {
+          name = "";
+          tags = [ "wiki" ];
+          keyword = "wiki";
+          url = "https://www.wikipedia.org/";
+        }
+      ];
+      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+        ublock-origin
+        sponsorblock
+        youtube-shorts-block
+        #keepassxc
+      ];
     };
   };
 
