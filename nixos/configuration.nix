@@ -27,7 +27,7 @@
       description = "tom";
       extraGroups = [ "networkmanager" "wheel" "audio" ];
       packages = with pkgs; [
-        brave
+#        brave
         keepassxc
         libgcc
         clang

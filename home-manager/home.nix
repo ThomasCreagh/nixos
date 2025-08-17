@@ -191,10 +191,15 @@
       theme = "tokyonight_night";
     };
   };
+
   programs.git = {
     enable = true;
     userEmail = "github@thomascreagh.mailer.me";
     userName = "Thomas Creagh";
+  };
+
+  programs.firefox = {
+    enable = true;
   };
 
   # Let Home Manager install and manage itself.

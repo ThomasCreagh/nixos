@@ -1,12 +1,25 @@
-these 4 derivations will be built:
-  /nix/store/id4wp70615fvskpn0xiwnm9hycbx539g-ghostty-config.drv
-  /nix/store/y77ggislq718vpsz1w2h7hisv8kffny8-activation-script.drv
-  /nix/store/yvfxvmci1kqf4r4y5h12cr3gjxpdqywv-home-manager-files.drv
-  /nix/store/5vg0ybv7n09c4yyfv26zqifqfa05jhjd-home-manager-generation.drv
-building '/nix/store/id4wp70615fvskpn0xiwnm9hycbx539g-ghostty-config.drv'...
-building '/nix/store/y77ggislq718vpsz1w2h7hisv8kffny8-activation-script.drv'...
-building '/nix/store/yvfxvmci1kqf4r4y5h12cr3gjxpdqywv-home-manager-files.drv'...
-building '/nix/store/5vg0ybv7n09c4yyfv26zqifqfa05jhjd-home-manager-generation.drv'...
+these 5 derivations will be built:
+  /nix/store/34l4n1diqpgdx5sypr18ya916g86gh0z-home-manager-path.drv
+  /nix/store/17ghx96k7hh3ahi95a3qd48yb8dxd5sl-activation-script.drv
+  /nix/store/fm2d10wnp29bpvb1hc5fahvwbbp9778p-mozilla-native-messaging-hosts.drv
+  /nix/store/j2yaa1drswh4ywdfk8vgqm9wjf0fx71h-home-manager-files.drv
+  /nix/store/psq4p794igv472737ak9fyj0qasna7z6-home-manager-generation.drv
+these 5 paths will be fetched (84.76 MiB download, 351.16 MiB unpacked):
+  /nix/store/4a9x12y957jx1ykk7mgp208i6b4cs4dp-adwaita-icon-theme-48.0
+  /nix/store/jxc9crw1i9xs378gc7pa3brhd87prcny-firefox-141.0
+  /nix/store/07269gw9rwmzxygfknknr2yzfyw45xfi-firefox-unwrapped-141.0
+  /nix/store/syh65b5v4f5wch267waaqlhc2rrw1qmb-icu4c-77.1
+  /nix/store/zhmyxyf4qv7q2a1xjk63bv6na4m3vsqa-nss-3.114
+copying path '/nix/store/4a9x12y957jx1ykk7mgp208i6b4cs4dp-adwaita-icon-theme-48.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/zhmyxyf4qv7q2a1xjk63bv6na4m3vsqa-nss-3.114' from 'https://cache.nixos.org'...
+copying path '/nix/store/syh65b5v4f5wch267waaqlhc2rrw1qmb-icu4c-77.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/07269gw9rwmzxygfknknr2yzfyw45xfi-firefox-unwrapped-141.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/jxc9crw1i9xs378gc7pa3brhd87prcny-firefox-141.0' from 'https://cache.nixos.org'...
+building '/nix/store/34l4n1diqpgdx5sypr18ya916g86gh0z-home-manager-path.drv'...
+building '/nix/store/fm2d10wnp29bpvb1hc5fahvwbbp9778p-mozilla-native-messaging-hosts.drv'...
+building '/nix/store/j2yaa1drswh4ywdfk8vgqm9wjf0fx71h-home-manager-files.drv'...
+building '/nix/store/17ghx96k7hh3ahi95a3qd48yb8dxd5sl-activation-script.drv'...
+building '/nix/store/psq4p794igv472737ak9fyj0qasna7z6-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -14,6 +27,7 @@ Activating writeBoundary
 Activating installPackages
 replacing old 'home-manager-path'
 installing 'home-manager-path'
+building '/nix/store/mxbcxbdj85slx4xf5z88c2plydkzwa02-user-environment.drv'...
 Activating dconfSettings
 Activating linkGeneration
 Cleaning up orphan links from /home/tom
@@ -21,6 +35,6 @@ Creating home file links in /home/tom
 Activating onFilesChange
 Activating reloadSystemd
 
-There are 251 unread and relevant news items.
+There are 254 unread and relevant news items.
 Read them by running the command "home-manager news".
 
