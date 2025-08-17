@@ -219,7 +219,7 @@
       "$mod" = "SUPER";
       "$terminal" = "ghostty";
       "$fileManager" = "dolphin";
-      "$webBrowser" = "brave";
+      "$webBrowser" = "firefox";
       "$menu" = "wofi --show drun";
 
       exec-once = [
