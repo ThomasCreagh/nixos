@@ -29,7 +29,8 @@
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.wbg
     pkgs.brightnessctl
-
+    pkgs.swaylock
+    pkgs.swayidle
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
     # # environment:
@@ -208,6 +209,19 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # services
+  services.swayidle = {
+    enable = true;
+    timeouts = [
+      { timeout = 300; command = "swaylock -f -c 000000"; } # lock after 5 min
+    ];
+    events = [
+      { event = "before-sleep"; command = "swaylock -f -c 000000"; }
+      { event = "lock"; command = "swaylock -f -c 000000"; }
+    ];
+  };
+
 
   # hyprland
   wayland.windowManager.hyprland = {

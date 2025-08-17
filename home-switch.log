@@ -1,3 +1,19 @@
+these 5 derivations will be built:
+  /nix/store/3l4y76vrq9xmrczqsjm9by53gzpajzm6-home-manager-path.drv
+  /nix/store/xqyrwf1ggw1fcf73vnp9bjawx5ssky2l-swayidle.service.drv
+  /nix/store/94y78r4zrj5ss8cdvki1q00kraa1pmdn-home-manager-files.drv
+  /nix/store/j7mg3yfq0dh67bgvagxfn5zy1rgfw259-activation-script.drv
+  /nix/store/lhpsnwgqdn5gd9886a64nfhgcpayg4nq-home-manager-generation.drv
+these 2 paths will be fetched (0.04 MiB download, 0.16 MiB unpacked):
+  /nix/store/p6c0l31x4fzk31jzc07xyfgr2wd9zrfw-swayidle-1.8.0
+  /nix/store/iyj774b4cd0x1zhgachji28n4wy631s6-swaylock-1.8.3
+copying path '/nix/store/p6c0l31x4fzk31jzc07xyfgr2wd9zrfw-swayidle-1.8.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/iyj774b4cd0x1zhgachji28n4wy631s6-swaylock-1.8.3' from 'https://cache.nixos.org'...
+building '/nix/store/xqyrwf1ggw1fcf73vnp9bjawx5ssky2l-swayidle.service.drv'...
+building '/nix/store/3l4y76vrq9xmrczqsjm9by53gzpajzm6-home-manager-path.drv'...
+building '/nix/store/94y78r4zrj5ss8cdvki1q00kraa1pmdn-home-manager-files.drv'...
+building '/nix/store/j7mg3yfq0dh67bgvagxfn5zy1rgfw259-activation-script.drv'...
+building '/nix/store/lhpsnwgqdn5gd9886a64nfhgcpayg4nq-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -5,13 +21,15 @@ Activating writeBoundary
 Activating installPackages
 replacing old 'home-manager-path'
 installing 'home-manager-path'
+building '/nix/store/cmp6h4p22l6g5zzn4yfvfhzfdh8ysyqj-user-environment.drv'...
 Activating dconfSettings
 Activating linkGeneration
 Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
 Activating reloadSystemd
+Starting units: swayidle.service
 
-There are 254 unread and relevant news items.
+There are 255 unread and relevant news items.
 Read them by running the command "home-manager news".
 
