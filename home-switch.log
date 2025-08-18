@@ -1,3 +1,12 @@
+these 4 derivations will be built:
+  /nix/store/cpng7v9a4dmih2s5xkrvv9skqj39mj31-home-manager-path.drv
+  /nix/store/1whs0cxkw4z2i77jk9ivdxmyxx2qpr74-activation-script.drv
+  /nix/store/5df83v9hrziilx0s8ilwj0y79lkg8cv8-home-manager-files.drv
+  /nix/store/iljdxx3h0inh2ihypf4ihs3rg2rvxg6l-home-manager-generation.drv
+building '/nix/store/5df83v9hrziilx0s8ilwj0y79lkg8cv8-home-manager-files.drv'...
+building '/nix/store/cpng7v9a4dmih2s5xkrvv9skqj39mj31-home-manager-path.drv'...
+building '/nix/store/1whs0cxkw4z2i77jk9ivdxmyxx2qpr74-activation-script.drv'...
+building '/nix/store/iljdxx3h0inh2ihypf4ihs3rg2rvxg6l-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -5,6 +14,7 @@ Activating writeBoundary
 Activating installPackages
 replacing old 'home-manager-path'
 installing 'home-manager-path'
+building '/nix/store/d1z5fr56yi0xnrf28yrs73hm1vw2qy8d-user-environment.drv'...
 Activating dconfSettings
 Activating linkGeneration
 Cleaning up orphan links from /home/tom
@@ -12,6 +22,6 @@ Creating home file links in /home/tom
 Activating onFilesChange
 Activating reloadSystemd
 
-There are 255 unread and relevant news items.
+There are 252 unread and relevant news items.
 Read them by running the command "home-manager news".
 
