@@ -200,33 +200,33 @@
     userName = "Thomas Creagh";
   };
 
-    programs.firefox.profiles.default = {
-      bookmarks = {
-        force = true; # Ensure bookmarks are applied
-        settings = {
-          toolbar = true; # Show bookmarks on the toolbar
-          bookmarks = [
-            {
-              name = "My Bookmarks";
-              bookmarks = [
-                {
-                  name = "NixOS";
-                  url = "https://nixos.org/";
-                }
-                {
-                  name = "NixOS Discourse";
-                  url = "https://discourse.nixos.org/";
-                }
-              ];
-            }
-            {
-              name = "Other";
-              url = "https://example.com";
-            }
-          ];
-        };
+  programs.firefox.profiles.default = {
+    bookmarks = {
+      force = true; # Ensure bookmarks are applied
+      settings = {
+        toolbar = true; # Show bookmarks on the toolbar
+        bookmarks = [
+          {
+            name = "My Bookmarks";
+            bookmarks = [
+              {
+                name = "NixOS";
+                url = "https://nixos.org/";
+              }
+              {
+                name = "NixOS Discourse";
+                url = "https://discourse.nixos.org/";
+              }
+            ];
+          }
+          {
+            name = "Other";
+            url = "https://example.com";
+          }
+        ];
       };
     };
+  };
 
 #  programs.firefox = {
 #    enable = true;
