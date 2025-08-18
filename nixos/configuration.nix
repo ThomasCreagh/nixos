@@ -37,6 +37,7 @@
         home-manager
         unzip
         discord
+        firefox
       ];
     };
     syncthing = {
