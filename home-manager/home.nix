@@ -203,7 +203,8 @@
   programs.firefox = {
     enable = true;
     profiles.default = {
-      bookmarks = [
+      bookmarks.force = true;
+      bookmarks.settings = [
         {
           name = "";
           tags = [ "wiki" ];
@@ -211,12 +212,15 @@
           url = "https://www.wikipedia.org/";
         }
       ];
-      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
-        ublock-origin
-        sponsorblock
-        youtube-shorts-block
-        #keepassxc
-      ];
+      extensions = {
+        force = true;
+        packages = with inputs.firefox-addons.packages."x86_64-linux"; [
+          ublock-origin
+          sponsorblock
+          youtube-shorts-block
+          #keepassxc
+        ];
+      };
     };
   };
 
