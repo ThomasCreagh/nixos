@@ -202,7 +202,8 @@
 
   programs.firefox = {
     enable = true;
-    profiles.default = {
+    profiles.tom = {
+      isDefault = true;
       bookmarks.force = true;
       bookmarks.settings = [
         {
