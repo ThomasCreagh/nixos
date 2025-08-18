@@ -202,29 +202,27 @@
 
   programs.firefox.profiles.default = {
     bookmarks = {
-      force = true; # Ensure bookmarks are applied
-      settings = {
-        toolbar = true; # Show bookmarks on the toolbar
-        bookmarks = [
-          {
-            name = "My Bookmarks";
-            bookmarks = [
-              {
-                name = "NixOS";
-                url = "https://nixos.org/";
-              }
-              {
-                name = "NixOS Discourse";
-                url = "https://discourse.nixos.org/";
-              }
-            ];
-          }
-          {
-            name = "Other";
-            url = "https://example.com";
-          }
-        ];
-      };
+      force = true;
+      settings = [
+        {
+          toolbar = true;  # <- global toolbar 
+          bookmarks = [
+            { 
+              name = "folder";
+              bookmarks = [
+                {
+                  name = "bookmark in folder in panel"; 
+                  url = "https://example.com";
+                }
+              ];
+            }
+            {
+              name = "bookmark in panel"; 
+              url = "https://example.com";
+            }
+          ];
+        }
+      ];
     };
   };
 
