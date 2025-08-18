@@ -8,11 +8,6 @@ installing 'home-manager-path'
 Activating dconfSettings
 Activating linkGeneration
 Cleaning up orphan links from /home/tom
-Path '/home/tom/.mozilla/firefox/default/.keep' does not link into a Home Manager generation. Skipping delete.
-Path '/home/tom/.mozilla/firefox/default/user.js' does not link into a Home Manager generation. Skipping delete.
-Path '/home/tom/.mozilla/firefox/default/extensions/sponsorBlocker@ajay.app.xpi' does not link into a Home Manager generation. Skipping delete.
-Path '/home/tom/.mozilla/firefox/default/extensions/{34daeb50-c2d2-4f14-886a-7160b24d66a4}.xpi' does not link into a Home Manager generation. Skipping delete.
-Path '/home/tom/.mozilla/firefox/default/extensions/uBlock0@raymondhill.net.xpi' does not link into a Home Manager generation. Skipping delete.
 Creating home file links in /home/tom
 Activating onFilesChange
 Activating reloadSystemd
