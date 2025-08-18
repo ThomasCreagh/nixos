@@ -200,42 +200,44 @@
     userName = "Thomas Creagh";
   };
 
-  programs.firefox.profiles.default = {
-    bookmarks = {
-      force = true;
-      settings = [
-        {
-          name = "wikipedia";
-          tags = [ "wiki" ];
-          keyword = "wiki";
-          url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
-        }
-        {
-          name = "kernel.org";
-          url = "https://www.kernel.org";
-        }
-        "separator"
-        {
-          name = "Nix sites";
-          toolbar = true;
-          bookmarks = [
-            {
-              name = "homepage";
-              url = "https://nixos.org/";
-            }
-            {
-              name = "wiki";
-              tags = [ "wiki" "nix" ];
-              url = "https://wiki.nixos.org/";
-            }
-          ];
-        }
-      ];
+  programs.firefox = {
+    enable = true;
+    profiles.default = {
+      bookmarks = {
+        force = true;
+        settings = [
+          {
+            name = "wikipedia";
+            tags = [ "wiki" ];
+            keyword = "wiki";
+            url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
+          }
+          {
+            name = "kernel.org";
+            url = "https://www.kernel.org";
+          }
+          "separator"
+          {
+            name = "Nix sites";
+            toolbar = true;
+            bookmarks = [
+              {
+                name = "homepage";
+                url = "https://nixos.org/";
+              }
+              {
+                name = "wiki";
+                tags = [ "wiki" "nix" ];
+                url = "https://wiki.nixos.org/";
+              }
+            ];
+          }
+        ];
+      };
     };
   };
-
-#  programs.firefox.profiles.default = {
-#    bookmarks = {
+#    programs.firefox.profiles.default = {
+#      bookmarks = {
 #      force = true;
 #      settings = [
 #        {
