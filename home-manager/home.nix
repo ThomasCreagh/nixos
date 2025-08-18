@@ -205,26 +205,60 @@
       force = true;
       settings = [
         {
-          toolbar = true;  # <- global toolbar 
+          name = "wikipedia";
+          tags = [ "wiki" ];
+          keyword = "wiki";
+          url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
+        }
+        {
+          name = "kernel.org";
+          url = "https://www.kernel.org";
+        }
+        "separator"
+        {
+          name = "Nix sites";
+          toolbar = true;
           bookmarks = [
-            { 
-              name = "folder";
-              bookmarks = [
-                {
-                  name = "bookmark in folder in panel"; 
-                  url = "https://example.com";
-                }
-              ];
+            {
+              name = "homepage";
+              url = "https://nixos.org/";
             }
             {
-              name = "bookmark in panel"; 
-              url = "https://example.com";
+              name = "wiki";
+              tags = [ "wiki" "nix" ];
+              url = "https://wiki.nixos.org/";
             }
           ];
         }
       ];
     };
   };
+
+#  programs.firefox.profiles.default = {
+#    bookmarks = {
+#      force = true;
+#      settings = [
+#        {
+#          toolbar = true;  # <- global toolbar 
+#          bookmarks = [
+#            { 
+#              name = "folder";
+#              bookmarks = [
+#                {
+#                  name = "bookmark in folder in panel"; 
+#                  url = "https://example.com";
+#                }
+#              ];
+#            }
+#            {
+#              name = "bookmark in panel"; 
+#              url = "https://example.com";
+#            }
+#          ];
+#        }
+#      ];
+#    };
+#  };
 
 #  programs.firefox = {
 #    enable = true;
