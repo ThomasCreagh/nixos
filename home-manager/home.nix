@@ -200,23 +200,24 @@
     userName = "Thomas Creagh";
   };
 
+  # browser
   programs.firefox = {
     enable = true;
     profiles.default = {
       bookmarks = {
         force = true;
         settings = [
-          {
-            name = "wikipedia";
-            tags = [ "wiki" ];
-            keyword = "wiki";
-            url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
-          }
-          {
-            name = "kernel.org";
-            url = "https://www.kernel.org";
-          }
-          "separator"
+#          {
+#            name = "wikipedia";
+#            tags = [ "wiki" ];
+#            keyword = "wiki";
+#            url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
+#          }
+#          {
+#            name = "kernel.org";
+#            url = "https://www.kernel.org";
+#          }
+#          "separator"
           {
             name = "Nix sites";
             toolbar = true;
@@ -230,62 +231,17 @@
                 tags = [ "wiki" "nix" ];
                 url = "https://wiki.nixos.org/";
               }
+              {
+                name = "zig";
+                tags = [ "zig" ];
+                url = "https://ziglang.org/";
+              }
             ];
           }
         ];
       };
     };
   };
-#    programs.firefox.profiles.default = {
-#      bookmarks = {
-#      force = true;
-#      settings = [
-#        {
-#          toolbar = true;  # <- global toolbar 
-#          bookmarks = [
-#            { 
-#              name = "folder";
-#              bookmarks = [
-#                {
-#                  name = "bookmark in folder in panel"; 
-#                  url = "https://example.com";
-#                }
-#              ];
-#            }
-#            {
-#              name = "bookmark in panel"; 
-#              url = "https://example.com";
-#            }
-#          ];
-#        }
-#      ];
-#    };
-#  };
-
-#  programs.firefox = {
-#    enable = true;
-#    profiles.tom = {
-#      isDefault = true;
-#      bookmarks.force = true;
-#      bookmarks.settings = [
-#        {
-#          name = "";
-#          tags = [ "wiki" ];
-#          keyword = "wiki";
-#          url = "https://www.wikipedia.org/";
-#        }
-#      ];
-#      extensions = {
-#        force = true;
-#        packages = with inputs.firefox-addons.packages."x86_64-linux"; [
-#          ublock-origin
-#          sponsorblock
-#          youtube-shorts-block
-#          #keepassxc
-#        ];
-#      };
-#    };
-#  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
