@@ -223,6 +223,15 @@
             toolbar = true;
             bookmarks = [
               {
+                 name = "zig foler";
+                 bookmarks = [
+                   {
+                     name = "zig";
+                     url = "https://ziglang.org";
+                   }
+                 ];
+              }
+              {
                 name = "homepage";
                 url = "https://nixos.org/";
               }
