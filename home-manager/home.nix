@@ -237,6 +237,27 @@
                 url = "https://nixos.org/";
               }
               {
+                 name = "com";
+                 bookmarks = [
+                   {
+                     name = "proton";
+                     url = "https://proton.org";
+                   }
+                   {
+                     name = "addy";
+                     url = "https://addy.io";
+                   }
+                   {
+                     name = "gmail";
+                     url = "https://gmail.com";
+                   }
+                   {
+                     name = "linkedin";
+                     url = "https://linkedin.com";
+                   }
+                 ];
+              }
+              {
                  name = "nixos";
                  bookmarks = [
                    {
