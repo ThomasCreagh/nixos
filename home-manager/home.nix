@@ -209,7 +209,13 @@
         "browser.search.defaultenginename" = "DuckDuckGo";
         "sidebar.verticalTabs" = "true";
         "browser.newtabpage.enabled" = "false";
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
+      userChrome = ''
+        #personal-bookmarks #import-button {
+          display: none !important;
+        }
+      '';
       extensions = {
         force = true;
         packages = with inputs.firefox-addons.packages."x86_64-linux"; [
