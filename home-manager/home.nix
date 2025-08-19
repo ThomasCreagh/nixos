@@ -204,6 +204,14 @@
   programs.firefox = {
     enable = true;
     profiles.default = {
+      extensions = {
+        force = true;
+        packages = with inputs.firefox-addons.packages."x86_64-linux"; [
+          ublock-origin
+          sponsorblock
+          youtube-shorts-block
+        ];
+      };
       bookmarks = {
         force = true;
         settings = [
