@@ -208,42 +208,63 @@
         force = true;
         settings = [
           {
-            name = "wikipedia";
-            tags = [ "wiki" ];
-            keyword = "wiki";
-            url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
-          }
-          {
-            name = "kernel.org";
-            url = "https://www.kernel.org";
-          }
-          "separator"
-          {
-            name = "Nix sites";
+            name = "Toobar bookmarks";
             toolbar = true;
             bookmarks = [
               {
-                 name = "zig foler";
+                name = "homepage";
+                url = "https://nixos.org/";
+              }
+              {
+                 name = "nixos";
+                 bookmarks = [
+                   {
+                     name = "nix packages";
+                     url = "https://search.nixos.org/packages";
+                   }
+                   {
+                     name = "nix options";
+                     url = "https://search.nixos.org/options?";
+                   }
+                   {
+                     name = "nix flakes";
+                     url = "https://search.nixos.org/flakes?";
+                   }
+                   {
+                     name = "nix wiki";
+                     url = "https://wiki.nixos.org/wiki/NixOS_Wiki";
+                   }
+                   {
+                     name = "home-manager manual";
+                     url = "https://nix-community.github.io/home-manager/";
+                   }
+                 ];
+              }
+              {
+                 name = "job";
+                 bookmarks = [
+                   {
+                     name = "linkedin";
+                     url = "https://www.linkedin.com/in/thomas-creagh/";
+                   }
+                   {
+                     name = "github";
+                     url = "https://github.com/ThomasCreagh";
+                   }
+                   {
+                     name = "personal website";
+                     url = "https://thomascreagh.github.io";
+                   }
+                 ];
+              }
+              {
+                 name = "zig";
                  bookmarks = [
                    {
                      name = "zig";
                      url = "https://ziglang.org";
                    }
                  ];
-              }
-              {
-                name = "homepage";
-                url = "https://nixos.org/";
-              }
-              {
-                name = "wiki";
-                tags = [ "wiki" "nix" ];
-                url = "https://wiki.nixos.org/";
-              }
-              {
-                name = "zig";
-                tags = [ "zig" ];
-                url = "https://ziglang.org/";
               }
             ];
           }
