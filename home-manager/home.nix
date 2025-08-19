@@ -205,7 +205,7 @@
     enable = true;
     profiles.default = {
       settings = {
-        "browser.startup.homepage" = "https://https://duckduckgo.com/";
+        "browser.startup.homepage" = "https://duckduckgo.com/";
         "browser.search.defaultenginename" = "DuckDuckGo";
       };
       extensions = {
