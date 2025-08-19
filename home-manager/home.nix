@@ -207,6 +207,8 @@
       settings = {
         "browser.startup.homepage" = "https://github.com/thomascreagh";
         "browser.search.defaultenginename" = "DuckDuckGo";
+        "sidebar.verticalTabs" = "true";
+        "browser.newtabpage.enabled" = "false";
       };
       extensions = {
         force = true;
