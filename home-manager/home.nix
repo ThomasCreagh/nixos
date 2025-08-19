@@ -240,6 +240,10 @@
                  name = "com";
                  bookmarks = [
                    {
+                     name = "whatsapp";
+                     url = "https://web.whatsapp.com";
+                   }
+                   {
                      name = "proton";
                      url = "https://proton.me";
                    }
