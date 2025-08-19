@@ -205,7 +205,7 @@
     enable = true;
     profiles.default = {
       settings = {
-        "browser.startup.homepage" = "https://duckduckgo.com/";
+        "browser.startup.homepage" = "https://github.com/thomascreagh";
         "browser.search.defaultenginename" = "DuckDuckGo";
       };
       extensions = {
