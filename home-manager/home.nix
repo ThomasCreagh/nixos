@@ -205,7 +205,7 @@
     enable = true;
     profiles.default = {
       settings = {
-        "browser.startup.homepage" = "https://github.com/thomascreagh";
+        "browser.startup.homepage" = "https://nixos.org";
         "browser.search.defaultenginename" = "DuckDuckGo";
         "sidebar.verticalTabs" = "true";
         "browser.newtabpage.enabled" = "false";
