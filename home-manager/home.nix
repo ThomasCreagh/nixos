@@ -204,6 +204,10 @@
   programs.firefox = {
     enable = true;
     profiles.default = {
+      settings = {
+        "browser.startup.homepage" = "https://https://duckduckgo.com/";
+        "browser.search.defaultenginename" = "DuckDuckGo";
+      };
       extensions = {
         force = true;
         packages = with inputs.firefox-addons.packages."x86_64-linux"; [
