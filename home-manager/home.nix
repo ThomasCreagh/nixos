@@ -241,7 +241,7 @@
                  bookmarks = [
                    {
                      name = "proton";
-                     url = "https://proton.org";
+                     url = "https://proton.me";
                    }
                    {
                      name = "addy";
