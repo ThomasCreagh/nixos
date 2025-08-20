@@ -28,6 +28,7 @@
       extraGroups = [ "networkmanager" "wheel" "audio" ];
       packages = with pkgs; [
 #        brave
+        python3
         keepassxc
         libgcc
         clang

@@ -3,15 +3,6 @@ evaluation warning: Search engines are now referenced by id instead of by name, 
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://duckduckgo.com/favicon.ico"' instead
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://nixos.wiki/favicon.png"' instead
-these 4 derivations will be built:
-  /nix/store/2p424caxh6sh65lkbqwalgysbrvscww3-bookmarks.html.drv
-  /nix/store/n19vyw475j7p69jpvx0dvw1b81g7kwf2-hm_.mozillafirefoxdefaultuser.js.drv
-  /nix/store/x3kvgwbvrrl7qc60f0h8n8nxq8cpzd9w-home-manager-files.drv
-  /nix/store/531x5yn1a4w3xjx164a4hg4b3lkcv5fl-home-manager-generation.drv
-building '/nix/store/2p424caxh6sh65lkbqwalgysbrvscww3-bookmarks.html.drv'...
-building '/nix/store/n19vyw475j7p69jpvx0dvw1b81g7kwf2-hm_.mozillafirefoxdefaultuser.js.drv'...
-building '/nix/store/x3kvgwbvrrl7qc60f0h8n8nxq8cpzd9w-home-manager-files.drv'...
-building '/nix/store/531x5yn1a4w3xjx164a4hg4b3lkcv5fl-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
