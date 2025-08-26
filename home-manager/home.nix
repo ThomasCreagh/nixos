@@ -209,6 +209,7 @@
         "browser.search.defaultenginename" = "DuckDuckGo";
         "sidebar.verticalTabs" = "true";
         "browser.newtabpage.enabled" = "false";
+        "browser.newtabpage.activity-stream.enabled" = "false";
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
       userChrome = ''
