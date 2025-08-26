@@ -203,6 +203,15 @@
   # browser
   programs.firefox = {
     enable = true;
+    policies = {
+      Homepage = {
+        URL = "https://nixos.org";
+        Locked = true;
+      };
+      NewTabPage = false;
+      DisableTelemetry = true;
+    };
+
     profiles.default = {
       settings = {
         "browser.startup.homepage" = "https://nixos.org";

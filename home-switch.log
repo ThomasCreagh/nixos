@@ -3,6 +3,23 @@ evaluation warning: Search engines are now referenced by id instead of by name, 
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://duckduckgo.com/favicon.ico"' instead
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://nixos.wiki/favicon.png"' instead
+these 8 derivations will be built:
+  /nix/store/6mlzlb8b92xrlr19gxh4f6h1a34v68f5-policies.json.drv
+  /nix/store/z95qi9br2s71yvcsy8cvc83ymd9rvsfg-firefox-141.0.drv
+  /nix/store/1dnsf4jim2yc9l2har0fslda6bqvmrmw-home-manager-path.drv
+  /nix/store/fka5fsaqx6q199d7qi1v02v15n0vvy7m-activation-script.drv
+  /nix/store/6lx5gvf5ig7c7hmd25i7cpjin7xz5sjl-search.json.mozlz4.drv
+  /nix/store/8r738jf01ls5pcwk2jhdnh1a1vqp1is3-mozilla-native-messaging-hosts.drv
+  /nix/store/lch28z5x8n231fmr9s7hkmzjihihvzr2-home-manager-files.drv
+  /nix/store/0df2qwkk73ggc5xqwrqwrgb9brayrf5v-home-manager-generation.drv
+building '/nix/store/6mlzlb8b92xrlr19gxh4f6h1a34v68f5-policies.json.drv'...
+building '/nix/store/z95qi9br2s71yvcsy8cvc83ymd9rvsfg-firefox-141.0.drv'...
+building '/nix/store/1dnsf4jim2yc9l2har0fslda6bqvmrmw-home-manager-path.drv'...
+building '/nix/store/8r738jf01ls5pcwk2jhdnh1a1vqp1is3-mozilla-native-messaging-hosts.drv'...
+building '/nix/store/6lx5gvf5ig7c7hmd25i7cpjin7xz5sjl-search.json.mozlz4.drv'...
+building '/nix/store/lch28z5x8n231fmr9s7hkmzjihihvzr2-home-manager-files.drv'...
+building '/nix/store/fka5fsaqx6q199d7qi1v02v15n0vvy7m-activation-script.drv'...
+building '/nix/store/0df2qwkk73ggc5xqwrqwrgb9brayrf5v-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -10,6 +27,7 @@ Activating writeBoundary
 Activating installPackages
 replacing old 'home-manager-path'
 installing 'home-manager-path'
+building '/nix/store/y52rryfsf87pmiqxgz60c4gyyzb16zxw-user-environment.drv'...
 Activating dconfSettings
 Activating linkGeneration
 Cleaning up orphan links from /home/tom
