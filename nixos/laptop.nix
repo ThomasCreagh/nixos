@@ -17,4 +17,6 @@
     variant = "";
   };
 
+  console.keyMap = "us";
+
 }
