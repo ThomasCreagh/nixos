@@ -476,7 +476,7 @@
       ];
 
       input = {
-        kb_layout = "ie";
+        kb_layout = "us";
         touchpad = {
           natural_scroll = true;
         };
