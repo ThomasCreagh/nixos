@@ -56,6 +56,8 @@
   };
 
   services = {
+    tailscale.enable = true;
+    displayManager.ly.enable = true;
     syncthing = {
       enable = true;
       user = "tom";

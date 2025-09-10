@@ -232,7 +232,7 @@
           ublock-origin
           sponsorblock
           youtube-shorts-block
-          vimium
+          #vimium
         ];
       };
       bookmarks = {
