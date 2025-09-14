@@ -102,6 +102,8 @@
     wireplumber.enable = true;
   };
 
+  services.ofono.enable = true;
+
   hardware.bluetooth.enable = true;
 
   networking = {
