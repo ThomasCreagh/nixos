@@ -27,7 +27,6 @@
       description = "tom";
       extraGroups = [ "networkmanager" "wheel" "audio" ];
       packages = with pkgs; [
-#        brave
         python3
         keepassxc
         libgcc
@@ -38,7 +37,7 @@
         home-manager
         unzip
         discord
-#        firefox
+        tor-browser
       ];
     };
     syncthing = {
