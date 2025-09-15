@@ -266,6 +266,10 @@
                      name = "linkedin";
                      url = "https://linkedin.com";
                    }
+                   {
+                     name = "blackboard";
+                     url = "https://tcd.blackboard.com/";
+                   }
                  ];
               }
               {
