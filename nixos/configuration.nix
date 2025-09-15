@@ -40,6 +40,7 @@
         tor-browser
         linuxKernel.packages.linux_zen.perf
         unixtools.netstat
+        wireshark
       ];
     };
     syncthing = {
