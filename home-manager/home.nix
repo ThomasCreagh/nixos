@@ -116,7 +116,12 @@
         # These won't add gaps themselves, but are required context
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "pulseaudio" "battery" "network" ];
+        modules-right = [ "sni-tray" "pulseaudio" "battery" "network" ];
+
+        "sni-tray" = {
+          icon-size = 20;
+          spacing = 10;
+        };
 
         "clock" = {
           interval = 60;
