@@ -38,6 +38,9 @@
         unzip
         discord
         tor-browser
+        networkmanager
+        networkmanagerapplet
+        gnome-keyring
       ];
     };
     syncthing = {
@@ -57,6 +60,8 @@
   };
 
   services = {
+    dbus.enable = true;
+    gnome.gnome-keyring.enable = true;
     syncthing = {
       enable = true;
       user = "tom";
@@ -82,6 +87,7 @@
 
 
   programs = {
+    nm-applet.enable = true;
     hyprland = {
       enable = true;
       xwayland.enable = true;
