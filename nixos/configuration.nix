@@ -40,7 +40,6 @@
         tor-browser
         linuxKernel.packages.linux_zen.perf
         unixtools.netstat
-        wireshark
       ];
     };
     syncthing = {
@@ -86,6 +85,10 @@
 
 
   programs = {
+    wireshark = {
+      enable = true;
+      dumpcap.enable = true;
+    };
     hyprland = {
       enable = true;
       xwayland.enable = true;
