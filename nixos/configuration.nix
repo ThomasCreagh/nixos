@@ -87,6 +87,7 @@
 
 
   programs = {
+    dconf.enable = true;
     nm-applet.enable = true;
     hyprland = {
       enable = true;
