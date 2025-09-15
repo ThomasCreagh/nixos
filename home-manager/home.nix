@@ -135,10 +135,19 @@
           interval = 60;
         };
 
+				#"network" = {
+				#  format-wifi = " {essid} ({signalStrength}%)";
+				#  format-ethernet = " {ifname}";
+				#  format-disconnected = "⚠ Disconnected";
+				#};
         "network" = {
-          format-wifi = " {essid} ({signalStrength}%)";
-          format-ethernet = " {ifname}";
+          # use "auto" so it detects wlan/eth automatically
+          interface = "auto";
+          format-wifi = "{essid} ";
+          format-ethernet = "{ifname} 󰈀";
           format-disconnected = "⚠ Disconnected";
+          tooltip = true;
+          tooltip-format = "{ifname} via {gwaddr}";
         };
 
         "hyprland/workspaces" = {
