@@ -41,6 +41,7 @@
         networkmanager
         networkmanagerapplet
         gnome-keyring
+        snixembed
       ];
     };
     syncthing = {
