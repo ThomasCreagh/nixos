@@ -38,10 +38,6 @@
         unzip
         discord
         tor-browser
-        networkmanager
-        networkmanagerapplet
-        gnome-keyring
-        snixembed
       ];
     };
     syncthing = {
@@ -52,6 +48,7 @@
 
   environment = {
     systemPackages = with pkgs; [
+      networkmanager
       neofetch
       neovim
       bash
@@ -61,8 +58,6 @@
   };
 
   services = {
-    dbus.enable = true;
-    gnome.gnome-keyring.enable = true;
     syncthing = {
       enable = true;
       user = "tom";
@@ -88,8 +83,6 @@
 
 
   programs = {
-    dconf.enable = true;
-    nm-applet.enable = true;
     hyprland = {
       enable = true;
       xwayland.enable = true;
