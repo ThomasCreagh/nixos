@@ -31,8 +31,6 @@
     pkgs.brightnessctl
     pkgs.swaylock
     pkgs.swayidle
-    pkgs.networkmanagerapplet
-    pkgs.snixembed
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
     # # environment:
@@ -118,12 +116,7 @@
         # These won't add gaps themselves, but are required context
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "sni-tray" "pulseaudio" "battery" "network" ];
-
-        "sni-tray" = {
-          icon-size = 20;
-          spacing = 10;
-        };
+        modules-right = [ "pulseaudio" "battery" "network" ];
 
         "clock" = {
           interval = 60;
@@ -142,19 +135,10 @@
           interval = 60;
         };
 
-				#"network" = {
-				#  format-wifi = " {essid} ({signalStrength}%)";
-				#  format-ethernet = " {ifname}";
-				#  format-disconnected = "⚠ Disconnected";
-				#};
         "network" = {
-          # use "auto" so it detects wlan/eth automatically
-          interface = "auto";
-          format-wifi = "{essid} ";
-          format-ethernet = "{ifname} 󰈀";
+          format-wifi = " {essid} ({signalStrength}%)";
+          format-ethernet = " {ifname}";
           format-disconnected = "⚠ Disconnected";
-          tooltip = true;
-          tooltip-format = "{ifname} via {gwaddr}";
         };
 
         "hyprland/workspaces" = {
