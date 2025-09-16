@@ -41,6 +41,7 @@
         linuxKernel.packages.linux_zen.perf
         unixtools.netstat
         spotify
+        swi-prolog
       ];
     };
     syncthing = {
