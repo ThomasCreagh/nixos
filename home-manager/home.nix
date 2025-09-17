@@ -374,15 +374,18 @@
   programs.home-manager.enable = true;
 
   # services
-  services.swayidle = {
-    enable = true;
-    timeouts = [
-      { timeout = 300; command = "swaylock -f -c 000000"; } # lock after 5 min
-    ];
-    events = [
-      { event = "before-sleep"; command = "swaylock -f -c 000000"; }
-      { event = "lock"; command = "swaylock -f -c 000000"; }
-    ];
+  services = {
+    mako.enable = true;
+    swayidle = {
+      enable = true;
+      timeouts = [
+        { timeout = 300; command = "swaylock -f -c 000000"; } # lock after 5 min
+      ];
+      events = [
+        { event = "before-sleep"; command = "swaylock -f -c 000000"; }
+        { event = "lock"; command = "swaylock -f -c 000000"; }
+      ];
+    };
   };
 
 

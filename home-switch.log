@@ -3,13 +3,6 @@ evaluation warning: Search engines are now referenced by id instead of by name, 
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://duckduckgo.com/favicon.ico"' instead
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://nixos.wiki/favicon.png"' instead
-these 3 derivations will be built:
-  /nix/store/5yn4zh002qq9cnp2737k28kvv57kn363-hm-firefox-extensions.drv
-  /nix/store/b4l748ma1zdjry08dny0725rdax0vxdm-home-manager-files.drv
-  /nix/store/s4snsh11j24sqy23dl4hkayx8snvghwx-home-manager-generation.drv
-building '/nix/store/5yn4zh002qq9cnp2737k28kvv57kn363-hm-firefox-extensions.drv'...
-building '/nix/store/b4l748ma1zdjry08dny0725rdax0vxdm-home-manager-files.drv'...
-building '/nix/store/s4snsh11j24sqy23dl4hkayx8snvghwx-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -17,6 +10,7 @@ Activating writeBoundary
 Activating installPackages
 replacing old 'home-manager-path'
 installing 'home-manager-path'
+building '/nix/store/mvrcij93rn48cjykj50f4vpnc64cwvxm-user-environment.drv'...
 Activating dconfSettings
 Activating linkGeneration
 Cleaning up orphan links from /home/tom
