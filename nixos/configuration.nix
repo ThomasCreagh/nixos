@@ -37,6 +37,12 @@
         home-manager
         unzip
         discord
+        tor-browser
+        linuxKernel.packages.linux_zen.perf
+        unixtools.netstat
+        spotify
+        swi-prolog
+        haskell.compiler.ghc96
       ];
     };
     syncthing = {
@@ -47,6 +53,7 @@
 
   environment = {
     systemPackages = with pkgs; [
+      networkmanager
       neofetch
       neovim
       bash
@@ -83,6 +90,10 @@
 
 
   programs = {
+    wireshark = {
+      enable = true;
+      dumpcap.enable = true;
+    };
     hyprland = {
       enable = true;
       xwayland.enable = true;
@@ -102,6 +113,8 @@
     jack.enable = true;
     wireplumber.enable = true;
   };
+
+  services.ofono.enable = true;
 
   hardware.bluetooth.enable = true;
 

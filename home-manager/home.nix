@@ -77,6 +77,13 @@
   # programs
 
   # nvim
+  programs.fish = {
+    enable = true;
+    shellInit = ''
+      set -g fish_key_bindings fish_vi_key_bindings
+      neofetch
+    '';
+  };
   programs.neovim = {
     enable = true;
 
@@ -268,6 +275,10 @@
                    {
                      name = "linkedin";
                      url = "https://linkedin.com";
+                   }
+                   {
+                     name = "blackboard";
+                     url = "https://tcd.blackboard.com/";
                    }
                  ];
               }
