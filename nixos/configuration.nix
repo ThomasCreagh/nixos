@@ -43,6 +43,7 @@
         spotify
         swi-prolog
         haskell.compiler.ghc96
+        libnotify
       ];
     };
     syncthing = {
