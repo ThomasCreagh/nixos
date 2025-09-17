@@ -28,6 +28,7 @@
       variant = "";
     };
   };
+  console.keyMap = "us";
 
   hardware.nvidia = {
     modesetting.enable = true;

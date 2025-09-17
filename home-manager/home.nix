@@ -210,12 +210,22 @@
   # browser
   programs.firefox = {
     enable = true;
+    policies = {
+      Homepage = {
+        URL = "https://nixos.org";
+        Locked = true;
+      };
+      NewTabPage = false;
+      DisableTelemetry = true;
+    };
+
     profiles.default = {
       settings = {
         "browser.startup.homepage" = "https://nixos.org";
         "browser.search.defaultenginename" = "DuckDuckGo";
         "sidebar.verticalTabs" = "true";
         "browser.newtabpage.enabled" = "false";
+        "browser.newtabpage.activity-stream.enabled" = "false";
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
       userChrome = ''
