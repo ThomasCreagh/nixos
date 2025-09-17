@@ -374,15 +374,38 @@
   programs.home-manager.enable = true;
 
   # services
-  services.swayidle = {
-    enable = true;
-    timeouts = [
-      { timeout = 300; command = "swaylock -f -c 000000"; } # lock after 5 min
-    ];
-    events = [
-      { event = "before-sleep"; command = "swaylock -f -c 000000"; }
-      { event = "lock"; command = "swaylock -f -c 000000"; }
-    ];
+  services = {
+    mako = {
+      enable = true;
+      settings = {
+        "actionable=true" = {
+          anchor = "top-left";
+        };
+        actions = true;
+        anchor = "top-right";
+        background-color = "#3a5760";
+        border-color = "#a1d1cc";
+        border-radius = 10;
+        default-timeout = 0;
+        height = 100;
+        icons = true;
+        ignore-timeout = false;
+        layer = "top";
+        margin = 10;
+        markup = true;
+        width = 300;
+      };
+    };
+    swayidle = {
+      enable = true;
+      timeouts = [
+        { timeout = 300; command = "swaylock -f -c 000000"; } # lock after 5 min
+      ];
+      events = [
+        { event = "before-sleep"; command = "swaylock -f -c 000000"; }
+        { event = "lock"; command = "swaylock -f -c 000000"; }
+      ];
+    };
   };
 
 
@@ -406,8 +429,8 @@
       exec-once = [
         "waybar &"
         "wbg ~/.dotfiles/wallpapers/0.jpg"
+        "mako"
 #        "swww init &"
-#        "nm-applet &"
       ];
 
       bind = [
