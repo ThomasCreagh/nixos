@@ -429,8 +429,8 @@
       exec-once = [
         "waybar &"
         "wbg ~/.dotfiles/wallpapers/0.jpg"
+        "mako"
 #        "swww init &"
-#        "nm-applet &"
       ];
 
       bind = [
