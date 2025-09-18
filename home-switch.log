@@ -3,35 +3,6 @@ evaluation warning: Search engines are now referenced by id instead of by name, 
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://duckduckgo.com/favicon.ico"' instead
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://nixos.wiki/favicon.png"' instead
-these 14 derivations will be built:
-  /nix/store/ca23m1piddjknw2k2sgxav5bcsirklzv-rebsave.drv
-  /nix/store/07379ak6zvd49psxzc8cbqcqy9qpjg1h-rebsave-fish-completions.drv
-  /nix/store/bkwn80336g0xldd2jrjf6gk9jznwdggw-rebuild.drv
-  /nix/store/z1ynwmqc9l7dx1glbjgll48is01vdw8l-shutsave.drv
-  /nix/store/cvls6f1iqwkxvrqin46gh6jqc9hjbffd-man-paths.drv
-  /nix/store/hy00xyaf7kc14bnrw2rsxq90935b7m5p-man-cache.drv
-  /nix/store/974rn28y0naglpj2czy7rmqxfk9jhi82-hm_.manpath.drv
-  /nix/store/p8nhzj0pqn63m01vq7vzj9gh4y200c0x-home-manager-path.drv
-  /nix/store/j081lklpp9s3bx3d7prmqql8csblc5dd-activation-script.drv
-  /nix/store/lvarkhvjfgqw4p842hnd5lbv88bl71p3-shutsave-fish-completions.drv
-  /nix/store/vncffqlrhhhsaxccraas1ikflylk28m8-rebuild-fish-completions.drv
-  /nix/store/mc9v9xw72lzlz3zpqicyz7363vwrkjdp-tom-fish-completions.drv
-  /nix/store/sfjmxzc6d21wyamw6fsidzxqnnpr809d-home-manager-files.drv
-  /nix/store/hh63jvdyax0yvdvkymsgzssgrghlbgxq-home-manager-generation.drv
-building '/nix/store/ca23m1piddjknw2k2sgxav5bcsirklzv-rebsave.drv'...
-building '/nix/store/bkwn80336g0xldd2jrjf6gk9jznwdggw-rebuild.drv'...
-building '/nix/store/z1ynwmqc9l7dx1glbjgll48is01vdw8l-shutsave.drv'...
-building '/nix/store/vncffqlrhhhsaxccraas1ikflylk28m8-rebuild-fish-completions.drv'...
-building '/nix/store/p8nhzj0pqn63m01vq7vzj9gh4y200c0x-home-manager-path.drv'...
-building '/nix/store/cvls6f1iqwkxvrqin46gh6jqc9hjbffd-man-paths.drv'...
-building '/nix/store/07379ak6zvd49psxzc8cbqcqy9qpjg1h-rebsave-fish-completions.drv'...
-building '/nix/store/lvarkhvjfgqw4p842hnd5lbv88bl71p3-shutsave-fish-completions.drv'...
-building '/nix/store/hy00xyaf7kc14bnrw2rsxq90935b7m5p-man-cache.drv'...
-building '/nix/store/mc9v9xw72lzlz3zpqicyz7363vwrkjdp-tom-fish-completions.drv'...
-building '/nix/store/j081lklpp9s3bx3d7prmqql8csblc5dd-activation-script.drv'...
-building '/nix/store/974rn28y0naglpj2czy7rmqxfk9jhi82-hm_.manpath.drv'...
-building '/nix/store/sfjmxzc6d21wyamw6fsidzxqnnpr809d-home-manager-files.drv'...
-building '/nix/store/hh63jvdyax0yvdvkymsgzssgrghlbgxq-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -39,14 +10,12 @@ Activating writeBoundary
 Activating installPackages
 replacing old 'home-manager-path'
 installing 'home-manager-path'
-building '/nix/store/8ppl7yacjfdnwxcspcqsyfci5rkimc7d-user-environment.drv'...
 Activating dconfSettings
 Activating linkGeneration
 Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
 Activating reloadSystemd
-Starting units: swayidle.service
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 
 There are 255 unread and relevant news items.
