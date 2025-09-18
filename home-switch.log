@@ -3,6 +3,15 @@ evaluation warning: Search engines are now referenced by id instead of by name, 
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://duckduckgo.com/favicon.ico"' instead
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://nixos.wiki/favicon.png"' instead
+these 4 derivations will be built:
+  /nix/store/vq7jd78banswsbm6vwb2c1ihcviy021a-bookmarks.html.drv
+  /nix/store/hcwd34p8mqcf9ms74fpn7xm87yk6rdah-hm_.mozillafirefoxdefaultuser.js.drv
+  /nix/store/fd3j9yvr505rd6ip0a8dml6s4v97kw6i-home-manager-files.drv
+  /nix/store/6laxn1d8w8v9ilz3szpfxhfv86x95cqn-home-manager-generation.drv
+building '/nix/store/vq7jd78banswsbm6vwb2c1ihcviy021a-bookmarks.html.drv'...
+building '/nix/store/hcwd34p8mqcf9ms74fpn7xm87yk6rdah-hm_.mozillafirefoxdefaultuser.js.drv'...
+building '/nix/store/fd3j9yvr505rd6ip0a8dml6s4v97kw6i-home-manager-files.drv'...
+building '/nix/store/6laxn1d8w8v9ilz3szpfxhfv86x95cqn-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -16,6 +25,7 @@ Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
 Activating reloadSystemd
+Starting units: swayidle.service
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 
 There are 255 unread and relevant news items.

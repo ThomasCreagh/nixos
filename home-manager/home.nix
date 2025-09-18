@@ -339,6 +339,7 @@
                    }
                  ];
               }
+							
               {
                  name = "job";
                  bookmarks = [
@@ -365,6 +366,16 @@
                    }
                  ];
               }
+              {
+                 name = "cheatsheets";
+                 bookmarks = [
+                   {
+                     name = "firefox";
+                     url = "https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly?redirectslug=Keyboard+shortcuts&redirectlocale=en-US";
+                   }
+                 ];
+              }
+
             ];
           }
         ];
