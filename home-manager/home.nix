@@ -49,6 +49,18 @@
       bash ~/.dotfiles/rebuild $HOST
     '')
 
+    # trash
+    (writeShellScriptBin "trash" ''
+      if [ $# -lt 1 ]; then
+        echo "Usage: trash <file or dir>"
+        exit 1
+      fi
+
+      FILE="$1"
+      mv FILE ~/.trash/
+    '')
+
+
     # save an shutdown/reboot commands
     (writeShellScriptBin "shutsave" ''
       pushd ~/.dotfiles >> /dev/null
