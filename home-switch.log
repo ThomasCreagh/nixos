@@ -3,6 +3,15 @@ evaluation warning: Search engines are now referenced by id instead of by name, 
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://duckduckgo.com/favicon.ico"' instead
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://nixos.wiki/favicon.png"' instead
+these 4 derivations will be built:
+  /nix/store/s6dvvxlx07ixksn7dwvbgf37kdk8kqar-hm_hyprhyprland.conf.drv
+  /nix/store/qmqclkb6rbm7cw8sr3kvyn6d60d3a1cw-home-manager-files.drv
+  /nix/store/vf76kh95nlsybka3yy9yhrmv5avj5px0-activation-script.drv
+  /nix/store/y5lbsrpqvk9fzj3jyzc7928hv67q5j1q-home-manager-generation.drv
+building '/nix/store/s6dvvxlx07ixksn7dwvbgf37kdk8kqar-hm_hyprhyprland.conf.drv'...
+building '/nix/store/vf76kh95nlsybka3yy9yhrmv5avj5px0-activation-script.drv'...
+building '/nix/store/qmqclkb6rbm7cw8sr3kvyn6d60d3a1cw-home-manager-files.drv'...
+building '/nix/store/y5lbsrpqvk9fzj3jyzc7928hv67q5j1q-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -15,6 +24,7 @@ Activating linkGeneration
 Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
+ok
 Activating reloadSystemd
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 

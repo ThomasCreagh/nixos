@@ -502,6 +502,9 @@
         "$mod, P, pseudo"
         "$mod, J, togglesplit"
 
+        # SUPER+` takes a region screenshot, saves to Pictures, copies to clipboard
+        "$mod, grave, exec, grimblast save area - | tee ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png | wl-copy"
+
         # Move focus
         "$mod, left, movefocus, l"
         "$mod, right, movefocus, r"
