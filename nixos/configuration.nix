@@ -44,6 +44,8 @@
         swi-prolog
         haskell.compiler.ghc96
         libnotify
+        grimblast
+        wl-clipboard
       ];
     };
     syncthing = {
