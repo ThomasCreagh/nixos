@@ -93,7 +93,6 @@
 
 
   programs = {
-    nix-ld.enable = true;
     wireshark = {
       enable = true;
       dumpcap.enable = true;
