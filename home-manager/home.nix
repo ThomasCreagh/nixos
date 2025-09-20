@@ -68,21 +68,13 @@
 
     # save an shutdown/reboot commands
     (writeShellScriptBin "shutsave" ''
-      pushd ~/.dotfiles >> /dev/null
-      echo "saving..."
-      git push
-      echo "saved."
-      popd >> /dev/null
+      bash ~/.dotfiles/save
       echo "shutting down now."
       shutdown now
     '')
 
     (writeShellScriptBin "rebsave" ''
-      pushd ~/.dotfiles >> /dev/null
-      echo "saving..."
-      git push
-      echo "saved."
-      popd >> /dev/null
+      bash ~/.dotfiles/save
       echo "rebooting now."
       sudo reboot 0
     '')
