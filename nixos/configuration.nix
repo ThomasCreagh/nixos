@@ -44,6 +44,8 @@
         swi-prolog
         haskell.compiler.ghc96
         libnotify
+        grimblast
+        wl-clipboard
       ];
     };
     syncthing = {
@@ -90,6 +92,7 @@
   };
 
 
+  programs.nix-ld.enable = true;
   programs = {
     wireshark = {
       enable = true;

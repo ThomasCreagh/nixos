@@ -17,7 +17,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -26,17 +26,66 @@
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
-    pkgs.nerd-fonts.jetbrains-mono
-    pkgs.wbg
-    pkgs.brightnessctl
-    pkgs.swaylock
-    pkgs.swayidle
+    nerd-fonts.jetbrains-mono
+    wbg
+    brightnessctl
+    swaylock
+    swayidle
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
     # # environment:
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+
+    # rebuild command
+    (writeShellScriptBin "rebuild" ''
+      if [ $# -lt 1 ]; then
+        echo "Usage: rebuild <hostname>"
+        exit 1
+      fi
+
+      HOST="$1"
+      bash ~/.dotfiles/rebuild $HOST
+    '')
+
+    # save system to github
+    (writeShellScriptBin "save" ''
+      bash ~/.dotfiles/save
+    '')
+
+    # trash
+    (writeShellScriptBin "trash" ''
+      if [ $# -lt 1 ]; then
+        echo "Usage: trash <file or dir>"
+        exit 1
+      fi
+
+      DIR_NAME="$1"
+      mv $DIR_NAME ~/.trash/
+    '')
+
+
+    # save an shutdown/reboot commands
+    (writeShellScriptBin "shutsave" ''
+      pushd ~/.dotfiles >> /dev/null
+      echo "saving..."
+      git push
+      echo "saved."
+      popd >> /dev/null
+      echo "shutting down now."
+      shutdown now
+    '')
+
+    (writeShellScriptBin "rebsave" ''
+      pushd ~/.dotfiles >> /dev/null
+      echo "saving..."
+      git push
+      echo "saved."
+      popd >> /dev/null
+      echo "rebooting now."
+      sudo reboot 0
+    '')
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -307,6 +356,7 @@
                    }
                  ];
               }
+							
               {
                  name = "job";
                  bookmarks = [
@@ -333,6 +383,16 @@
                    }
                  ];
               }
+              {
+                 name = "cheatsheets";
+                 bookmarks = [
+                   {
+                     name = "firefox";
+                     url = "https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly?redirectslug=Keyboard+shortcuts&redirectlocale=en-US";
+                   }
+                 ];
+              }
+
             ];
           }
         ];
@@ -430,7 +490,7 @@
         "waybar &"
         "wbg ~/.dotfiles/wallpapers/0.jpg"
         "mako"
-#        "swww init &"
+        "swayidle -w timeout 300 'swaylock -f -c 000000' before-sleep 'swaylock -f -c 000000'"
       ];
 
       bind = [
@@ -446,6 +506,9 @@
         "$mod, R, exec, $menu"
         "$mod, P, pseudo"
         "$mod, J, togglesplit"
+
+        # SUPER+` takes a region screenshot, saves to Pictures, copies to clipboard
+        "$mod, grave, exec, grimblast save area - | tee ~/Pictures/screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png | wl-copy"
 
         # Move focus
         "$mod, left, movefocus, l"
