@@ -49,6 +49,11 @@
       bash ~/.dotfiles/rebuild $HOST
     '')
 
+    # save system to github
+    (writeShellScriptBin "save" ''
+      bash ~/.dotfiles/save
+    '')
+
     # trash
     (writeShellScriptBin "trash" ''
       if [ $# -lt 1 ]; then

@@ -6,13 +6,9 @@ lsblk: /dev/mapper/no*[0-9]: not a block device
 lsblk: /dev/mapper/block*[0-9]: not a block device
 lsblk: /dev/mapper/devices*[0-9]: not a block device
 lsblk: /dev/mapper/found*[0-9]: not a block device
-stopping the following units: systemd-tmpfiles-resetup.service
 activating the configuration...
 setting up /etc...
 reloading user units for tom...
 restarting sysinit-reactivation.target
-reloading the following units: dbus.service
-restarting the following units: polkit.service
-starting the following units: systemd-tmpfiles-resetup.service
 the following new units were started: NetworkManager-dispatcher.service
 Done. The new configuration is /nix/store/bxra3jr1fin53kwlc1ihvzqnxkajz3j0-nixos-system-nixos-25.11.20250804.cab7782
