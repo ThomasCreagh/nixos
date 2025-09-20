@@ -3,5 +3,7 @@ set -e
 pushd ~/.dotfiles >> /dev/null
 echo "Saving Nixos..."
 git push
+echo "removing old generations"
+sudo nix-collect-garbage -d --delete-older-than 15d
 popd >> /dev/null
 echo "Complete."
