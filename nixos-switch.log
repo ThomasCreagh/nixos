@@ -15,4 +15,4 @@ reloading the following units: dbus.service
 restarting the following units: polkit.service
 starting the following units: systemd-tmpfiles-resetup.service
 the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/k4q3bcxlx523z6n1g6jr83h5gy792hy3-nixos-system-nixos-25.11.20250804.cab7782
+Done. The new configuration is /nix/store/bxra3jr1fin53kwlc1ihvzqnxkajz3j0-nixos-system-nixos-25.11.20250804.cab7782
