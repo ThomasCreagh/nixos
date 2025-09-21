@@ -45,6 +45,7 @@
         libnotify
         grimblast
         wl-clipboard
+        usbutils
       ];
     };
     syncthing = {
