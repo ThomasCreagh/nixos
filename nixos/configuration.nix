@@ -46,6 +46,7 @@
         libnotify
         grimblast
         wl-clipboard
+        discord
       ];
     };
     syncthing = {
