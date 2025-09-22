@@ -47,6 +47,7 @@
         wl-clipboard
         discord
         usbutils
+        file
       ];
     };
     syncthing = {
