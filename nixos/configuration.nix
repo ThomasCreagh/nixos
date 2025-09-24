@@ -48,6 +48,7 @@
         discord
         usbutils
         file
+        niv
       ];
     };
     syncthing = {

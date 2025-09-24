@@ -1,3 +1,4 @@
+unpacking 'gitlab:rycee/nur-expressions/e6c2e889b34f5f623a7749a46e2aa5ea6e7256a0?narHash=sha256-KVPjWo/RVQBQe6N03cNbSVM/xNCv2506wE4A8wL73sk%3D' into the Git cache...
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
@@ -16,9 +17,4 @@ Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
 Activating reloadSystemd
-Starting units: swayidle.service
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
-
-There are 255 unread and relevant news items.
-Read them by running the command "home-manager news".
-
