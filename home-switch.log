@@ -3,6 +3,22 @@ evaluation warning: Search engines are now referenced by id instead of by name, 
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://duckduckgo.com/favicon.ico"' instead
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://nixos.wiki/favicon.png"' instead
+these 6 derivations will be built:
+  /nix/store/q3k0f8xa7izdnkgddhbs45bbaiv4f5xh-hm_hyprhyprland.conf.drv
+  /nix/store/2m6qdkls6csrzlkzm2lyq5xmk4hji9zg-activation-script.drv
+  /nix/store/5yn4zh002qq9cnp2737k28kvv57kn363-hm-firefox-extensions.drv
+  /nix/store/wl8zv4qii0byfza0igh569ivwx24j45z-user-dbus-services.drv
+  /nix/store/2pcnq543g7jhfr61fssng9jp3qlpv493-home-manager-files.drv
+  /nix/store/3jl1d4k6hxwwmn7crp9h175ybjmrd7j6-home-manager-generation.drv
+this path will be fetched (0.01 MiB download, 0.02 MiB unpacked):
+  /nix/store/n97a7dysj8xhiaacyr038ik8pmaydsq2-lndir-1.0.5
+copying path '/nix/store/n97a7dysj8xhiaacyr038ik8pmaydsq2-lndir-1.0.5' from 'https://cache.nixos.org'...
+building '/nix/store/5yn4zh002qq9cnp2737k28kvv57kn363-hm-firefox-extensions.drv'...
+building '/nix/store/q3k0f8xa7izdnkgddhbs45bbaiv4f5xh-hm_hyprhyprland.conf.drv'...
+building '/nix/store/2m6qdkls6csrzlkzm2lyq5xmk4hji9zg-activation-script.drv'...
+building '/nix/store/wl8zv4qii0byfza0igh569ivwx24j45z-user-dbus-services.drv'...
+building '/nix/store/2pcnq543g7jhfr61fssng9jp3qlpv493-home-manager-files.drv'...
+building '/nix/store/3jl1d4k6hxwwmn7crp9h175ybjmrd7j6-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -15,19 +31,6 @@ Activating linkGeneration
 Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
+ok
 Activating reloadSystemd
-The user systemd session is degraded:
-  UNIT             LOAD   ACTIVE SUB    DESCRIPTION
-● swayidle.service loaded failed failed Idle manager for Wayland
-
-Legend: LOAD   → Reflects whether the unit definition was properly loaded.
-        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
-        SUB    → The low-level unit activation state, values depend on unit type.
-
-1 loaded units listed.
-Attempting to reload services anyway...
-The service manager is degraded.
-Failed services: swayidle.service
-Attempting to continue anyway...
-Starting units: swayidle.service
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'

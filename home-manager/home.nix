@@ -489,6 +489,7 @@
         "$mod, Q, exec, $terminal"
         "$mod, W, exec, $webBrowser"
         "$mod, K, exec, keepassxc"
+        "$mod, Y, exec, signal-desktop"
         "$mod, O, exec, obsidian"
         "$mod, D, exec, discord"
         "$mod, C, killactive"
