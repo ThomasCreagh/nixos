@@ -49,6 +49,7 @@
         usbutils
         file
         niv
+        signal-desktop
       ];
     };
     syncthing = {
