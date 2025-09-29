@@ -50,9 +50,7 @@
         file
         niv
         signal-desktop
-        rtorrent
-        riseup-vpn
-        protonvpn-gui
+        vlc
       ];
     };
     syncthing = {
