@@ -52,6 +52,7 @@
         signal-desktop
         qbittorrent
         riseup-vpn
+        protonvpn-gui
       ];
     };
     syncthing = {
