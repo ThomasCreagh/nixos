@@ -51,6 +51,7 @@
         niv
         signal-desktop
         qbittorrent
+        riseup-vpn
       ];
     };
     syncthing = {
