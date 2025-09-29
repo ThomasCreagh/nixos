@@ -50,6 +50,7 @@
         file
         niv
         signal-desktop
+        qbittorrent
       ];
     };
     syncthing = {
