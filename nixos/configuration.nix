@@ -50,7 +50,7 @@
         file
         niv
         signal-desktop
-        qbittorrent
+        rtorrent
         riseup-vpn
         protonvpn-gui
       ];
