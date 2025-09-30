@@ -16,6 +16,12 @@
     layout = "us";
     variant = "";
   };
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size   = 16384;
+    }
+  ];
 
   console.keyMap = "us";
 

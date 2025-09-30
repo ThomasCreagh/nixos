@@ -3,6 +3,19 @@ evaluation warning: Search engines are now referenced by id instead of by name, 
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://duckduckgo.com/favicon.ico"' instead
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://nixos.wiki/favicon.png"' instead
+these 6 derivations will be built:
+  /nix/store/rqy41sisz55xbx80psm0cpgla2k8xb3f-hm_hyprhyprland.conf.drv
+  /nix/store/4i5d6j34sp6lvb7ahz69kl20mj149c4k-activation-script.drv
+  /nix/store/5yn4zh002qq9cnp2737k28kvv57kn363-hm-firefox-extensions.drv
+  /nix/store/wl8zv4qii0byfza0igh569ivwx24j45z-user-dbus-services.drv
+  /nix/store/ba97yb4ng4js4cxqp62fvfkgl0cd8k1d-home-manager-files.drv
+  /nix/store/mckw5dk2nn633qigqgn7vz75l1m5260i-home-manager-generation.drv
+building '/nix/store/5yn4zh002qq9cnp2737k28kvv57kn363-hm-firefox-extensions.drv'...
+building '/nix/store/rqy41sisz55xbx80psm0cpgla2k8xb3f-hm_hyprhyprland.conf.drv'...
+building '/nix/store/wl8zv4qii0byfza0igh569ivwx24j45z-user-dbus-services.drv'...
+building '/nix/store/4i5d6j34sp6lvb7ahz69kl20mj149c4k-activation-script.drv'...
+building '/nix/store/ba97yb4ng4js4cxqp62fvfkgl0cd8k1d-home-manager-files.drv'...
+building '/nix/store/mckw5dk2nn633qigqgn7vz75l1m5260i-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -15,5 +28,7 @@ Activating linkGeneration
 Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
+ok
 Activating reloadSystemd
+Starting units: swayidle.service
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
