@@ -59,6 +59,7 @@
         signal-desktop
         vlc
         qbittorrent
+        p7zip
       ];
     };
     syncthing = {
