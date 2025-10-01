@@ -86,20 +86,14 @@
       egl-wayland
       tree
 # virtual machine
+      qemu
       qemu_kvm
       qemu-utils
-      libvirt
       virt-manager
       virt-viewer
       libguestfs
-      OVMF
       jq
       git
-      (pkgs.writeShellScriptBin "qemu-system-x86_64-uefi" ''
-        qemu-system-x86_64 \
-          -bios ${pkgs.OVMF.fd}/FV/OVMF.fd \
-          "$@"
-      '')
     ];
   };
 
@@ -107,21 +101,32 @@
     libvirtd = {
       enable = true;
       qemu = {
-        package = pkgs.qemu_kvm;
-        runAsRoot = false;
         swtpm.enable = true;
-        ovmf = {
-          enable = true;
-          packages = [ pkgs.OVMFFull.fd ];
-					#packages = [(pkgs.OVMF.override {
-					#  secureBoot = true;
-					#  tpmSupport = true;
-					#}).fd];
-        };
+        ovmf.enable = true;
+        ovmf.packages = [ pkgs.OVMFFull.fd ];
       };
     };
     spiceUSBRedirection.enable = true;
   };
+#  virtualisation = {
+#    libvirtd = {
+#      enable = true;
+#      qemu = {
+#        package = pkgs.qemu_kvm;
+#        runAsRoot = false;
+#        swtpm.enable = true;
+#        ovmf = {
+#          enable = true;
+#          packages = [ pkgs.OVMFFull.fd ];
+#					#packages = [(pkgs.OVMF.override {
+#					#  secureBoot = true;
+#					#  tpmSupport = true;
+#					#}).fd];
+#        };
+#      };
+#    };
+#    spiceUSBRedirection.enable = true;
+#  };
 
   services = {
     tailscale.enable = true;
