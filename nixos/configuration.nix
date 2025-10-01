@@ -31,7 +31,7 @@
         "wheel"
         "audio"
         "kvm"
-        "libvirt"
+        "libvirtd"
       ];
       packages = with pkgs; [
         python3
