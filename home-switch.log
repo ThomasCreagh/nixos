@@ -16,6 +16,20 @@ Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
 Activating reloadSystemd
+The user systemd session is degraded:
+  UNIT             LOAD   ACTIVE SUB    DESCRIPTION
+● swayidle.service loaded failed failed Idle manager for Wayland
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+1 loaded units listed.
+Attempting to reload services anyway...
+The service manager is degraded.
+Failed services: swayidle.service
+Attempting to continue anyway...
+Starting units: swayidle.service
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 
 There are 255 unread and relevant news items.

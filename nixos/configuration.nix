@@ -58,6 +58,7 @@
         niv
         signal-desktop
         vlc
+        qbittorrent
       ];
     };
     syncthing = {
