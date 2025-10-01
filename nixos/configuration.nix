@@ -29,8 +29,8 @@
         "networkmanager"
         "wheel"
         "audio"
-        "libvirt"
         "kvm"
+        "libvirt"
       ];
       packages = with pkgs; [
         python3
@@ -85,6 +85,8 @@
       git
     ];
   };
+
+  virtualisation.libvirtd.enable = true;
 
   services = {
     tailscale.enable = true;
