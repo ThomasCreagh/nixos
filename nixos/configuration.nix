@@ -20,6 +20,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
+  users.groups.libvirtd.members = ["tom"];
   users.users = {
     tom = {
       shell = pkgs.fish;
@@ -87,7 +88,10 @@
     ];
   };
 
-  virtualisation.libvirtd.enable = true;
+  virtualisation = {
+    libvirtd.enable = true;
+    spiceUSBRedirection.enable = true;
+  };
 
   services = {
     tailscale.enable = true;
@@ -116,6 +120,7 @@
   };
 
 
+  programs.virt-manager.enable = true;
   programs.nix-ld.enable = true;
   programs = {
     wireshark = {
