@@ -77,7 +77,6 @@
       egl-wayland
       tree
 # virtual machine
-      qemu
       qemu_kvm
       qemu-utils
       libvirt
