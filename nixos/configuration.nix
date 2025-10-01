@@ -75,6 +75,7 @@
       tree
 # virtual machines
       qemu
+      qemu_kvm
       qemu-utils
       libvirt
       virt-manager
