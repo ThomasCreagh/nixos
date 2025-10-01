@@ -25,7 +25,13 @@
       shell = pkgs.fish;
       isNormalUser = true;
       description = "tom";
-      extraGroups = [ "networkmanager" "wheel" "audio" ];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+        "audio"
+        "libvirt"
+        "kvm"
+      ];
       packages = with pkgs; [
         python3
         keepassxc
@@ -67,6 +73,16 @@
       bash
       egl-wayland
       tree
+# virtual machines
+      qemu
+      qemu-utils
+      libvirt
+      virt-manager
+      virt-viewer
+      libguestfs
+      OVMF
+      jq
+      git
     ];
   };
 
