@@ -68,6 +68,15 @@
     };
   };
 
+  environment.etc = {
+    "ovmf/edk2-x86_64-secure-code.fd" = {
+      source = config.virtualisation.libvirtd.qemu.package + "/share/qemu/edk2-x86_64-secure-code.fd";
+    };
+
+    "ovmf/edk2-i386-vars.fd" = {
+      source = config.virtualisation.libvirtd.qemu.package + "/share/qemu/edk2-i386-vars.fd";
+    };
+  };
   environment = {
     systemPackages = with pkgs; [
       networkmanager
@@ -99,14 +108,15 @@
       enable = true;
       qemu = {
         package = pkgs.qemu_kvm;
-        runAsRoot = true;
+        runAsRoot = false;
         swtpm.enable = true;
         ovmf = {
           enable = true;
-          packages = [(pkgs.OVMF.override {
-            secureBoot = true;
-            tpmSupport = true;
-          }).fd];
+          packages = [ pkgs.OVMFFull.fd ];
+					#packages = [(pkgs.OVMF.override {
+					#  secureBoot = true;
+					#  tpmSupport = true;
+					#}).fd];
         };
       };
     };
