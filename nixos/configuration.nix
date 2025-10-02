@@ -76,16 +76,28 @@
       bash
       egl-wayland
       tree
+      virt-manager
+      OVMF
       git
     ];
   };
 
+  virtualisation.spiceUSBRedirection.enable = true;
   virtualisation.libvirtd = {
     enable = true;
     qemu = {
       package = pkgs.qemu_kvm;
+      runAsRoot = false;
       swtpm.enable = true;
-      ovmf.enable = true;
+      ovmf = {
+        enable = true;
+        packages = [
+          (pkgs.OVMF.override {
+            secureBoot = true;
+            tpmSupport = true;
+          }).fd
+        ];
+      };
     };
   };
 
