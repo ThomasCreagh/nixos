@@ -85,7 +85,7 @@
     qemu = {
       package = pkgs.qemu_kvm;
       swtpm.enable = true;
-      ovmf.enable = true;
+      #ovmf.enable = true;
     };
   };
 
