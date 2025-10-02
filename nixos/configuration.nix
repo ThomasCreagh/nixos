@@ -151,6 +151,7 @@
   networking.nat = {
     enable = true;
     internalInterfaces = ["virbr0"];
+    externalInterface = "wlp5s0";
   };
 
   networking = {
