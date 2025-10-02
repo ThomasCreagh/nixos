@@ -151,6 +151,7 @@
   hardware.bluetooth.enable = true;
 
   networking = {
+    nftables.enable = true;
     networkmanager.enable = true;
     firewall.allowedTCPPorts = [ 8384 ];
     hostName = "nixos";
