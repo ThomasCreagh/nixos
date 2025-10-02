@@ -77,11 +77,13 @@
       egl-wayland
       tree
       git
+      dnsmasq
     ];
   };
 
   virtualisation.libvirtd = {
     enable = true;
+    allowedBridges = [ "virbr0" "br0" ];
     qemu = {
       package = pkgs.qemu_kvm;
       swtpm.enable = true;
