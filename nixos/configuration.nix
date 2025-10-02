@@ -92,6 +92,7 @@
   };
 
   services = {
+		#    dnsmasq.enable = true;
     tailscale.enable = true;
     displayManager.ly.enable = true;
     syncthing = {
