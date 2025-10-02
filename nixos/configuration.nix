@@ -68,15 +68,6 @@
     };
   };
 
-  environment.etc = {
-    "ovmf/edk2-x86_64-secure-code.fd" = {
-      source = config.virtualisation.libvirtd.qemu.package + "/share/qemu/edk2-x86_64-secure-code.fd";
-    };
-
-    "ovmf/edk2-i386-vars.fd" = {
-      source = config.virtualisation.libvirtd.qemu.package + "/share/qemu/edk2-i386-vars.fd";
-    };
-  };
   environment = {
     systemPackages = with pkgs; [
       networkmanager
@@ -86,47 +77,32 @@
       egl-wayland
       tree
 # virtual machine
-      qemu
-      qemu_kvm
-      qemu-utils
-      virt-manager
-      virt-viewer
-      libguestfs
-      jq
+#      qemu
+#      qemu_kvm
+#      qemu-utils
+#      virt-viewer
+#      libguestfs
+#      jq
       git
     ];
   };
 
-  virtualisation = {
-    libvirtd = {
-      enable = true;
-      qemu = {
-        swtpm.enable = true;
-        ovmf.enable = true;
-        ovmf.packages = [ pkgs.OVMFFull.fd ];
+  virtualisation.spiceUSBRedirection.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      package = pkgs.qemu_kvm;
+      runAsRoot = true;
+      swtpm.enable = true;
+      ovmf = {
+        enable = true;
+        packages = [(pkgs.OVMF.override {
+          secureBoot = true;
+          tpmSupport = true;
+        }).fd];
       };
     };
-    spiceUSBRedirection.enable = true;
   };
-#  virtualisation = {
-#    libvirtd = {
-#      enable = true;
-#      qemu = {
-#        package = pkgs.qemu_kvm;
-#        runAsRoot = false;
-#        swtpm.enable = true;
-#        ovmf = {
-#          enable = true;
-#          packages = [ pkgs.OVMFFull.fd ];
-#					#packages = [(pkgs.OVMF.override {
-#					#  secureBoot = true;
-#					#  tpmSupport = true;
-#					#}).fd];
-#        };
-#      };
-#    };
-#    spiceUSBRedirection.enable = true;
-#  };
 
   services = {
     tailscale.enable = true;
