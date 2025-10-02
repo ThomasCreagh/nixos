@@ -87,12 +87,10 @@
     qemu = {
       package = pkgs.qemu_kvm;
       swtpm.enable = true;
-      #ovmf.enable = true;
     };
   };
 
   services = {
-		#    dnsmasq.enable = true;
     tailscale.enable = true;
     displayManager.ly.enable = true;
     syncthing = {
@@ -145,13 +143,17 @@
     jack.enable = true;
     wireplumber.enable = true;
   };
-
   services.ofono.enable = true;
 
   hardware.bluetooth.enable = true;
 
+  networking.firewall.checkReversePath = false;
+  networking.nat = {
+    enable = true;
+    internalInterfaces = ["virbr0"];
+  };
+
   networking = {
-    nftables.enable = true;
     networkmanager.enable = true;
     firewall.allowedTCPPorts = [ 8384 ];
     hostName = "nixos";
