@@ -78,6 +78,10 @@
       tree
       git
       dnsmasq
+      spice spice-gtk
+      spice-protocol
+      win-virtio
+      win-spice
     ];
   };
 
@@ -90,8 +94,11 @@
       package = pkgs.qemu_kvm;
       swtpm.enable = true;
       ovmf.enable = true;
+      #ovmf.package = [ pkgs.OVMFFull.fd ];
     };
   };
+  virtualisation.spiceUSBRedirection.enable = true;
+  services.spice-vdagentd.enable = true;
 
   services = {
     tailscale.enable = true;
