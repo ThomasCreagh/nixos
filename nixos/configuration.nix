@@ -166,6 +166,9 @@
 
   networking = {
     networkmanager.enable = true;
+    firewall = {
+      trustedInterfaces = [ "wlp5s0" "virbr0" ];
+    };
     firewall.allowedTCPPorts = [ 8384 ];
     hostName = "nixos";
   };
