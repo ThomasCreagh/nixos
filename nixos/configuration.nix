@@ -60,7 +60,6 @@
         vlc
         qbittorrent
         p7zip
-        openjdk17
       ];
     };
     syncthing = {
