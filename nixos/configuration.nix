@@ -82,6 +82,7 @@
       spice-protocol
       win-virtio
       win-spice
+      virt-viewer
     ];
   };
 
