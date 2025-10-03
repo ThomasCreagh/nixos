@@ -493,13 +493,16 @@
         "$mod, Y, exec, signal-desktop"
         "$mod, O, exec, obsidian"
         "$mod, D, exec, discord"
+        "$mod, E, exec, $fileManager"
+        "$mod, R, exec, $menu"
+
         "$mod, C, killactive"
         "$mod, M, exit"
-        "$mod, E, exec, $fileManager"
         "$mod, V, togglefloating"
-        "$mod, R, exec, $menu"
         "$mod, P, pseudo"
         "$mod, J, togglesplit"
+        "$mod, F, fullscreen"
+        "$mod, SHIFT, F, fullscreen, 1"
 
         # SUPER+` takes a region screenshot, saves to Pictures, copies to clipboard
         "$mod, grave, exec, grimblast save area - | tee ~/Pictures/screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png | wl-copy"
