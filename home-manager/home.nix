@@ -501,8 +501,8 @@
         "$mod, V, togglefloating"
         "$mod, P, pseudo"
         "$mod, J, togglesplit"
-        "$mod, F, fullscreen"
-        "$mod SHIFT, F, fullscreen, 1"
+        "$mod, F, fullscreen, 1"
+        "$mod SHIFT, F, fullscreen"
 
         # SUPER+` takes a region screenshot, saves to Pictures, copies to clipboard
         "$mod, grave, exec, grimblast save area - | tee ~/Pictures/screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png | wl-copy"
