@@ -81,6 +81,8 @@
     ];
   };
 
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
   virtualisation.libvirtd = {
     enable = true;
     allowedBridges = [ "virbr0" "br0" ];
