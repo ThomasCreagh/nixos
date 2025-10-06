@@ -16,4 +16,9 @@ Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
 Activating reloadSystemd
+Starting units: swayidle.service
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
+
+There are 255 unread and relevant news items.
+Read them by running the command "home-manager news".
+
