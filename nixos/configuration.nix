@@ -60,6 +60,7 @@
         vlc
         qbittorrent
         p7zip
+        openvpn
       ];
     };
     syncthing = {
