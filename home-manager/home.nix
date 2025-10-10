@@ -135,7 +135,7 @@
   };
   home.file.".config/nvim".source = ../nvim;
 
-  programs.imv.enable = true; # image viewer
+  programs.feh.enable = true; # image viewer
 
   gtk = {
     enable = true;
