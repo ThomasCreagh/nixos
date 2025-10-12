@@ -38,7 +38,6 @@
         keepassxc
         libgcc
         clang
-        zig
         pavucontrol
         obsidian
         home-manager
