@@ -3,6 +3,7 @@ evaluation warning: Search engines are now referenced by id instead of by name, 
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://duckduckgo.com/favicon.ico"' instead
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://nixos.wiki/favicon.png"' instead
+<<<<<<< HEAD
 these 8 derivations will be built:
   /nix/store/pzn05g93qgdp2d852vsldjhmyqxnfmv4-builder.pl.drv
   /nix/store/5yn4zh002qq9cnp2737k28kvv57kn363-hm-firefox-extensions.drv
@@ -35,6 +36,8 @@ building '/nix/store/ix9y3rk1bk41p74n0rzf4i0r6nv8w41q-hm_.mozillafirefoxdefaultu
 building '/nix/store/5yn4zh002qq9cnp2737k28kvv57kn363-hm-firefox-extensions.drv'...
 building '/nix/store/fihfl2v38zwpsv4my3dz10zw9g3v1736-home-manager-files.drv'...
 building '/nix/store/4lk5mfy4zzmxsb6jpg955kkml1xlwr6d-home-manager-generation.drv'...
+=======
+>>>>>>> refs/remotes/origin/master
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -50,3 +53,7 @@ Activating onFilesChange
 Activating reloadSystemd
 Starting units: swayidle.service
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
+
+There are 256 unread and relevant news items.
+Read them by running the command "home-manager news".
+
