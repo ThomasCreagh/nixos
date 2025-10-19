@@ -382,6 +382,10 @@
                      name = "firefox";
                      url = "https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly?redirectslug=Keyboard+shortcuts&redirectlocale=en-US";
                    }
+                   {
+                     name = "tmux";
+                     url = "https://tmuxcheatsheet.com/";
+                   }
                  ];
               }
 
