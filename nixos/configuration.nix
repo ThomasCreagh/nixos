@@ -60,6 +60,7 @@
         qbittorrent
         p7zip
         openvpn
+        ardour
       ];
     };
     syncthing = {
