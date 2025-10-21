@@ -254,8 +254,18 @@ setting up /etc...
 removing obsolete symlink ‘/etc/systemd/network/40-vboxnet0.link’...
 reloading user units for tom...
 restarting sysinit-reactivation.target
+<<<<<<< HEAD
 reloading the following units: dbus.service
 restarting the following units: polkit.service, systemd-udevd.service
 starting the following units: network-setup.service, NetworkManager.service, systemd-modules-load.service, systemd-sysctl.service
 the following new units were started: docker-prune.timer, docker.service, docker.socket, network-online.target, NetworkManager-dispatcher.service, NetworkManager-wait-online.service, sys-devices-virtual-net-docker0.device, sys-subsystem-net-devices-docker0.device, sysinit-reactivation.target, systemd-hostnamed.service, systemd-tmpfiles-resetup.service, var-lib-docker-overlay2-opaque\x2dbug\x2dcheck2811127790-merged.mount
 Done. The new configuration is /nix/store/ic7qsp90kb0dfgsjbxsanrvd16q6s7ix-nixos-system-nixos-25.11.20250804.cab7782
+=======
+<<<<<<< HEAD
+the following new units were started: NetworkManager-dispatcher.service, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
+Done. The new configuration is /nix/store/3simbib46c54mk0skgnlqdy4q50j2mwa-nixos-system-nixos-25.11.20250804.cab7782
+=======
+the following new units were started: NetworkManager-dispatcher.service
+Done. The new configuration is /nix/store/f8zrn84j160cazld3dhm9h1cqbchr480-nixos-system-nixos-25.11.20250804.cab7782
+>>>>>>> refs/remotes/origin/master
+>>>>>>> refs/remotes/origin/master

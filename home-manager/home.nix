@@ -348,7 +348,6 @@
                    }
                  ];
               }
-							
               {
                  name = "job";
                  bookmarks = [
@@ -363,6 +362,15 @@
                    {
                      name = "personal website";
                      url = "https://thomascreagh.github.io";
+                   }
+                 ];
+              }
+              {
+                 name = "prog misc";
+                 bookmarks = [
+                   {
+                     name = "css docs";
+                     url = "https://developer.mozilla.org/en-US/docs";
                    }
                  ];
               }
