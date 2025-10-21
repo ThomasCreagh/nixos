@@ -32,6 +32,7 @@
         "audio"
         "kvm"
         "libvirtd"
+        "docker"
       ];
       packages = with pkgs; [
         python3
@@ -87,8 +88,15 @@
     ];
   };
 
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
+    autoPrune = {
+      enable = true;
+      dates = "weekly";
+    };
+  };
+
   virtualisation.libvirtd = {
     enable = true;
     allowedBridges = [ "virbr0" "br0" ];
@@ -96,7 +104,6 @@
       package = pkgs.qemu_kvm;
       swtpm.enable = true;
       ovmf.enable = true;
-      #ovmf.package = [ pkgs.OVMFFull.fd ];
     };
   };
   virtualisation.spiceUSBRedirection.enable = true;
