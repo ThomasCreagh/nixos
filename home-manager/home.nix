@@ -588,8 +588,10 @@
         };
       };
 
-      "device:synps/2-synaptics-touchpad" = {
-        enabled = false;
+      device = {
+        "synps/2-synaptics-touchpad" = {
+          enabled = false;
+        };
       };
 
       misc = {
