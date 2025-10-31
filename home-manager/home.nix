@@ -116,6 +116,7 @@
   };
 
   # programs
+  programs.wofi.enable = true;
 
   # nvim
   programs.fish = {
