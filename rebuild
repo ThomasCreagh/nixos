@@ -5,7 +5,7 @@ if [ -z "$1" ]; then
 fi
 set -e
 pushd ~/.dotfiles >> /dev/null
-vim flake.nix
+nvim flake.nix
 git diff -U0 -- . ':(exclude)*.log'
 echo "Rebuilding Nixos..."
 sudo nixos-rebuild switch --flake path:.#$1 &>nixos-switch.log || (cat nixos-switch.log | grep --color error && false)

@@ -110,6 +110,10 @@
   services.spice-vdagentd.enable = true;
 
   services = {
+    libinput = {
+      enable = true;
+      touchpad.sendEventsMode = "disabled";
+    };
     tailscale.enable = true;
     displayManager.ly.enable = true;
     syncthing = {
