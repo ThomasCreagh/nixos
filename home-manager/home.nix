@@ -481,9 +481,7 @@
       animations {
         enabled = no
       }
-      device:synps/2-synaptics-touchpad {
-        enabled = false
-      }
+      device:synps/2-synaptics-touchpad:enabled false
     '';
 
     settings = {
