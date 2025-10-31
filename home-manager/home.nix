@@ -588,6 +588,10 @@
         };
       };
 
+      "device:synps/2-synaptics-touchpad" = {
+        enabled = false;
+      };
+
       misc = {
         force_default_wallpaper = 0;
         disable_hyprland_logo = true;
