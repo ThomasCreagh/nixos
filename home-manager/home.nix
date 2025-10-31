@@ -116,7 +116,15 @@
   };
 
   # programs
-  programs.wofi.enable = true;
+  programs.wofi = {
+    enable = true;
+    style = ''
+      window {
+        background-color: #21325b;
+        color: #e3e6ed;
+      }
+    '';
+  };
 
   # nvim
   programs.fish = {
