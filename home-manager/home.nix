@@ -120,8 +120,8 @@
     enable = true;
     style = ''
       window {
-        background-color: #21325b;
-        color: #e3e6ed;
+        background-color: #1a1b26;
+        color: #c0caf5;
       }
     '';
   };
