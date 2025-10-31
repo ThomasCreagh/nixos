@@ -481,6 +481,9 @@
       animations {
         enabled = no
       }
+      device:synps/2-synaptics-touchpad {
+        enabled = false
+      }
     '';
 
     settings = {
@@ -585,12 +588,6 @@
         kb_layout = "us";
         touchpad = {
           natural_scroll = true;
-        };
-      };
-
-      device = {
-        "synps/2-synaptics-touchpad" = {
-          enabled = false;
         };
       };
 
