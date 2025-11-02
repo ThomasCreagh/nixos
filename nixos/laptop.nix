@@ -8,12 +8,18 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  #boot.loader.grub.enable = true;
-  #boot.loader.grub.device = "/dev/nvme0n1";
-  #boot.loader.grub.useOSProber = true;
+  boot.kernelParams = [
+    "amdgpu.runpm=0"
+    "amdgpu.deep_color=0"
+  ];
+
+  hardware.enableRedistributableFirmware = true;
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  services.logind.lidSwitch = "ignore";
+  services.logind.lidSwitchDocked = "ignore";
+  services.power-profiles-daemon.enable = true;
   services.xserver.xkb = {
     layout = "us";
     variant = "";
