@@ -17,7 +17,7 @@
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  services.logind.lidSwitch = "suspend";
+  services.logind.lidSwitch = "ignore";
   services.logind.lidSwitchDocked = "ignore";
   services.power-profiles-daemon.enable = true;
   services.xserver.xkb = {
