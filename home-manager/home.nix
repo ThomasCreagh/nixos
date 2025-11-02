@@ -495,11 +495,11 @@
       "$menu" = "wofi --show drun";
 
 			# swayidle -w timeout 300 '
+			#"swaylock -f -c 000000' before-sleep 'swaylock -f -c 000000'"
       exec-once = [
         "waybar &"
         "wbg ~/.dotfiles/wallpapers/0.jpg"
         "mako"
-        "swaylock -f -c 000000' before-sleep 'swaylock -f -c 000000'"
       ];
 
       bind = [
