@@ -62,7 +62,7 @@
         p7zip
         openvpn
         ardour
-        protonvpn-cli
+        protonvpn-gui
       ];
     };
     syncthing = {
