@@ -63,6 +63,7 @@
         openvpn
         ardour
         protonvpn-gui
+        protonvpn-cli
       ];
     };
     syncthing = {
