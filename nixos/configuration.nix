@@ -64,6 +64,7 @@
         ardour
         protonvpn-gui
         protonvpn-cli
+        pandoc
       ];
     };
     syncthing = {

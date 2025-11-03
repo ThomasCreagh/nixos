@@ -116,6 +116,20 @@
   };
 
   # programs
+  programs.wofi = {
+    enable = true;
+    style = ''
+      window {
+        background-color: #1a1b26;
+        color: #c0caf5;
+      }
+      #input {
+        background-color: #1a1b26;
+        color: #c0caf5;
+        border: none;
+      }
+    '';
+  };
 
   # nvim
   programs.fish = {
@@ -511,6 +525,7 @@
         "$mod, D, exec, discord"
         "$mod, E, exec, $fileManager"
         "$mod, R, exec, $menu"
+        "$mod, S, exec, wofi --show drun"
 
         "$mod, C, killactive"
         "$mod, M, exit"
@@ -554,8 +569,8 @@
         "$mod SHIFT, 0, movetoworkspace, 10"
 
         # Special workspace
-        "$mod, S, togglespecialworkspace, magic"
-        "$mod, SHIFT S, movetoworkspace, special:magic"
+        #"$mod, S, togglespecialworkspace, magic"
+        #"$mod, SHIFT S, movetoworkspace, special:magic"
 
         # resize windows click and drag
       ];
