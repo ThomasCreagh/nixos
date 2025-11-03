@@ -177,12 +177,14 @@
     externalInterface = "wlp5s0";
   };
 
+
   networking = {
     networkmanager.enable = true;
     firewall = {
       trustedInterfaces = [ "wlp5s0" "virbr0" ];
+      allowedTCPPorts = [ 8384 ];
+      allowedUDPPorts = [ 41641 ];
     };
-    firewall.allowedTCPPorts = [ 8384 ];
     hostName = "nixos";
   };
 
