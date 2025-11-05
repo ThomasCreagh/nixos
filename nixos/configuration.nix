@@ -65,6 +65,7 @@
         protonvpn-gui
         protonvpn-cli
         pandoc
+        wireguard-tools
       ];
     };
     syncthing = {
