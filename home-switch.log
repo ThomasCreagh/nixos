@@ -30,7 +30,10 @@ Creating home file links in /home/tom
 Activating onFilesChange
 ok
 Activating reloadSystemd
+<<<<<<< HEAD
+=======
 Starting units: swayidle.service
+>>>>>>> a664720a9174eb363c8247c52091c5597b751451
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 
 There are 256 unread and relevant news items.

@@ -62,10 +62,9 @@
         p7zip
         openvpn
         ardour
-        protonvpn-gui
-        protonvpn-cli
         pandoc
         wireguard-tools
+        mullvad-vpn
       ];
     };
     syncthing = {
@@ -118,7 +117,11 @@
       enable = true;
       touchpad.sendEventsMode = "disabled";
     };
+<<<<<<< HEAD
+    mullvad-vpn.enable = true;
+=======
     tailscale.enable = true;
+>>>>>>> a664720a9174eb363c8247c52091c5597b751451
     displayManager.ly.enable = true;
     syncthing = {
       enable = true;

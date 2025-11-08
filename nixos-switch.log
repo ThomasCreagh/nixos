@@ -1,4 +1,5 @@
 building the system configuration...
+<<<<<<< HEAD
 these 67 derivations will be built:
   /nix/store/1fsd10mp2kkxnbrhix8py6yqv8y21z6p-unit-pipewire.socket-disabled.drv
   /nix/store/rcgmhh249i2n38lgxhc4361246bz0pyd-fish_patched-completion-generator.drv
@@ -399,11 +400,42 @@ Its output will be used to detect bootable binaries on them and create new boot 
 lsblk: /dev/mapper/no*[0-9]: not a block device
 lsblk: /dev/mapper/raid*[0-9]: not a block device
 lsblk: /dev/mapper/disks*[0-9]: not a block device
+=======
+<<<<<<< HEAD
+these 2 derivations will be built:
+  /nix/store/1jm4vya5jfi4lxjz07vs6blwhyzi1zr5-etc.drv
+  /nix/store/gkyxps5alb0mg5z3dxzbbam30fbg7h83-nixos-system-nixos-25.11.20250804.cab7782.drv
+building '/nix/store/1jm4vya5jfi4lxjz07vs6blwhyzi1zr5-etc.drv'...
+building '/nix/store/gkyxps5alb0mg5z3dxzbbam30fbg7h83-nixos-system-nixos-25.11.20250804.cab7782.drv'...
+=======
+these 3 derivations will be built:
+  /nix/store/6b1rkxy438hn02l8qyx5g7ca6xkqgycf-system-units.drv
+  /nix/store/ib3fi71yxl7cw7fvfa7y1cybjx0jljj0-etc.drv
+  /nix/store/6ncbhxsb4yzsdhbgadn3z7n69frg4aij-nixos-system-nixos-25.11.20250804.cab7782.drv
+building '/nix/store/6b1rkxy438hn02l8qyx5g7ca6xkqgycf-system-units.drv'...
+building '/nix/store/ib3fi71yxl7cw7fvfa7y1cybjx0jljj0-etc.drv'...
+building '/nix/store/6ncbhxsb4yzsdhbgadn3z7n69frg4aij-nixos-system-nixos-25.11.20250804.cab7782.drv'...
+stopping the following units: systemd-modules-load.service, wireguard-wg0-peer-SiK03VH5ayt0NRwAzf9O3IoxbE05Qh0LfT6G6vnBeGw\x3d.service, wireguard-wg0.service, wireguard-wg0.target
+>>>>>>> a664720a9174eb363c8247c52091c5597b751451
+>>>>>>> refs/remotes/origin/master
 activating the configuration...
 setting up /etc...
 reloading user units for tom...
 restarting sysinit-reactivation.target
+<<<<<<< HEAD
 reloading the following units: dbus.service, firewall.service
 restarting the following units: polkit.service, systemd-udevd.service
 the following new units were started: NetworkManager-dispatcher.service, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
 Done. The new configuration is /nix/store/4pnf55gfzp3a2q208hdnp667vxlxyvv5-nixos-system-nixos-25.11.20250804.cab7782
+=======
+reloading the following units: dbus.service
+restarting the following units: polkit.service
+<<<<<<< HEAD
+the following new units were started: libvirtd.service, mullvad-daemon.service, NetworkManager-dispatcher.service
+Done. The new configuration is /nix/store/y60m9g6gqj5q2kq1p85krn89nk91ylck-nixos-system-nixos-25.11.20250804.cab7782
+=======
+starting the following units: systemd-modules-load.service
+the following new units were started: libvirtd.service, NetworkManager-dispatcher.service, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
+Done. The new configuration is /nix/store/6p2d6a43gyxr4q1gybhy7cn6qcrc47kx-nixos-system-nixos-25.11.20250804.cab7782
+>>>>>>> a664720a9174eb363c8247c52091c5597b751451
+>>>>>>> refs/remotes/origin/master
