@@ -66,6 +66,7 @@
         wireguard-tools
         mullvad-vpn
         traceroute
+        steam
       ];
     };
     syncthing = {
@@ -174,6 +175,11 @@
   services.ofono.enable = true;
 
   hardware.bluetooth.enable = true;
+  # steam 32 bit libs
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true;
+  };
 
   networking.firewall.checkReversePath = false;
   networking.nat = {
