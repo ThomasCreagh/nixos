@@ -91,6 +91,7 @@
       win-virtio
       win-spice
       virt-viewer
+      openssl
     ];
   };
 
