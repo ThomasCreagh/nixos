@@ -67,6 +67,7 @@
         mullvad-vpn
         traceroute
         steam
+        thunderbird
       ];
     };
     syncthing = {
