@@ -64,7 +64,7 @@
         ardour
         pandoc
         wireguard-tools
-        mullvad-vpn
+				#mullvad-vpn
         traceroute
         steam
         thunderbird
@@ -122,7 +122,7 @@
       enable = true;
       touchpad.sendEventsMode = "disabled";
     };
-    mullvad-vpn.enable = true;
+		#mullvad-vpn.enable = true;
     tailscale.enable = true;
     displayManager.ly.enable = true;
     syncthing = {
