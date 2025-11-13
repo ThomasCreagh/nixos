@@ -126,6 +126,7 @@
     tailscale = {
       enable = true;
       useRoutingFeatures = "client";
+      extraUpFlags = [ "--accept-routes" ];
     };
     displayManager.ly.enable = true;
     syncthing = {
