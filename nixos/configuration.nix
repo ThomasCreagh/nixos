@@ -123,7 +123,10 @@
       touchpad.sendEventsMode = "disabled";
     };
 		#mullvad-vpn.enable = true;
-    tailscale.enable = true;
+    tailscale = {
+      enable = true;
+      useRoutingFeatures = "client";
+    };
     displayManager.ly.enable = true;
     syncthing = {
       enable = true;
@@ -184,7 +187,7 @@
     driSupport32Bit = true;
   };
 
-  networking.firewall.checkReversePath = false;
+	#networking.firewall.checkReversePath = false;
   networking.nat = {
     enable = true;
     internalInterfaces = ["virbr0"];
