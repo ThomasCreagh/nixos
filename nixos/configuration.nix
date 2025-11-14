@@ -56,9 +56,6 @@
         usbutils
         file
         niv
-        signal-desktop
-        xdg-desktop-portal # for signal
-        gnome-keyring
         vlc
         qbittorrent
         p7zip
