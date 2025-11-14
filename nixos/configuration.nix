@@ -58,6 +58,7 @@
         niv
         signal-desktop
         xdg-desktop-portal # for signal
+        gnome-keyring
         vlc
         qbittorrent
         p7zip
@@ -119,6 +120,7 @@
   services.spice-vdagentd.enable = true;
 
   services = {
+    gnome.gnome-keyring.enable = true;
     libinput = {
       enable = true;
       touchpad.sendEventsMode = "disabled";
