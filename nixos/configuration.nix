@@ -56,8 +56,8 @@
         usbutils
         file
         niv
-        flare-signal
         signal-desktop
+        xdg-desktop-portal # for signal
         vlc
         qbittorrent
         p7zip
