@@ -56,7 +56,7 @@
         usbutils
         file
         niv
-        signal-desktop
+        flare-signal
         vlc
         qbittorrent
         p7zip
