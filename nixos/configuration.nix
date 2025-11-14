@@ -57,6 +57,7 @@
         file
         niv
         flare-signal
+        gurk-rs
         vlc
         qbittorrent
         p7zip
