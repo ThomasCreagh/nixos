@@ -56,7 +56,7 @@
         usbutils
         file
         niv
-        signal-desktop-bin
+        signal-desktop
         vlc
         qbittorrent
         p7zip
