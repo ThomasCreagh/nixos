@@ -56,7 +56,6 @@
         usbutils
         file
         niv
-        signal-desktop
         vlc
         qbittorrent
         p7zip
@@ -64,8 +63,11 @@
         ardour
         pandoc
         wireguard-tools
-        mullvad-vpn
         bisq2
+				#mullvad-vpn
+        traceroute
+        steam
+        thunderbird
       ];
     };
     syncthing = {
@@ -89,12 +91,14 @@
       win-virtio
       win-spice
       virt-viewer
+      openssl
     ];
   };
 
   virtualisation.docker = {
     enable = true;
     enableOnBoot = true;
+    extraPackages = [ pkgs.docker-buildx ];
     autoPrune = {
       enable = true;
       dates = "weekly";
@@ -114,12 +118,17 @@
   services.spice-vdagentd.enable = true;
 
   services = {
+    gnome.gnome-keyring.enable = true;
     libinput = {
       enable = true;
       touchpad.sendEventsMode = "disabled";
     };
-    mullvad-vpn.enable = true;
-    tailscale.enable = true;
+		#mullvad-vpn.enable = true;
+    tailscale = {
+      enable = true;
+      useRoutingFeatures = "client";
+      extraUpFlags = [ "--accept-routes" ];
+    };
     displayManager.ly.enable = true;
     syncthing = {
       enable = true;
@@ -174,8 +183,13 @@
   services.ofono.enable = true;
 
   hardware.bluetooth.enable = true;
+  # steam 32 bit libs
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true;
+  };
 
-  networking.firewall.checkReversePath = false;
+	#networking.firewall.checkReversePath = false;
   networking.nat = {
     enable = true;
     internalInterfaces = ["virbr0"];
