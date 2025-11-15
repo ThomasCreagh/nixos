@@ -68,7 +68,7 @@
         traceroute
         steam
         thunderbird
-        tetex
+        texliveSmall
       ];
     };
     syncthing = {
