@@ -69,6 +69,7 @@
         steam
         thunderbird
         texliveSmall
+        bluetui
       ];
     };
     syncthing = {
