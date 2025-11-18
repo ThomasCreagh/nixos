@@ -63,6 +63,7 @@
         ardour
         pandoc
         wireguard-tools
+        mullvad-vpn
         traceroute
         steam
         thunderbird
