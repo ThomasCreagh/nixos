@@ -71,6 +71,8 @@
         texliveSmall
         bluetui
         vital
+        surge-XT
+        helm
       ];
     };
     syncthing = {
