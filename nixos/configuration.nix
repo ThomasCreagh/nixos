@@ -70,6 +70,7 @@
         thunderbird
         texliveSmall
         bluetui
+        vital
       ];
     };
     syncthing = {
