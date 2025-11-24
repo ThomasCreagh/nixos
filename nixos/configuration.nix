@@ -76,6 +76,7 @@
         surge-XT
         helm
         synthv1
+        lsp-plugins
       ];
     };
     syncthing = {
