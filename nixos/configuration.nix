@@ -71,9 +71,11 @@
         thunderbird
         texliveSmall
         bluetui
+        # synths
         vital
         surge-XT
         helm
+        synthv1
       ];
     };
     syncthing = {
