@@ -44,7 +44,7 @@
         home-manager
         unzip
         discord
-        brave
+        ungoogled-chromium
         tor-browser
         linuxKernel.packages.linux_zen.perf
         unixtools.netstat
