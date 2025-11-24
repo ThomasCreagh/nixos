@@ -44,6 +44,7 @@
         home-manager
         unzip
         discord
+        brave
         tor-browser
         linuxKernel.packages.linux_zen.perf
         unixtools.netstat
