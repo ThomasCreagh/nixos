@@ -71,12 +71,14 @@
         thunderbird
         texliveSmall
         bluetui
+        # effects
+        swh_lv2
+        dragonfly-reverb
+        lsp-plugins
         # synths
         vital
         surge-XT
         helm
-        synthv1
-        lsp-plugins
       ];
     };
     syncthing = {
