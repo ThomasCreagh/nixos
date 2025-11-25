@@ -35,6 +35,7 @@
         "docker"
       ];
       packages = with pkgs; [
+        zrythm
         python3
         keepassxc
         libgcc
