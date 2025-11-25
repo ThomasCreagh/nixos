@@ -35,7 +35,6 @@
         "docker"
       ];
       packages = with pkgs; [
-        gimp
         python3
         keepassxc
         libgcc
@@ -72,6 +71,7 @@
         thunderbird
         texliveSmall
         bluetui
+        gimp3
         # effects
         swh_lv2
         dragonfly-reverb
