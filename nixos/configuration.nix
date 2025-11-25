@@ -44,6 +44,7 @@
         home-manager
         unzip
         discord
+        ungoogled-chromium
         tor-browser
         linuxKernel.packages.linux_zen.perf
         unixtools.netstat
@@ -63,10 +64,23 @@
         ardour
         pandoc
         wireguard-tools
+<<<<<<< HEAD
         mullvad-vpn
+=======
+        bisq2
+				#mullvad-vpn
+>>>>>>> 1a758954210a445b4f288e19274dd26d7bba2b76
         traceroute
         steam
         thunderbird
+        texliveSmall
+        bluetui
+        # synths
+        vital
+        surge-XT
+        helm
+        synthv1
+        lsp-plugins
       ];
     };
     syncthing = {
