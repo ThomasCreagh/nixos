@@ -35,6 +35,7 @@
         "docker"
       ];
       packages = with pkgs; [
+        gimp
         python3
         keepassxc
         libgcc
