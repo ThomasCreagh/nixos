@@ -113,6 +113,8 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
+    LV2_PATH = "${pkgs.lv2}/lib/lv2:/run/current-system/sw/lib/lv2";
+    VST_PATH = "/run/current-system/sw/lib/vst";
   };
 
   # programs
