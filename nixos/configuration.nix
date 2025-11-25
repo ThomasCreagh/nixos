@@ -34,6 +34,7 @@
         "libvirtd"
         "docker"
         "realtime"
+        "jackaudio"
       ];
       packages = with pkgs; [
         zrythm
