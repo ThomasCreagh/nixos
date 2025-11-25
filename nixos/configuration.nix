@@ -33,6 +33,7 @@
         "kvm"
         "libvirtd"
         "docker"
+        "realtime"
       ];
       packages = with pkgs; [
         zrythm
