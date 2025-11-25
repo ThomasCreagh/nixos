@@ -79,6 +79,7 @@
         vital
         surge-XT
         helm
+        lutris
       ];
     };
     syncthing = {
