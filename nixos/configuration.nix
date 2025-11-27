@@ -37,6 +37,7 @@
         "jackaudio"
       ];
       packages = with pkgs; [
+        ripgrep
         zrythm
         python3
         keepassxc
