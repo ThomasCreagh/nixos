@@ -37,6 +37,7 @@
         "jackaudio"
       ];
       packages = with pkgs; [
+        tor-browser
         ripgrep
         zrythm
         python3
