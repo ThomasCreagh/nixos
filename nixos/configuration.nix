@@ -37,6 +37,7 @@
         "jackaudio"
       ];
       packages = with pkgs; [
+        reaper
         zrythm
         python3
         keepassxc
