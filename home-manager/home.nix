@@ -117,6 +117,13 @@
     VST_PATH = "/run/current-system/sw/lib/vst";
   };
 
+  home.pointerCursor = {
+    package = pkgs.vanilla-dmz;
+    name = "DMZ-White";
+    size = 24;
+    gtk.enable = true;
+  };
+
   # programs
   programs.wofi = {
     enable = true;
