@@ -38,6 +38,8 @@
       ];
       packages = with pkgs; [
         reaper
+        tor-browser
+        ripgrep
         zrythm
         python3
         keepassxc
