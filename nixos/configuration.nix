@@ -39,7 +39,6 @@
       packages = with pkgs; [
         tor-browser
         ripgrep
-        zrythm
         python3
         keepassxc
         libgcc
@@ -63,10 +62,8 @@
         file
         niv
         vlc
-        qbittorrent
         p7zip
         openvpn
-        ardour
         pandoc
         wireguard-tools
         mullvad-vpn
@@ -77,6 +74,7 @@
         texliveSmall
         bluetui
         gimp3
+        reaper
         # effects
         swh_lv2
         dragonfly-reverb
