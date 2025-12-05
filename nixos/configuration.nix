@@ -37,8 +37,6 @@
         "jackaudio"
       ];
       packages = with pkgs; [
-        reaper
-        tor-browser
         ripgrep
         python3
         keepassxc
@@ -49,7 +47,6 @@
         home-manager
         unzip
         discord
-        ungoogled-chromium
         tor-browser
         linuxKernel.packages.linux_zen.perf
         unixtools.netstat
@@ -61,7 +58,6 @@
         discord
         usbutils
         file
-        niv
         vlc
         p7zip
         openvpn
@@ -75,16 +71,9 @@
         texliveSmall
         bluetui
         gimp3
-        reaper
-        # effects
-        swh_lv2
-        dragonfly-reverb
-        lsp-plugins
-        # synths
         vital
         surge-XT
         helm
-        lutris
       ];
     };
     syncthing = {
