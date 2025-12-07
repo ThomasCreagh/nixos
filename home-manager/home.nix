@@ -574,7 +574,7 @@
         "$mod SHIFT, 6, movetoworkspace, 6"
         "$mod SHIFT, 7, movetoworkspace, 7"
         "$mod SHIFT, 8, movetoworkspace, 8"
-        "$mod SHIFT, 9, movetoworkspace, 8"
+        "$mod SHIFT, 9, movetoworkspace, 9"
         "$mod SHIFT, 0, movetoworkspace, 10"
 
         # Special workspace
@@ -621,8 +621,13 @@
         disable_hyprland_logo = true;
       };
 
+      general = {
+        gaps_in = 0;
+        gaps_out = 0;
+      };
+
       decoration = {
-        rounding = 8;
+        rounding = 6;
         blur = {
           enabled = true;
           size = 8;

@@ -4,14 +4,14 @@ evaluation warning: Search engines are now referenced by id instead of by name, 
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://duckduckgo.com/favicon.ico"' instead
 evaluation warning: 'iconUpdateURL' is deprecated, use 'icon = "https://nixos.wiki/favicon.png"' instead
 these 4 derivations will be built:
-  /nix/store/l27g4xfwqlzjsdjyp3169ywsr98ys0k4-hm_hyprhyprland.conf.drv
-  /nix/store/9c9p526968k53i6vhbmqd7qp7ywv4g63-activation-script.drv
-  /nix/store/wgzlcqgrx05rl3jnsap8bp5vnmik4y14-home-manager-files.drv
-  /nix/store/zqfb5hvm0d250j2k1p03jym0zrp4wfs9-home-manager-generation.drv
-building '/nix/store/l27g4xfwqlzjsdjyp3169ywsr98ys0k4-hm_hyprhyprland.conf.drv'...
-building '/nix/store/9c9p526968k53i6vhbmqd7qp7ywv4g63-activation-script.drv'...
-building '/nix/store/wgzlcqgrx05rl3jnsap8bp5vnmik4y14-home-manager-files.drv'...
-building '/nix/store/zqfb5hvm0d250j2k1p03jym0zrp4wfs9-home-manager-generation.drv'...
+  /nix/store/h1y49813cwszgn6shjgrl7nhfp080iky-hm_hyprhyprland.conf.drv
+  /nix/store/hfbdkqfavm30083lbrl0dkp8r0zpnl0k-activation-script.drv
+  /nix/store/yggwkk2j67zldzfvyrrdh82p80shvhca-home-manager-files.drv
+  /nix/store/fps48pjhbmd2m28mm97dkrl4kqm1incp-home-manager-generation.drv
+building '/nix/store/h1y49813cwszgn6shjgrl7nhfp080iky-hm_hyprhyprland.conf.drv'...
+building '/nix/store/hfbdkqfavm30083lbrl0dkp8r0zpnl0k-activation-script.drv'...
+building '/nix/store/yggwkk2j67zldzfvyrrdh82p80shvhca-home-manager-files.drv'...
+building '/nix/store/fps48pjhbmd2m28mm97dkrl4kqm1incp-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -26,7 +26,6 @@ Creating home file links in /home/tom
 Activating onFilesChange
 ok
 Activating reloadSystemd
-Starting units: swayidle.service
 evaluation warning: Search engines are now referenced by id instead of by name, use 'ddg' instead of 'DuckDuckGo'
 
 There are 256 unread and relevant news items.
