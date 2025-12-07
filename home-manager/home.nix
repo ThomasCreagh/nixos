@@ -621,8 +621,8 @@
       };
 
       general = {
-        gaps_in = 4;
-        gaps_out = 2;
+        gaps_in = 3;
+        gaps_out = 4;
       };
 
       decoration = {

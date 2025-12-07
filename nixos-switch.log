@@ -1,6 +1,6 @@
 building the system configuration...
-evaluation warning: The option `hardware.opengl.driSupport32Bit' defined in `/nix/store/wssss6730lx9wrg4kwcc43p5zpi63285-source/nixos/configuration.nix' has been renamed to `hardware.graphics.enable32Bit'.
-evaluation warning: The option `hardware.opengl.enable' defined in `/nix/store/wssss6730lx9wrg4kwcc43p5zpi63285-source/nixos/configuration.nix' has been renamed to `hardware.graphics.enable'.
+evaluation warning: The option `hardware.opengl.driSupport32Bit' defined in `/nix/store/ym1xaypm3bhyvz2n04i8282p35lgqm6j-source/nixos/configuration.nix' has been renamed to `hardware.graphics.enable32Bit'.
+evaluation warning: The option `hardware.opengl.enable' defined in `/nix/store/ym1xaypm3bhyvz2n04i8282p35lgqm6j-source/nixos/configuration.nix' has been renamed to `hardware.graphics.enable'.
 updating GRUB 2 menu...
 Warning: os-prober will be executed to detect other bootable partitions.
 Its output will be used to detect bootable binaries on them and create new boot entries.
