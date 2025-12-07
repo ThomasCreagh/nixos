@@ -37,6 +37,7 @@
         "jackaudio"
       ];
       packages = with pkgs; [
+        obs-studio
         ripgrep
         python3
         keepassxc
