@@ -529,12 +529,11 @@
         "$mod, Q, exec, $terminal"
         "$mod, W, exec, $webBrowser"
         "$mod, K, exec, keepassxc"
-        "$mod, Y, exec, signal-desktop"
+        "$mod, Y, exec, spotify"
         "$mod, O, exec, obsidian"
         "$mod, D, exec, discord"
         "$mod, E, exec, $fileManager"
         "$mod, R, exec, $menu"
-        "$mod, S, exec, wofi --show drun"
 
         "$mod, C, killactive"
         "$mod, M, exit"
@@ -578,8 +577,8 @@
         "$mod SHIFT, 0, movetoworkspace, 10"
 
         # Special workspace
-        #"$mod, S, togglespecialworkspace, magic"
-        #"$mod, SHIFT S, movetoworkspace, special:magic"
+        "$mod, S, togglespecialworkspace, magic"
+        "$mod, SHIFT S, movetoworkspace, special:magic"
 
         # resize windows click and drag
       ];
@@ -622,8 +621,8 @@
       };
 
       general = {
-        gaps_in = 0;
-        gaps_out = 0;
+        gaps_in = 4;
+        gaps_out = 2;
       };
 
       decoration = {
