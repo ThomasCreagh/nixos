@@ -23,6 +23,7 @@
 
   users.users.tom.packages = with pkgs; [
     davinci-resolve
+    ffmpeg_7
   ];
 
   services.xserver = {
