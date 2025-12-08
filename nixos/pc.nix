@@ -21,6 +21,10 @@
     };
   };
 
+  users.users.tom.packages = with pkgs; [
+    davinci-resolve
+  ];
+
   services.xserver = {
     videoDrivers = [ "nvidia" ];
     xkb = {
