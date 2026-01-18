@@ -521,7 +521,7 @@
 			#"swaylock -f -c 000000' before-sleep 'swaylock -f -c 000000'"
       exec-once = [
         "waybar &"
-        "wbg ~/.dotfiles/wallpapers/0.jpg"
+        "wbg ~/.dotfiles/wallpapers/3.jpg"
         "mako"
       ];
 
