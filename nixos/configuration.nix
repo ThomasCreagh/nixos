@@ -74,6 +74,7 @@
         vital
         surge-XT
         helm
+        speed_dreams
       ];
     };
     syncthing = {
