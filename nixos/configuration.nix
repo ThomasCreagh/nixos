@@ -76,6 +76,7 @@
         helm
         speed_dreams
         torcs
+        wineWowPackages.stable
       ];
     };
     syncthing = {
