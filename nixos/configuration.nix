@@ -75,7 +75,7 @@
         surge-XT
         helm
         speed_dreams
-        signal-desktop
+        torcs
       ];
     };
     syncthing = {
