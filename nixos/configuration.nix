@@ -102,6 +102,7 @@
       virt-viewer
       openssl
       signal-desktop
+      gurk-rs
     ];
   };
 
