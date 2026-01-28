@@ -57,8 +57,8 @@
   #  };
   #};
 
-  services.logind.lidSwitch = "ignore";
-  services.logind.lidSwitchDocked = "ignore";
+  services.logind.settings.Login.HandleLidSwitch = "ignore";
+  services.logind.settings.Login.HandleLidSwitchDocked = "ignore";
   services.power-profiles-daemon.enable = true;
   services.xserver.xkb = {
     layout = "us";
