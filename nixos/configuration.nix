@@ -77,6 +77,9 @@
         speed_dreams
         torcs
         wineWowPackages.stable
+        signal-desktop
+        gurk-rs
+        electron_37
       ];
     };
     syncthing = {
@@ -101,8 +104,6 @@
       win-spice
       virt-viewer
       openssl
-      signal-desktop
-      gurk-rs
     ];
   };
 
