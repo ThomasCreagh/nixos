@@ -536,7 +536,7 @@
         "$mod, D, exec, discord"
         "$mod, E, exec, $fileManager"
         "$mod, R, exec, $menu"
-        "$mod, S, exec, wofi --show drun"
+        "$mod, S, exec, signal-desktop"
 
         "$mod, C, killactive"
         "$mod, M, exit"
