@@ -267,8 +267,10 @@
 
   programs.git = {
     enable = true;
-    userEmail = "github@thomascreagh.mailer.me";
-    userName = "Thomas Creagh";
+    settings.user = {
+      name = "Thomas Creagh";
+      email = "github@thomascreagh.mailer.me";
+    };
   };
 
   # browser
