@@ -428,8 +428,8 @@
       };
       search = {
         force = true;
-        default = "DuckDuckGo";
-        order = [ "DuckDuckGo" ];
+        default = "ddg";
+        order = [ "ddg" ];
         engines = {
           "Nix Packages" = {
             urls = [{
@@ -444,13 +444,13 @@
           };
           "NixOS Wiki" = {
             urls = [{ template = "https://nixos.wiki/index.php?search={searchTerms}"; }];
-            iconUpdateURL = "https://nixos.wiki/favicon.png";
+            icon = "https://nixos.wiki/favicon.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@nw" ];
           };
-          "DuckDuckGo" = {
+          "ddg" = {
             urls = [{ template = "https://duckduckgo.com/?t=h_&q={searchTerms}&ia=web"; }];
-            iconUpdateURL = "https://duckduckgo.com/favicon.ico";
+            icon = "https://duckduckgo.com/favicon.ico";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@dk" ];
           };
@@ -485,16 +485,16 @@
         width = 300;
       };
     };
-    swayidle = {
-      enable = true;
-      timeouts = [
-        { timeout = 300; command = "swaylock -f -c 000000"; } # lock after 5 min
-      ];
-      events = [
-        { event = "before-sleep"; command = "swaylock -f -c 000000"; }
-        { event = "lock"; command = "swaylock -f -c 000000"; }
-      ];
-    };
+	#swayidle = {
+    	#  enable = true;
+    	#  timeouts = [
+    	#    { timeout = 300; command = "swaylock -f -c 000000"; } # lock after 5 min
+    	#  ];
+    	#  events = [
+    	#    { event = "before-sleep"; command = "swaylock -f -c 000000"; }
+    	#    { event = "lock"; command = "swaylock -f -c 000000"; }
+    	#  ];
+    	#};
   };
 
 
