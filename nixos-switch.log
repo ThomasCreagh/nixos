@@ -1,9 +1,8 @@
 building the system configuration...
-evaluation warning: The option `services.logind.lidSwitchDocked' defined in `/nix/store/w6vjklq507z33i7vzpddbjni53i0z77c-source/nixos/laptop.nix' has been renamed to `services.logind.settings.Login.HandleLidSwitchDocked'.
-evaluation warning: The option `services.logind.lidSwitch' defined in `/nix/store/w6vjklq507z33i7vzpddbjni53i0z77c-source/nixos/laptop.nix' has been renamed to `services.logind.settings.Login.HandleLidSwitch'.
-evaluation warning: The option `hardware.opengl.driSupport32Bit' defined in `/nix/store/w6vjklq507z33i7vzpddbjni53i0z77c-source/nixos/configuration.nix' has been renamed to `hardware.graphics.enable32Bit'.
-evaluation warning: The option `hardware.opengl.enable' defined in `/nix/store/w6vjklq507z33i7vzpddbjni53i0z77c-source/nixos/configuration.nix' has been renamed to `hardware.graphics.enable'.
-evaluation warning: linuxPackages.perf is now perf
 Checking switch inhibitors... done
-stopping the following units: docker.service, docker.socket, kmod-static-nodes.service, libvirt-guests.service, libvirtd-admin.socket, libvirtd-ro.socket, libvirtd.socket, logrotate-checkconf.service, mount-pstore.service, mullvad-daemon.service, network-setup.service, NetworkManager-wait-online.service, NetworkManager.service, nscd.service, power-profiles-daemon.service, resolvconf.service, rtkit-daemon.service, spice-vdagentd.service, syncthing-init.service, syncthing.service, systemd-machined.service, systemd-modules-load.service, systemd-oomd.service, systemd-oomd.socket, systemd-sysctl.service, systemd-timesyncd.service, systemd-udev-trigger.service, systemd-vconsole-setup.service, virt-guest-shutdown.target, virtlockd.socket, virtlogd.socket
-
+activating the configuration...
+setting up /etc...
+reloading user units for tom...
+restarting sysinit-reactivation.target
+the following new units were started: NetworkManager-dispatcher.service
+Done. The new configuration is /nix/store/7d2iwprg0jq1a66y0zv0kwx8zpnhlbsn-nixos-system-nixos-26.05.20260126.bfc1b8a
