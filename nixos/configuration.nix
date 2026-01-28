@@ -101,6 +101,7 @@
       win-spice
       virt-viewer
       openssl
+      signal-desktop
     ];
   };
 
