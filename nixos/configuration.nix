@@ -105,6 +105,11 @@
     ];
   };
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
+  };
+
   virtualisation.docker = {
     enable = true;
     enableOnBoot = true;
