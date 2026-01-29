@@ -534,6 +534,7 @@
         "$mod, Y, exec, signal-desktop"
         "$mod, O, exec, obsidian"
         "$mod, D, exec, discord"
+        "$mod, T, exec, thunderbird"
         "$mod, E, exec, $fileManager"
         "$mod, R, exec, $menu"
         "$mod, S, exec, signal-desktop"

@@ -1,14 +1,12 @@
-these 5 derivations will be built:
-  /nix/store/hbfksa7w73lgy9xpl0r0q5aw5gm8i164-ghostty-config.drv
-  /nix/store/2jfxc9a61jizs9pfc61cjv96kjnxn8ww-activation-script.drv
-  /nix/store/bv3bxwwm92j08mydnkgkay0cig51lbi6-hm_systemduserappcom.mitchellh.ghostty.service.doverrides.conf.drv
-  /nix/store/akaj6cirpk08mvmxp5l89451nczs7hb4-home-manager-files.drv
-  /nix/store/jy46b3xisl0dk3vk104y2z4fq8ylll6v-home-manager-generation.drv
-building '/nix/store/hbfksa7w73lgy9xpl0r0q5aw5gm8i164-ghostty-config.drv'...
-building '/nix/store/2jfxc9a61jizs9pfc61cjv96kjnxn8ww-activation-script.drv'...
-building '/nix/store/bv3bxwwm92j08mydnkgkay0cig51lbi6-hm_systemduserappcom.mitchellh.ghostty.service.doverrides.conf.drv'...
-building '/nix/store/akaj6cirpk08mvmxp5l89451nczs7hb4-home-manager-files.drv'...
-building '/nix/store/jy46b3xisl0dk3vk104y2z4fq8ylll6v-home-manager-generation.drv'...
+these 4 derivations will be built:
+  /nix/store/qh485yra53z7rk2g090lgi046hahd0ig-hm_hyprhyprland.conf.drv
+  /nix/store/qr13chfd9lzav969xlkv5igy9888spgi-activation-script.drv
+  /nix/store/v78mywi8rs6xw1w382wmzfw45p7bxwpf-home-manager-files.drv
+  /nix/store/nmwahflj1z7f1qi3xn5xgl77vqg0h32r-home-manager-generation.drv
+building '/nix/store/qh485yra53z7rk2g090lgi046hahd0ig-hm_hyprhyprland.conf.drv'...
+building '/nix/store/qr13chfd9lzav969xlkv5igy9888spgi-activation-script.drv'...
+building '/nix/store/v78mywi8rs6xw1w382wmzfw45p7bxwpf-home-manager-files.drv'...
+building '/nix/store/nmwahflj1z7f1qi3xn5xgl77vqg0h32r-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -21,6 +19,7 @@ Activating linkGeneration
 Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
+ok
 Activating reloadSystemd
 
 There are 346 unread and relevant news items.
