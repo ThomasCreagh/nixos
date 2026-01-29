@@ -52,7 +52,7 @@
     # run local ai
     (writeShellScriptBin "ai" ''
       ollama serve&
-      open-webui serve&
+      DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve&
     '')
 
     # save system to github
