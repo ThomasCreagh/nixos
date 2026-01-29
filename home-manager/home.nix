@@ -49,6 +49,12 @@
       bash ~/.dotfiles/rebuild $HOST
     '')
 
+    # run local ai
+    (writeShellScriptBin "ai" ''
+      ollama serve&
+      open-webui serve&
+    '')
+
     # save system to github
     (writeShellScriptBin "save" ''
       bash ~/.dotfiles/save
