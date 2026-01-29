@@ -77,6 +77,7 @@
         wineWowPackages.stable
         signal-desktop
         ollama
+        uv
       ];
     };
     syncthing = {
