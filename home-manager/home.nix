@@ -261,7 +261,7 @@
     installVimSyntax = true;
     settings = {
       font-size = 20;
-      theme = "tokyonight_night";
+      theme = "TokyoNight Night";
     };
   };
 
