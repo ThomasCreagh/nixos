@@ -76,7 +76,7 @@
         helm
         wineWowPackages.stable
         signal-desktop
-        ollama-rocm
+        ollama
       ];
     };
     syncthing = {
