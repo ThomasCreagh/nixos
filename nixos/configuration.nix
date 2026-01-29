@@ -78,7 +78,6 @@
         signal-desktop
         ollama
         uv
-        gpt4all
       ];
     };
     syncthing = {
