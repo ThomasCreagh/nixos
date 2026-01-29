@@ -51,8 +51,10 @@
 
     # run local ai
     (writeShellScriptBin "ai" ''
+      echo "ai starting..."
       (ollama serve >> /dev/null 2>&1)&
       (DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve >> /dev/null 2>&1)&
+      echo "ai started."
     '')
 
     # save system to github
