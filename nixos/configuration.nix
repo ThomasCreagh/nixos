@@ -74,12 +74,9 @@
         vital
         surge-XT
         helm
-				#speed_dreams
-				#torcs
         wineWowPackages.stable
         signal-desktop
-				#gurk-rs
-				#electron_37
+        ollama-rocm
       ];
     };
     syncthing = {
