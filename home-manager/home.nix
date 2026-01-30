@@ -405,6 +405,10 @@
                      name = "css docs";
                      url = "https://developer.mozilla.org/en-US/docs";
                    }
+                   {
+                     name = "how to make a proxy server";
+                     url = "https://medium.com/@davesohamm/constructing-a-multithreaded-proxy-web-server-in-c-a-technical-perspective-e2126501d8bb";
+                   }
                  ];
               }
               {
