@@ -78,6 +78,7 @@
         signal-desktop
         ollama
         uv
+        netcat
       ];
     };
     syncthing = {
