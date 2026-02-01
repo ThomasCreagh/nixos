@@ -13,5 +13,7 @@ home-manager switch --flake path:. 2>&1 | tee home-switch.log || (cat home-switc
 gen=$(nixos-rebuild list-generations | grep True | grep -o "[0-9]*-[0-9]*-[0-9]* [0-9]*:[0-9]*:[0-9]*  [0-9\.a-zA-Z]*")
 git add .
 git commit -m "$gen"
+git pull
+git push
 popd >> /dev/null
 echo "Complete."
