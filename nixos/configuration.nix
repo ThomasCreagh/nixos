@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 
+
 {
   time.timeZone = "Europe/Dublin";
 
@@ -48,7 +49,6 @@
         unzip
         discord
         tor-browser
-        linuxKernel.packages.linux_zen.perf
         unixtools.netstat
         spotify
         swi-prolog
@@ -63,17 +63,22 @@
         openvpn
         pandoc
         wireguard-tools
-        mullvad-vpn
+				#mullvad-vpn
         bisq2
         traceroute
         steam
         thunderbird
         texliveSmall
         bluetui
-        gimp3
+        gimp
         vital
         surge-XT
         helm
+        wineWowPackages.stable
+        signal-desktop
+        ollama
+        uv
+        netcat
       ];
     };
     syncthing = {
@@ -94,12 +99,27 @@
       dnsmasq
       spice spice-gtk
       spice-protocol
-      win-virtio
+      virtio-win
       win-spice
       virt-viewer
       openssl
     ];
   };
+
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
+    ];
+    config.common = {
+      default = [ "hyprland" "gtk" ];
+      "org.freedesktop.portal.FileChooser" = [ "gtk" ];
+    };
+  };
+
+  services.dbus.enable = true;
 
   virtualisation.docker = {
     enable = true;
@@ -111,15 +131,15 @@
     };
   };
 
-  virtualisation.libvirtd = {
-    enable = true;
-    allowedBridges = [ "virbr0" "br0" ];
-    qemu = {
-      package = pkgs.qemu_kvm;
-      swtpm.enable = true;
-      ovmf.enable = true;
-    };
-  };
+	#virtualisation.libvirtd = {
+  	#  enable = true;
+  	#  allowedBridges = [ "virbr0" "br0" ];
+  	#  qemu = {
+  	#    package = pkgs.qemu_kvm;
+  	#    swtpm.enable = true;
+  	#    ovmf.enable = true;
+  	#  };
+  	#};
   virtualisation.spiceUSBRedirection.enable = true;
   services.spice-vdagentd.enable = true;
 
@@ -196,9 +216,9 @@
 
   hardware.bluetooth.enable = true;
   # steam 32 bit libs
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 
 	#networking.firewall.checkReversePath = false;

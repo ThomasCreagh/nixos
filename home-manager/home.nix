@@ -49,6 +49,14 @@
       bash ~/.dotfiles/rebuild $HOST
     '')
 
+    # run local ai
+    (writeShellScriptBin "ai" ''
+      echo "ai starting..."
+      (ollama serve >> /dev/null 2>&1)&
+      (DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve >> /dev/null 2>&1)&
+      echo "ai started."
+    '')
+
     # save system to github
     (writeShellScriptBin "save" ''
       bash ~/.dotfiles/save
@@ -261,14 +269,16 @@
     installVimSyntax = true;
     settings = {
       font-size = 20;
-      theme = "tokyonight_night";
+      theme = "TokyoNight Night";
     };
   };
 
   programs.git = {
     enable = true;
-    userEmail = "github@thomascreagh.mailer.me";
-    userName = "Thomas Creagh";
+    settings.user = {
+      name = "Thomas Creagh";
+      email = "github@thomascreagh.mailer.me";
+    };
   };
 
   # browser
@@ -395,6 +405,10 @@
                      name = "css docs";
                      url = "https://developer.mozilla.org/en-US/docs";
                    }
+                   {
+                     name = "how to make a proxy server";
+                     url = "https://medium.com/@davesohamm/constructing-a-multithreaded-proxy-web-server-in-c-a-technical-perspective-e2126501d8bb";
+                   }
                  ];
               }
               {
@@ -426,8 +440,8 @@
       };
       search = {
         force = true;
-        default = "DuckDuckGo";
-        order = [ "DuckDuckGo" ];
+        default = "ddg";
+        order = [ "ddg" ];
         engines = {
           "Nix Packages" = {
             urls = [{
@@ -442,13 +456,13 @@
           };
           "NixOS Wiki" = {
             urls = [{ template = "https://nixos.wiki/index.php?search={searchTerms}"; }];
-            iconUpdateURL = "https://nixos.wiki/favicon.png";
+            icon = "https://nixos.wiki/favicon.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@nw" ];
           };
-          "DuckDuckGo" = {
+          "ddg" = {
             urls = [{ template = "https://duckduckgo.com/?t=h_&q={searchTerms}&ia=web"; }];
-            iconUpdateURL = "https://duckduckgo.com/favicon.ico";
+            icon = "https://duckduckgo.com/favicon.ico";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@dk" ];
           };
@@ -483,16 +497,16 @@
         width = 300;
       };
     };
-    swayidle = {
-      enable = true;
-      timeouts = [
-        { timeout = 300; command = "swaylock -f -c 000000"; } # lock after 5 min
-      ];
-      events = [
-        { event = "before-sleep"; command = "swaylock -f -c 000000"; }
-        { event = "lock"; command = "swaylock -f -c 000000"; }
-      ];
-    };
+	#swayidle = {
+    	#  enable = true;
+    	#  timeouts = [
+    	#    { timeout = 300; command = "swaylock -f -c 000000"; } # lock after 5 min
+    	#  ];
+    	#  events = [
+    	#    { event = "before-sleep"; command = "swaylock -f -c 000000"; }
+    	#    { event = "lock"; command = "swaylock -f -c 000000"; }
+    	#  ];
+    	#};
   };
 
 
@@ -521,7 +535,7 @@
 			#"swaylock -f -c 000000' before-sleep 'swaylock -f -c 000000'"
       exec-once = [
         "waybar &"
-        "wbg ~/.dotfiles/wallpapers/0.jpg"
+        "wbg ~/.dotfiles/wallpapers/3.jpg"
         "mako"
       ];
 
@@ -532,8 +546,10 @@
         "$mod, Y, exec, spotify"
         "$mod, O, exec, obsidian"
         "$mod, D, exec, discord"
+        "$mod, T, exec, thunderbird"
         "$mod, E, exec, $fileManager"
         "$mod, R, exec, $menu"
+        "$mod, S, exec, signal-desktop"
 
         "$mod, C, killactive"
         "$mod, M, exit"
@@ -635,4 +651,19 @@
       };
     };
   };
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr  # optional but recommended
+    ];
+
+    config = {
+      common = {
+        default = [ "hyprland" "gtk" ];
+        "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
+      };
+    };
+  };
+
 }
