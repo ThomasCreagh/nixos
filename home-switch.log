@@ -1,3 +1,12 @@
+these 4 derivations will be built:
+  /nix/store/ga2jklv3sy2qqazk7gpf325x2h1bm364-hm_hyprhyprland.conf.drv
+  /nix/store/80kyfd15zgy2xfr02gyr0mmm66mqp4hh-home-manager-files.drv
+  /nix/store/vj9yyplcxw8q7lwys7z46armnqg3lp35-activation-script.drv
+  /nix/store/0y2rlc501bxysgzija0z1gs8jvkgs3pn-home-manager-generation.drv
+building '/nix/store/ga2jklv3sy2qqazk7gpf325x2h1bm364-hm_hyprhyprland.conf.drv'...
+building '/nix/store/vj9yyplcxw8q7lwys7z46armnqg3lp35-activation-script.drv'...
+building '/nix/store/80kyfd15zgy2xfr02gyr0mmm66mqp4hh-home-manager-files.drv'...
+building '/nix/store/0y2rlc501bxysgzija0z1gs8jvkgs3pn-home-manager-generation.drv'...
 Starting Home Manager activation
 Activating checkFilesChanged
 Activating checkLinkTargets
@@ -10,6 +19,7 @@ Activating linkGeneration
 Cleaning up orphan links from /home/tom
 Creating home file links in /home/tom
 Activating onFilesChange
+ok
 Activating reloadSystemd
 
 There are 346 unread and relevant news items.

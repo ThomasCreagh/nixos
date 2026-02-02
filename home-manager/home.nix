@@ -543,7 +543,7 @@
         "$mod, Q, exec, $terminal"
         "$mod, W, exec, $webBrowser"
         "$mod, K, exec, keepassxc"
-        "$mod, Y, exec, signal-desktop"
+        "$mod, Y, exec, spotify"
         "$mod, O, exec, obsidian"
         "$mod, D, exec, discord"
         "$mod, T, exec, thunderbird"
@@ -577,7 +577,7 @@
         "$mod, 6, workspace, 6"
         "$mod, 7, workspace, 7"
         "$mod, 8, workspace, 8"
-        "$mod, 9, workspace, 8"
+        "$mod, 9, workspace, 9"
         "$mod, 0, workspace, 10"
 
         # Move active window to a workspace
@@ -589,12 +589,12 @@
         "$mod SHIFT, 6, movetoworkspace, 6"
         "$mod SHIFT, 7, movetoworkspace, 7"
         "$mod SHIFT, 8, movetoworkspace, 8"
-        "$mod SHIFT, 9, movetoworkspace, 8"
+        "$mod SHIFT, 9, movetoworkspace, 9"
         "$mod SHIFT, 0, movetoworkspace, 10"
 
         # Special workspace
-        #"$mod, S, togglespecialworkspace, magic"
-        #"$mod, SHIFT S, movetoworkspace, special:magic"
+        "$mod, S, togglespecialworkspace, magic"
+        "$mod, SHIFT S, movetoworkspace, special:magic"
 
         # resize windows click and drag
       ];
@@ -636,8 +636,13 @@
         disable_hyprland_logo = true;
       };
 
+      general = {
+        gaps_in = 3;
+        gaps_out = 4;
+      };
+
       decoration = {
-        rounding = 8;
+        rounding = 6;
         blur = {
           enabled = true;
           size = 8;

@@ -79,6 +79,7 @@
         ollama
         uv
         netcat
+        xautomation
       ];
     };
     syncthing = {
