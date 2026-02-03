@@ -85,6 +85,7 @@
         uv
         netcat
         xautomation
+        htop
         # last package
       ];
     };
