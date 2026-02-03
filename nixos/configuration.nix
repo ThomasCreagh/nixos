@@ -71,15 +71,21 @@
         texliveSmall
         bluetui
         gimp
+        # music
+        reaper
+
         vital
         surge-XT
         helm
+        airwindows
+
         wineWowPackages.stable
         signal-desktop
         ollama
         uv
         netcat
         xautomation
+        # last package
       ];
     };
     syncthing = {
