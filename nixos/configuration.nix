@@ -86,6 +86,7 @@
         netcat
         xautomation
         htop
+        wrk
         # last package
       ];
     };
