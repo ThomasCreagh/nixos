@@ -86,7 +86,7 @@
         netcat
         xautomation
         htop
-        wrk
+        apacheHttpd
         # last package
       ];
     };
