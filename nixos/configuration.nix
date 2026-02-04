@@ -87,6 +87,7 @@
         xautomation
         htop
         apacheHttpd
+        iperf
         # last package
       ];
     };
