@@ -88,6 +88,7 @@
         htop
         apacheHttpd
         iperf
+        wrk
         # last package
       ];
     };
