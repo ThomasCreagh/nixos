@@ -86,9 +86,6 @@
         netcat
         xautomation
         htop
-        apacheHttpd
-        iperf
-        wrk
         # last package
       ];
     };
