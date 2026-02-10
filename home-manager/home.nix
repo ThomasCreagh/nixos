@@ -593,8 +593,8 @@
         "$mod SHIFT, 0, movetoworkspace, 10"
 
         # Special workspace
-        "$mod, S, togglespecialworkspace, magic"
-        "$mod, SHIFT S, movetoworkspace, special:magic"
+        #"$mod, S, togglespecialworkspace, magic"
+        #"$mod, SHIFT S, movetoworkspace, special:magic"
 
         # resize windows click and drag
       ];
