@@ -87,7 +87,7 @@
         xautomation
         htop
         dig
-        bitwarden
+        bitwarden-desktop
         # last package
       ];
     };
