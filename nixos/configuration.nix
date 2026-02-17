@@ -88,6 +88,7 @@
         htop
         dig
         bitwarden-desktop
+        davinci-resolve
         # last package
       ];
     };
