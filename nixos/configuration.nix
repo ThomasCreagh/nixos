@@ -89,6 +89,7 @@
         dig
         bitwarden-desktop
         davinci-resolve
+        obs-studio
         # last package
       ];
     };
