@@ -69,8 +69,7 @@
         exit 1
       fi
 
-      DIR_NAME="$1"
-      mv $DIR_NAME ~/.trash/
+      mv "$1" ~/.trash/
     '')
 
 
