@@ -68,10 +68,10 @@
         echo "Usage: trash <file or dir>"
         exit 1
       fi
-
-      mv "$1" ~/.trash/
+      TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+      BASENAME=$(basename "$1")
+      mv "$1" ~/.trash/"''${BASENAME}_''${TIMESTAMP}"
     '')
-
 
     # save an shutdown/reboot commands
     (writeShellScriptBin "shutsave" ''
