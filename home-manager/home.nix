@@ -69,8 +69,10 @@
         exit 1
       fi
       TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-      BASENAME=$(basename "$1")
-      mv "$1" ~/.trash/"''${BASENAME}_''${TIMESTAMP}"
+      for f in "$@"; do
+        BASENAME=$(basename "$f")
+        mv "$f" ~/.trash/"''${BASENAME}_''${TIMESTAMP}"
+      done
     '')
 
     # save an shutdown/reboot commands
