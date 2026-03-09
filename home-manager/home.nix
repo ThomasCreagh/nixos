@@ -476,37 +476,6 @@
   programs.home-manager.enable = true;
 
   services = {
-		#    kanshi = {
-		#      enable = true;
-		#      systemdTarget = "hyprland-session.target";
-		#      profiles = {
-		#        undocked = {
-		#          outputs = [
-		#            {
-		#              criteria = "eDP-1";
-		#              status = "enable";
-		#              mode = "1920x1080";
-		#            }
-		#          ];
-		#        };
-		#        mirrored = {
-		#          outputs = [
-		#            {
-		#              criteria = "eDP-1";
-		#              status = "enable";
-		#              mode = "1920x1080";
-		#              position = "0,0";
-		#            }
-		#            {
-		#              criteria = "*";
-		#              status = "enable";
-		#              mode = "1920x1080";
-		#              position = "0,0";
-		#            }
-		#          ];
-		#        };
-		#      };
-		#    };
     mako = {
       enable = true;
       settings = {
