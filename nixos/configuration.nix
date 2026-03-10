@@ -90,6 +90,7 @@
         bitwarden-desktop
         davinci-resolve
         obs-studio
+        unixbench
         # last package
       ];
     };

@@ -1,8 +1,70 @@
 building the system configuration...
-Checking switch inhibitors... done
-activating the configuration...
-setting up /etc...
-reloading user units for tom...
-restarting sysinit-reactivation.target
-the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/qh1sr7a2pcgbghp4r8pq63bacrzbb9hm-nixos-system-nixos-26.05.20260126.bfc1b8a
+these 6 derivations will be built:
+  /nix/store/vbkb6x77sap7dkriil3yr1a02qfk110j-net-tools-1003.1-2008.drv
+  /nix/store/dhp5bx54avlf7ijmkdmm7hfqc1qrv6ih-unixbench-unstable-2023-02-27.drv
+  /nix/store/mr3fvy8vycpb9wpgmfpgnp9hyvq8b70w-user-environment.drv
+  /nix/store/5g3hp3kmqfk04v6db323mqyg5jwqmnkf-etc.drv
+  /nix/store/zdf3wdps3vhwcfsm2p22hr9j8bgz892m-activate.drv
+  /nix/store/5q69gh1q5cbw62yy784r74z0xc59220a-nixos-system-nixos-26.05.20260126.bfc1b8a.drv
+these 7 paths will be fetched (0.19 MiB download, 1.31 MiB unpacked):
+  /nix/store/hprgglzcmwp5yr3q6936bi8i0r0n2nk1-arp-net-tools-2.10
+  /nix/store/n3c1y6pw22pr1r9iq3ka5lznbqfq3zaz-ifconfig-net-tools-2.10
+  /nix/store/73ik8cqs2x7m18y8zaf84vq8x49gxp6h-install-shell-files
+  /nix/store/9hhy2186pz9wba8b5wq7d0xznqis8pqz-locale-glibc-2.42-47
+  /nix/store/n34sjiahi8jfvi8micdqskpzz347cdbc-route-net-tools-2.10
+  /nix/store/5cb82mchhbb87cbsdapjkyh8v5b6zdlg-source
+  /nix/store/279sd99v4x30442y2ypmhjvjhf3b8p0g-x11perf-1.7.0
+copying path '/nix/store/73ik8cqs2x7m18y8zaf84vq8x49gxp6h-install-shell-files' from 'https://cache.nixos.org'...
+copying path '/nix/store/5cb82mchhbb87cbsdapjkyh8v5b6zdlg-source' from 'https://cache.nixos.org'...
+copying path '/nix/store/9hhy2186pz9wba8b5wq7d0xznqis8pqz-locale-glibc-2.42-47' from 'https://cache.nixos.org'...
+copying path '/nix/store/279sd99v4x30442y2ypmhjvjhf3b8p0g-x11perf-1.7.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/hprgglzcmwp5yr3q6936bi8i0r0n2nk1-arp-net-tools-2.10' from 'https://cache.nixos.org'...
+copying path '/nix/store/n3c1y6pw22pr1r9iq3ka5lznbqfq3zaz-ifconfig-net-tools-2.10' from 'https://cache.nixos.org'...
+copying path '/nix/store/n34sjiahi8jfvi8micdqskpzz347cdbc-route-net-tools-2.10' from 'https://cache.nixos.org'...
+building '/nix/store/vbkb6x77sap7dkriil3yr1a02qfk110j-net-tools-1003.1-2008.drv'...
+building '/nix/store/dhp5bx54avlf7ijmkdmm7hfqc1qrv6ih-unixbench-unstable-2023-02-27.drv'...
+error: Cannot build '/nix/store/dhp5bx54avlf7ijmkdmm7hfqc1qrv6ih-unixbench-unstable-2023-02-27.drv'.
+       Reason: builder failed with exit code 2.
+       Output paths:
+         /nix/store/0vci6isznq3mq0vn3f7x7b6475lqvw8r-unixbench-unstable-2023-02-27
+       Last 25 log lines:
+       >    32 | void wake_me(seconds, func)
+       >       |      ^~~~~~~
+       > src/timeit.c:37:25: error: passing argument 2 of 'signal' from incompatible pointer type [-Wincompatible-pointer-types]
+       >    37 |         signal(SIGALRM, func);
+       >       |                         ^~~~
+       >       |                         |
+       >       |                         void (*)(void)
+       > In file included from src/timeit.c:29:
+       > /nix/store/rwalsamz4246k8f1zzxa54qx7w3fbzdg-glibc-2.42-47-dev/include/signal.h:88:57: note: expected '__sighandler_t' {aka 'void (*)(int)'} but argument is of type 'void (*)(void)'
+       >    88 | extern __sighandler_t signal (int __sig, __sighandler_t __handler)
+       >       |                                          ~~~~~~~~~~~~~~~^~~~~~~~~
+       > /nix/store/rwalsamz4246k8f1zzxa54qx7w3fbzdg-glibc-2.42-47-dev/include/signal.h:72:16: note: '__sighandler_t' declared here
+       >    72 | typedef void (*__sighandler_t) (int);
+       >       |                ^~~~~~~~~~~~~~
+       > src/arith.c: In function 'main':
+       > src/arith.c:47:5: warning: old-style function definition [-Wold-style-definition]
+       >    47 | int main(argc, argv)
+       >       |     ^~~~
+       > src/arith.c: In function 'dumb_stuff':
+       > src/arith.c:84:5: warning: old-style function definition [-Wold-style-definition]
+       >    84 | int dumb_stuff(i)
+       >       |     ^~~~~~~~~~
+       > make[1]: *** [Makefile:235: pgms/arithoh] Error 1
+       > make[1]: Leaving directory '/build/source/UnixBench'
+       > make: *** [Makefile:176: all] Error 2
+       For full logs, run:
+         nix log /nix/store/dhp5bx54avlf7ijmkdmm7hfqc1qrv6ih-unixbench-unstable-2023-02-27.drv
+error: Cannot build '/nix/store/mr3fvy8vycpb9wpgmfpgnp9hyvq8b70w-user-environment.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/l90si0ncxi4j670kcz5w7bj5nz7qqb7w-user-environment
+error: Cannot build '/nix/store/5g3hp3kmqfk04v6db323mqyg5jwqmnkf-etc.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/4ay0q6j4iwr4y8khdg7i85fwjb81zch0-etc
+error: Cannot build '/nix/store/5q69gh1q5cbw62yy784r74z0xc59220a-nixos-system-nixos-26.05.20260126.bfc1b8a.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/3d1cw59zlklcs9v899i7gzk2clip4v0g-nixos-system-nixos-26.05.20260126.bfc1b8a
+Command 'nix --extra-experimental-features 'nix-command flakes' build --print-out-paths 'path:.#nixosConfigurations."laptop".config.system.build.toplevel' --no-link' returned non-zero exit status 1.
