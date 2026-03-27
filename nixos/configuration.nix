@@ -92,6 +92,7 @@
         obs-studio
         geekbench
         pwgen
+        wget
         # last package
       ];
     };
