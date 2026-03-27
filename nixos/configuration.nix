@@ -91,6 +91,7 @@
         davinci-resolve
         obs-studio
         geekbench
+        pwgen
         # last package
       ];
     };
