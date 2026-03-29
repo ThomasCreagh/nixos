@@ -66,8 +66,8 @@ in {
       primary = {
         exclusive = true;
         passthrough = true;
-        height = 40;
-        margin = "6";
+        height = 30;
+        margin = "3";
         position = "top";
         modules-left =
           ["custom/menu"]
