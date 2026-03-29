@@ -67,7 +67,7 @@ in {
         exclusive = true;
         passthrough = true;
         height = 30;
-        margin = "3";
+        margin = "0";
         position = "top";
         modules-left =
           ["custom/menu"]
