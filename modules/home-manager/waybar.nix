@@ -186,36 +186,6 @@ in {
             "ubuntu-logo" = "󰕈";
           };
         };
-        "custom/next-event" = {
-          interval = 10;
-          return-type = "json";
-          exec = mkScriptJson {
-            deps = [config.programs.khal.package pkgs.gnugrep];
-            script = ''
-              events="$(khal list now tomorrow --json title --json start-time | jq '.[] | "\(."start-time") \(.title)"' -r)"
-              count="$(printf "%s" "$events" | grep -c "^" || true)"
-              if [ "$count" == 0 ]; then
-                status="no-event"
-                events="No events!"
-              else
-                if test -n "$(khal list now 10m --json title --json start-time | jq '.[] | select(."start-time" != "") | "\(.title)"' -r)"; then
-                  status="has-close-event"
-                else
-                  status="has-event"
-                fi
-              fi
-            '';
-            alt = "$status";
-            tooltip = "$events";
-          };
-          format = "{icon}";
-          format-icons = {
-            has-event = "󰃭";
-            has-close-event = "󰨱";
-            no-event = "󰃮";
-          };
-          on-click = mkScript { deps = [pkgs.handlr-regex]; script = "handlr launch text/calendar"; };
-        };
         "custom/currentplayer" = {
           interval = 2;
           return-type = "json";
