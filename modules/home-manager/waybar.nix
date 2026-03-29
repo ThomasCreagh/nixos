@@ -94,7 +94,7 @@ in {
 
         clock = {
           format = "{:%H:%M %d/%m/%y}";
-          on-click-left = "mode";
+          on-click-left = lib.getExe pkgs.thunderbird;
           tooltip-format = "<tt><small>{calendar}</small></tt>";
         };
 
@@ -309,8 +309,8 @@ in {
           margin-right: 0.1em;
         }
         #workspaces button.hidden {
-          background-color: ${text};
-          color: ${grey};
+          background-color: ${yellow};
+          color: ${background};
         }
         #workspaces button.focused,
         #workspaces button.active {
