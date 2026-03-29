@@ -282,6 +282,7 @@ in {
         }
 
         window#waybar {
+          margine-top: 3;
           padding: 0;
           background-color: transparent;
           color: ${text};
