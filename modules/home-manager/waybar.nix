@@ -93,7 +93,7 @@ in {
         ];
 
         clock = {
-          format = "{:%H:%M %d/%m}";
+          format = "{:%H:%M %d/%m/%y}";
           on-click-left = "mode";
           tooltip-format = "<tt><small>{calendar}</small></tt>";
         };
@@ -260,6 +260,7 @@ in {
     style = let
       inherit (inputs.nix-colors.lib.conversions) hexToRGBString;
       background = "#1a1b26";
+      upper_background = "#242536";
       text = "#c0caf5";
       red = "#f7758e";
       green = "#9ece6a";
@@ -318,7 +319,7 @@ in {
         }
 
         #custom-menu {
-          background-color: ${background};
+          background-color: ${upper_background};
           color: ${blue};
           padding-right: 1.5em;
           padding-left: 1em;
@@ -326,7 +327,7 @@ in {
           border-radius: 0.5em;
         }
         #clock {
-          background-color: ${background};
+          background-color: ${upper_background};
           color: ${text};
           padding-right: 0.8em;
           padding-left: 0.7em;
