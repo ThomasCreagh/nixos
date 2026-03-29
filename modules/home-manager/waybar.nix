@@ -64,7 +64,7 @@ in {
     systemd.enable = true;
     settings = {
       primary = {
-        exclusive = false;
+        exclusive = true;
         passthrough = true;
         height = 40;
         margin = "6";
