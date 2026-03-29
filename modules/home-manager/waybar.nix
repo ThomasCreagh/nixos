@@ -65,7 +65,7 @@ in {
     settings = {
       primary = {
         exclusive = true;
-        passthrough = true;
+        passthrough = false;
         height = 33;
         margin = "0";
         position = "top";
