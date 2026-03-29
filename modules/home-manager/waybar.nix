@@ -278,13 +278,14 @@ in {
           font-family: "JetBrainsMono Nerd Font", monospace;
           font-size: 12pt;
           padding: 0;
-          margin: 0;
+          margin: 0 0.4em;
         }
 
         window#waybar {
           padding: 0;
           background-color: transparent;
           color: ${text};
+          margin: 0;
         }
         .modules-left {
           background-color: ${background};
