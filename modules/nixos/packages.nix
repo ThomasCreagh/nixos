@@ -34,6 +34,7 @@
     dig
     pwgen
     wget
+    exfat
     # system
     pavucontrol
     home-manager
