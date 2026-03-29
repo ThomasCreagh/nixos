@@ -282,20 +282,19 @@ in {
         }
 
         window#waybar {
-          margin-top: 3;
           padding: 0;
           background-color: transparent;
           color: ${text};
         }
         .modules-left {
           background-color: ${background};
-          margin: 0;
+          margin: 3 0 0 0;
           border-radius: 0.5em;
           border-right: solid 0.4em ${red};
         }
         .modules-right {
           background-color: ${background};
-          margin: 0;
+          margin: 3 0 0 0;
           border-radius: 0.5em;
           border-left: solid 0.4em ${green};
         }
