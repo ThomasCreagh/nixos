@@ -288,13 +288,13 @@ in {
         }
         .modules-left {
           background-color: ${background};
-          margin-left: 0;
+          margin: 0;
           border-radius: 0.5em;
           border-right: solid 0.4em ${red};
         }
         .modules-right {
           background-color: ${background};
-          margin-right: 0;
+          margin: 0;
           border-radius: 0.5em;
           border-left: solid 0.4em ${green};
         }
