@@ -290,7 +290,7 @@ in {
     # w x y z -> top, right, bottom, left
     style = let
       inherit (inputs.nix-colors.lib.conversions) hexToRGBString;
-      backgroud = "#1a1b26";
+      background = "#1a1b26";
       text = "#c0caf5";
       red = "#f7758e";
       green = "#9ece6a";
@@ -314,23 +314,23 @@ in {
         window#waybar {
           padding: 0;
           background-color: transparent;
-          color: text;
+          color: ${text};
         }
         .modules-left {
-          background-color: background;
+          background-color: ${background};
           margin-left: 0;
           border-radius: 0.5em;
-          border-right: solid 0.4em red;
+          border-right: solid 0.4em ${red};
         }
         .modules-right {
-          background-color: background;
+          background-color: ${background};
           margin-right: 0;
           border-radius: 0.5em;
-          border-left: solid 0.4em green;
+          border-left: solid 0.4em ${green};
         }
 
         #workspaces button {
-          color: text;
+          color: ${text};
           padding-left: 0.2em;
           padding-right: 0.2em;
           margin-top: 0.15em;
@@ -339,26 +339,26 @@ in {
           margin-right: 0.1em;
         }
         #workspaces button.hidden {
-          background-color: text;
-          color: grey;
+          background-color: ${text};
+          color: ${grey};
         }
         #workspaces button.focused,
         #workspaces button.active {
-          background-color: blue;
-          color: text;
+          background-color: ${blue};
+          color: ${text};
         }
 
         #custom-menu {
-          background-color: background;
-          color: blue;
+          background-color: ${background};
+          color: ${blue};
           padding-right: 1.5em;
           padding-left: 1em;
           margin-left: 0;
           border-radius: 0.5em;
         }
         #clock {
-          background-color: background;
-          color: text;
+          background-color: ${background};
+          color: ${text};
           padding-right: 0.8em;
           padding-left: 0.7em;
           margin-right: 0;
@@ -375,7 +375,7 @@ in {
           margin-left: 1em;
         }
         #tray {
-          color: yellow;
+          color: ${yellow};
         }
       '';
   };
