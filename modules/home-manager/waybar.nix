@@ -66,7 +66,7 @@ in {
       primary = {
         exclusive = true;
         passthrough = true;
-        height = 30;
+        height = 33;
         margin = "0";
         position = "top";
         modules-left =
