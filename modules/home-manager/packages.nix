@@ -19,6 +19,11 @@
       bash ~/.dotfiles/rebuild $HOST
     '')
 
+    # clean command
+    (writeShellScriptBin "clean" ''
+      bash ~/.dotfiles/clean
+    '')
+
     # run local ai
     (writeShellScriptBin "ai" ''
       echo "ai starting..."
