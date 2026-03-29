@@ -113,7 +113,7 @@ in {
         };
 
         "pulseaudio" = {
-          format = "{icon}{format_source}";
+          format = "{icon} {capacity}% ";
           format-bluetooth = "{icon} 󰂯{format_source}";
           format-source = "";
           format-source-muted = " 󰍭";
@@ -153,9 +153,9 @@ in {
             "󰂂"
             "󰁹"
           ];
-          format = "{icon}";
+          format = "{icon} {capacity}%";
           format-charging = "󰂄";
-          tooltip-format = "{capacity}% ({time})";
+          tooltip-format = "{time}";
           onclick = "";
         };
         "sway/window" = {
