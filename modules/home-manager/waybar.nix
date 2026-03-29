@@ -278,7 +278,7 @@ in {
           font-family: "JetBrainsMono Nerd Font", monospace;
           font-size: 12pt;
           padding: 0;
-          margin: 0 0.4em;
+          margin: 0;
         }
 
         window#waybar {
