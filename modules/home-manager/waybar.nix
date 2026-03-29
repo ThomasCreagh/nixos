@@ -113,7 +113,7 @@ in {
         };
 
         "pulseaudio" = {
-          format = "{icon}{volume}%";
+          format = "{icon} {volume}%";
           format-bluetooth = "{icon} 󰂯{format_source}";
           format-source = "";
           format-source-muted = " 󰍭";
