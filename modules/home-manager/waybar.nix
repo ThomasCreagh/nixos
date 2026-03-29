@@ -85,7 +85,6 @@ in {
 
         modules-right = [
           "tray"
-          "custom/next-event"
           "network"
           "custom/rfkill"
           "battery"
