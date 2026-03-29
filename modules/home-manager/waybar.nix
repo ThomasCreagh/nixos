@@ -285,7 +285,7 @@ in {
           padding: 0;
           background-color: transparent;
           color: ${text};
-          margin: 0;
+          margin: 0 !important;
         }
         .modules-left {
           background-color: ${background};
