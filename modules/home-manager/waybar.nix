@@ -154,7 +154,7 @@ in {
             "󰁹"
           ];
           format = "{icon}{capacity}%";
-          format-charging = "󰂄";
+          format-charging = "󰂄{capacity}%";
           tooltip-format = "{time}";
           onclick = "";
         };
