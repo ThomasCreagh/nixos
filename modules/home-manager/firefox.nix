@@ -153,7 +153,15 @@
                    }
                  ];
               }
-
+              {
+                 name = "maths";
+                 bookmarks = [
+                   {
+                     name = "detexify";
+                     url = "https://detexify.kirelabs.org/classify.html";
+                   }
+                 ];
+              }
             ];
           }
         ];
