@@ -35,6 +35,7 @@
     pwgen
     wget
     exfat
+    pomodoro
     # system
     pavucontrol
     home-manager
