@@ -36,6 +36,7 @@
     wget
     exfat
     pomodoro
+    nmap
     # system
     pavucontrol
     home-manager
