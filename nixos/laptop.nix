@@ -8,12 +8,16 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = [
-    "amdgpu.runpm=0"
-    "amdgpu.deep_color=0"
-  ];
+	#boot.kernelParams = [
+  	#  "amdgpu.runpm=0"
+  	#  "amdgpu.deep_color=0"
+  	#];
 
-  hardware.enableRedistributableFirmware = true;
+	#hardware.enableRedistributableFirmware = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
