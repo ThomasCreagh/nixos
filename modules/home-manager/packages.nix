@@ -9,6 +9,11 @@
     swayidle
 
     # rebuild command
+    (writeShellScriptBin "fuck" ''
+      shutdown now
+    '')
+
+    # rebuild command
     (writeShellScriptBin "rebuild" ''
       if [ $# -lt 1 ]; then
         echo "Usage: rebuild <hostname>"
