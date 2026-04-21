@@ -8,9 +8,14 @@
     swaylock
     swayidle
 
-    # rebuild command
+    # fuck command
     (writeShellScriptBin "fuck" ''
       shutdown now
+    '')
+
+    # update command
+    (writeShellScriptBin "update" ''
+      bash ~/.dotfiles/update
     '')
 
     # rebuild command
