@@ -7,7 +7,7 @@
     # music
     reaper
     vital
-    surge-XT
+    surge-xt
     helm
     airwindows
     # programming
@@ -15,7 +15,7 @@
     libgcc
     clang
     swi-prolog
-    wineWowPackages.stable
+    wineWow64Packages.stable
     ollama
     uv
     # cli tools
@@ -64,7 +64,7 @@
 
   environment.systemPackages = with pkgs; [
     networkmanager
-    neofetch
+    fastfetch
     neovim
     bash
     egl-wayland

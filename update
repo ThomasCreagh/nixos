@@ -1,2 +1,11 @@
+#!/bin/bash
+if [ -z "$1" ]; then
+	echo "No system type provided! (laptop, pc)"
+  exit 1
+fi
+set -e
+pushd ~/.dotfiles >> /dev/null
 nix flake update
-./rebuild
+echo "updated"
+bash rebuild $1
+popd >> /dev/null

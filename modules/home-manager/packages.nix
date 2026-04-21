@@ -15,7 +15,13 @@
 
     # update command
     (writeShellScriptBin "update" ''
-      bash ~/.dotfiles/update
+      if [ $# -lt 1 ]; then
+        echo "Usage: rebuild <hostname>"
+        exit 1
+      fi
+
+      HOST="$1"
+      bash ~/.dotfiles/update $HOST
     '')
 
     # rebuild command
