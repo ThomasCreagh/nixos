@@ -167,7 +167,7 @@
                  bookmarks = [
                    {
                      name = "dublin buses on bustimes.org";
-                     url = "https://bustimes.org/operators/dublin-bus";
+                     url = "https://bustimes.org/operators/dublin-bus/map";
                    }
                  ];
               }
