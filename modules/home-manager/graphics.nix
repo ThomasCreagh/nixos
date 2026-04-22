@@ -14,6 +14,7 @@
     theme.name = "Adwaita";
     iconTheme.name = "Adwaita";
     font.name = "Cantarell 14";
+    gtk4.theme = null;
   };
   qt = {
     enable = true;
