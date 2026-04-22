@@ -19,7 +19,7 @@
       "$menu" = "wofi --show drun";
 
       exec-once = [
-        "waybar &"
+				#"waybar &"
         "wbg ~/.dotfiles/wallpapers/3.jpg"
         "mako"
       ];
