@@ -6,6 +6,7 @@
     ../modules/nixos/desktop.nix
     ../modules/nixos/networking.nix
     ../modules/nixos/packages.nix
+    ../modules/nixos/postgresql.nix
     ../modules/nixos/syncthing.nix
     ../modules/nixos/virtulisation.nix
   ];
