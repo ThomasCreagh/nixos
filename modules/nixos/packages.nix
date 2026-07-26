@@ -59,7 +59,7 @@
     bitwarden-desktop
     davinci-resolve
     obs-studio
-
+    pcmanfm
     # last
   ];
 
