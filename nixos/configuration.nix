@@ -28,7 +28,7 @@
         "docker"
         "realtime"
         "jackaudio"
-        "amixer"
+        "alsa-utils"
       ];
     };
   };
