@@ -8,6 +8,16 @@
     swaylock
     swayidle
 
+    # install fonts
+    (stdenv.mkDerivation {
+      name = "custom-fonts";
+      src = ../../fonts;
+      installPhase = ''
+        mkdir -p $out/share/fonts/truetype
+        cp $src/*.ttf $out/share/fonts/truetype/
+      '';
+    })
+
     # fuck command
     (writeShellScriptBin "fuck" ''
       shutdown now
