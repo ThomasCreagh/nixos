@@ -28,6 +28,7 @@
         "docker"
         "realtime"
         "jackaudio"
+        "amixer"
       ];
     };
   };
