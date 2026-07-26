@@ -45,6 +45,7 @@
     wl-clipboard
     openvpn
     bluetui
+    alsa-utils
     # desktop
     obsidian
     discord

@@ -28,7 +28,6 @@
         "docker"
         "realtime"
         "jackaudio"
-        "alsa-utils"
       ];
     };
   };
