@@ -4,6 +4,7 @@
   # browser
   programs.firefox = {
     enable = true;
+    configPath = ".mozilla/firefox";
     policies = {
       Homepage = {
         URL = "https://nixos.org";

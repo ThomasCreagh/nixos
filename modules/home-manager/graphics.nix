@@ -2,6 +2,7 @@
 
 {
   home.pointerCursor = {
+    enable = true;
     package = pkgs.vanilla-dmz;
     name = "DMZ-White";
     size = 24;
