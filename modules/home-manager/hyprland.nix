@@ -5,11 +5,11 @@
   wayland.windowManager.hyprland = {
     enable = true;
 
-    extraConfig = ''
-      animations {
-        enabled = no
-      }
-    '';
+		#extraConfig = ''
+    		#  animations {
+    		#    enabled = no
+    		#  }
+    		#'';
 
     settings = {
       "$mod" = "SUPER";
@@ -17,9 +17,13 @@
       "$fileManager" = "dolphin";
       "$webBrowser" = "firefox";
       "$menu" = "wofi --show drun";
+      animations = {
+        enabled = false;
+      };
+
 
       exec-once = [
-				#"waybar &"
+        #"waybar &"
         "wbg ~/.dotfiles/wallpapers/3.jpg"
         "mako"
       ];
@@ -39,7 +43,7 @@
         "$mod, M, exit"
         "$mod, V, togglefloating"
         "$mod, P, pseudo"
-        "$mod, I, togglesplit"
+        "$mod, I, layoutmsg, togglesplit"
         "$mod, F, fullscreen, 1"
         "$mod SHIFT, F, fullscreen"
 

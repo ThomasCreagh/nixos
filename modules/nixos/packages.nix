@@ -60,6 +60,7 @@
     davinci-resolve
     obs-studio
     pcmanfm
+    ungoogled-chromium
     # last
   ];
 
