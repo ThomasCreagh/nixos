@@ -41,6 +41,7 @@
       size = 16384;
     }
   ];
+  programs.gamemode.enable = true;
 
   console.keyMap = "us";
 }
