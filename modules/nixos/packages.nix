@@ -54,7 +54,6 @@
     steam
     vlc
     thunderbird
-    gimp
     signal-desktop
     bitwarden-desktop
     davinci-resolve
