@@ -53,6 +53,7 @@
     discord
     steam
     vlc
+    gimp
     thunderbird
     signal-desktop
     bitwarden-desktop
