@@ -47,6 +47,7 @@
     bluetui
     alsa-utils
     # desktop
+    thunar
     obsidian
     discord
     spotify
