@@ -25,9 +25,9 @@
       ];
 
       windowrule = [
-        "workspace 1 silent, class:^(com.mitchellh.ghostty)$"
-        "workspace 2 silent, class:^(firefox)$"
-        "workspace 3 silent, class:^(thunderbird)$"
+        "workspace 1 silent, ^(com.mitchellh.ghostty)$"
+        "workspace 2 silent, ^(firefox)$"
+        "workspace 3 silent, ^(thunderbird)$"
       ];
 
       bind = [
