@@ -24,7 +24,7 @@
         "thunderbird"
       ];
 
-      windowrulev2 = [
+      windowrule = [
         "workspace 1 silent, class:^(com.mitchellh.ghostty)$"
         "workspace 2 silent, class:^(firefox)$"
         "workspace 3 silent, class:^(thunderbird)$"
