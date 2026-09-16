@@ -5,12 +5,6 @@
   wayland.windowManager.hyprland = {
     enable = true;
 
-		#extraConfig = ''
-    		#  animations {
-    		#    enabled = no
-    		#  }
-    		#'';
-
     settings = {
       "$mod" = "SUPER";
       "$terminal" = "ghostty";
@@ -23,9 +17,17 @@
 
 
       exec-once = [
-        #"waybar &"
         "wbg ~/.dotfiles/wallpapers/3.jpg"
         "mako"
+        "ghostty"
+        "firefox"
+        "thunderbird"
+      ];
+
+      windowrulev2 = [
+        "workspace 1 silent, class:^(com.mitchellh.ghostty)$"
+        "workspace 2 silent, class:^(firefox)$"
+        "workspace 3 silent, class:^(thunderbird)$"
       ];
 
       bind = [
