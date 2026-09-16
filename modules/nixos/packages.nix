@@ -18,6 +18,7 @@
     wineWow64Packages.stable
     ollama
     uv
+    opencv4
     # cli tools
     ripgrep
     unzip
@@ -58,7 +59,6 @@
     thunderbird
     signal-desktop
     bitwarden-desktop
-    davinci-resolve
     obs-studio
     pcmanfm
     ungoogled-chromium

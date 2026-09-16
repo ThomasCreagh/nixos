@@ -22,8 +22,8 @@
   };
 
   users.users.tom.packages = with pkgs; [
-    davinci-resolve
-    ffmpeg_7
+		#davinci-resolve
+		#ffmpeg_7
   ];
 
   programs.obs-studio = {
