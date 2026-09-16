@@ -22,12 +22,14 @@
         "ghostty"
         "firefox"
         "thunderbird"
+        "obsidian"
       ];
 
       windowrule = [
         "match:class ^(com.mitchellh.ghostty)$, workspace 1 silent"
         "match:class ^(firefox)$, workspace 2 silent"
         "match:class ^(thunderbird)$, workspace 3 silent"
+        "match:class ^(md.obsidian.Obsidian)$, workspace 4 silent"
       ];
 
       bind = [
