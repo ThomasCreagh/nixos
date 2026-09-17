@@ -700,6 +700,9 @@ require('lazy').setup({
             },
           },
         },
+        zls = {
+          cmd = { 'zls' }, -- use the system zls (from Nix), not Mason's
+        },
       }
 
       -- Ensure the servers and tools above are installed
