@@ -62,6 +62,7 @@
     obs-studio
     pcmanfm
     ungoogled-chromium
+    zotero
     # last
   ];
 
