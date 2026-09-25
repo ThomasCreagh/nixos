@@ -42,6 +42,7 @@
         "$mod, E, exec, $fileManager"
         "$mod, R, exec, $menu"
         "$mod, S, exec, signal-desktop"
+        "$mod, L, exec, hyprlock"
 
         "$mod, C, killactive"
         "$mod, M, exit"
