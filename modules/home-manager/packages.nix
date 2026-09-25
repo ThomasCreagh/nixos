@@ -18,16 +18,6 @@
       '';
     })
 
-    # down command
-    (writeShellScriptBin "dn" ''
-      if [ $# -lt 1 ]; then
-        echo "Usage: dn <number of dirs up>"
-        exit 1
-      fi
-
-      cd "$(printf '../%.0s' $(seq 1 "$1"))"
-    '')
-
     # fuck command
     (writeShellScriptBin "fuck" ''
       shutdown now

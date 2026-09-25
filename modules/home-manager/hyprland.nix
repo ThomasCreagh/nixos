@@ -15,7 +15,6 @@
         enabled = false;
       };
 
-
       exec-once = [
         "wbg ~/.dotfiles/wallpapers/3.jpg"
         "mako"
