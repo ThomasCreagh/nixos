@@ -47,6 +47,7 @@
     openvpn
     bluetui
     alsa-utils
+    hyprlock
     # desktop
     thunar
     obsidian
