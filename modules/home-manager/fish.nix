@@ -8,8 +8,8 @@
         description = "Go up N directories";
         body = ''
           if test (count $argv) -lt 1
-            echo "Usage: dn <number of dirs up>"
-            return 1
+            cd ..
+            return 0
           end
 
           cd (string repeat -n $argv[1] "../" | string trim)
