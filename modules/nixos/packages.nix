@@ -38,6 +38,7 @@
     exfat
     pomodoro
     nmap
+    codex
     # system
     pavucontrol
     home-manager
