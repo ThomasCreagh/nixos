@@ -39,6 +39,7 @@
     pomodoro
     nmap
     codex
+    screen
     # system
     pavucontrol
     home-manager
