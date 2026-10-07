@@ -15,6 +15,7 @@
         enabled = false;
       };
 
+
       exec-once = [
         "wbg ~/.dotfiles/wallpapers/3.jpg"
         "mako"
@@ -42,7 +43,7 @@
         "$mod, E, exec, $fileManager"
         "$mod, R, exec, $menu"
         "$mod, S, exec, signal-desktop"
-        "$mod, L, exec, hyprlock"
+        "$mod, U, exec, hyprlock"
 
         "$mod, C, killactive"
         "$mod, M, exit"
