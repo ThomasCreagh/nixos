@@ -50,6 +50,7 @@
     bluetui
     alsa-utils
     hyprlock
+    ghostty.terminfo
     # desktop
     thunar
     obsidian
