@@ -1,5 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
+let
+  mesaPkgs = import inputs.nixpkgs-mesa {
+    system = pkgs.system;
+  };
+in
 {
   imports =
     [
@@ -8,17 +13,23 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-	#boot.kernelParams = [
-  	#  "amdgpu.runpm=0"
-  	#  "amdgpu.deep_color=0"
-  	#];
 
-	#hardware.enableRedistributableFirmware = true;
+#boot.kernelParams = [
+#  "amdgpu.runpm=0"
+#  "amdgpu.deep_color=0"
+#];
+
+#hardware.enableRedistributableFirmware = true;
+
   hardware = {
     graphics = {
       enable = true;
       enable32Bit = true;
+
+      package = mesaPkgs.mesa;
+      package32 = mesaPkgs.pkgsi686Linux.mesa;
     };
+
     amdgpu.opencl.enable = true;
   };
 
