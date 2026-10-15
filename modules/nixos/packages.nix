@@ -50,7 +50,7 @@
     bluetui
     alsa-utils
     hyprlock
-    ghostty.terminfo
+    #ghostty.terminfo
     # desktop
     thunar
     obsidian
@@ -65,7 +65,7 @@
     bitwarden-desktop
     obs-studio
     pcmanfm
-    ungoogled-chromium
+    # ungoogled-chromium
     zotero
     # last
   ];
