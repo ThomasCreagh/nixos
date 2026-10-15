@@ -65,8 +65,7 @@
     bitwarden-desktop
     obs-studio
     pcmanfm
-    # ungoogled-chromium
-    # zotero
+    jabref
     # last
   ];
 
