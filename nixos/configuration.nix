@@ -35,7 +35,14 @@
 
   services = {
     dbus.enable = true;
-    displayManager.ly.enable = true;
+    displayManager.ly = {
+      enable = true;
+      settings = {
+        animation = "matrix";
+        animation_frame_delay = 30;
+        animation_timeout_sec = 0;
+      };
+    };
   };
 
   programs = {
