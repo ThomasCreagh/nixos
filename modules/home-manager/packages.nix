@@ -50,6 +50,11 @@
       bash ~/.dotfiles/clean
     '')
 
+    # wake up pc command
+    (writeShellScriptBin "wakepc" ''
+      ssh h-server-remote 'wakeonlan -i 192.168.1.32 f0:b6:1e:7f:ce:a7'
+    '')
+
     # Start AI services at desktop login
     (writeShellApplication {
       name = "ai";
