@@ -67,7 +67,7 @@
     obs-studio
     pcmanfm
     ungoogled-chromium
-    opencode
+    #opencode
     # last
   ];
 
