@@ -21,12 +21,12 @@
         };
       };
 
-      permission = {
-        bash = "ask";
-        edit = "ask";
-        external_directory = "ask";
-        task = "deny";
-      };
+      # permission = {
+      #   bash = "ask";
+      #   edit = "ask";
+      #   external_directory = "ask";
+      #   task = "deny";
+      # };
     };
   };
 }
