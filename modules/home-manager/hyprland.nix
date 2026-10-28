@@ -20,17 +20,14 @@
         "wbg ~/.dotfiles/wallpapers/3.jpg"
         "ai"
         "mako"
-        "ghostty"
-        "firefox"
-        "thunderbird"
-        "obsidian"
-      ];
-
-      windowrule = [
-        "match:class ^(com.mitchellh.ghostty)$, workspace 1 silent"
-        "match:class ^(firefox)$, workspace 2 silent"
-        "match:class ^(thunderbird)$, workspace 3 silent"
-        "match:class ^(md.obsidian.Obsidian)$, workspace 4 silent"
+        # Exec rules only apply to the window spawned here, so later
+        # windows open on whatever workspace is active.
+        "[workspace 1 silent] ghostty"
+        "[workspace 2 silent] firefox"
+        "[workspace 3 silent] thunderbird"
+        "[workspace 4 silent] claude-desktop"
+        "[workspace 5 silent] signal-desktop"
+        "[workspace 6 silent] obsidian"
       ];
 
       bind = [
