@@ -110,10 +110,13 @@
         ", XF86AudioPrev, exec, playerctl previous"
       ];
 
-      # just mirror image
+      # Use the laptop panel plus any USB-C/DisplayPort dock monitor as
+      # separate displays.  Hyprland detects connectors dynamically; `auto`
+      # places an external display beside the current layout instead of
+      # forcing it to mirror eDP-1.
       monitor = [
-        "eDP-1, preferred, 0x0, 1"
-        ", preferred, 0x0, 1, mirror, eDP-1"
+        "eDP-1, preferred, auto, 1"
+        ", preferred, auto, 1"
       ];
 
       input = {

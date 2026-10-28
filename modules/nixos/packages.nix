@@ -40,6 +40,7 @@
     nmap
     codex
     screen
+    wakeonlan
     # system
     pavucontrol
     home-manager
