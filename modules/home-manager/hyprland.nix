@@ -18,6 +18,7 @@
 
       exec-once = [
         "wbg ~/.dotfiles/wallpapers/3.jpg"
+        "ai"
         "mako"
         "ghostty"
         "firefox"
