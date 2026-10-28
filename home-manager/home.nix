@@ -10,6 +10,7 @@
     ../modules/home-manager/hyprland.nix
     ../modules/home-manager/mako.nix
     ../modules/home-manager/neovim.nix
+    ../modules/home-manager/opencode.nix
     ../modules/home-manager/packages.nix
     ../modules/home-manager/waybar.nix
     ../modules/home-manager/wofi.nix
