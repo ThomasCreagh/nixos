@@ -41,6 +41,7 @@
     codex
     screen
     wakeonlan
+    claude-code
     # system
     pavucontrol
     home-manager
