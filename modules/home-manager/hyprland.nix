@@ -30,6 +30,12 @@
         "[workspace 6 silent] obsidian"
       ];
 
+      # claude-desktop runs inside a bwrap FHS wrapper, so the exec-once
+      # rule above doesn't reliably catch its window; match on class instead.
+      windowrule = [
+        "match:class ^(com\\.anthropic\\.Claude)$, workspace 4 silent"
+      ];
+
       bind = [
         "$mod, Q, exec, $terminal"
         "$mod, W, exec, $webBrowser"
