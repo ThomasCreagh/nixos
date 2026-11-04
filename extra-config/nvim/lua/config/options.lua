@@ -47,3 +47,6 @@ vim.o.scrolloff = 10
 
 -- Ask to save instead of failing on operations like `:q` with unsaved changes
 vim.o.confirm = true
+
+-- Extra filetypes. .vert and .frag are already detected as GLSL.
+vim.filetype.add { extension = { frac = 'glsl' } }

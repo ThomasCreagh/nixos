@@ -1,5 +1,5 @@
 -- Highlight, edit, and navigate code. See `:help treesitter`
-local parsers = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'nix', 'query', 'vim', 'vimdoc' }
+local parsers = { 'bash', 'c', 'diff', 'glsl', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'nix', 'query', 'vim', 'vimdoc' }
 
 local function start(buf, lang)
     vim.treesitter.start(buf, lang)
