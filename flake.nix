@@ -33,15 +33,6 @@
           ./nixos/configuration.nix
         ];
       };
-
-      pc = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-
-        modules = [
-          ./nixos/pc.nix
-          ./nixos/configuration.nix
-        ];
-      };
     };
 
     homeConfigurations."tom" =
