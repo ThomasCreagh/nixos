@@ -13,6 +13,7 @@
 
     extraPackages = with pkgs; [
       nixd
+      tree-sitter
     ];
   };
   home.file.".config/nvim".source = ../../extra-config/nvim;
