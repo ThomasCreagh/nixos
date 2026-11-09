@@ -4,6 +4,9 @@
   # hyprland
   wayland.windowManager.hyprland = {
     enable = true;
+    # Settings below are written in hyprlang syntax; keep that format rather
+    # than the Lua default for stateVersion >= 26.05.
+    configType = "hyprlang";
 
     settings = {
       "$mod" = "SUPER";
@@ -121,6 +124,22 @@
       monitor = [
         "eDP-1, preferred, auto, 1"
         ", preferred, auto, 1"
+      ];
+
+      # Pin workspaces to monitors. The Dell is matched by description so it
+      # works whichever port it's plugged into. Without it connected, its
+      # workspaces fall back to the laptop panel.
+      workspace = [
+        "3, monitor:eDP-1, default:true"
+        "4, monitor:eDP-1"
+        "5, monitor:eDP-1"
+        "10, monitor:eDP-1"
+        "1, monitor:desc:Dell Inc. DELL U2424HE 72694X3, default:true"
+        "2, monitor:desc:Dell Inc. DELL U2424HE 72694X3"
+        "6, monitor:desc:Dell Inc. DELL U2424HE 72694X3"
+        "7, monitor:desc:Dell Inc. DELL U2424HE 72694X3"
+        "8, monitor:desc:Dell Inc. DELL U2424HE 72694X3"
+        "9, monitor:desc:Dell Inc. DELL U2424HE 72694X3"
       ];
 
       input = {
