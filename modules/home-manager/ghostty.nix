@@ -7,7 +7,8 @@
     installVimSyntax = true;
     settings = {
       font-size = 20;
-      theme = "TokyoNight Night";
+      # Follows the system light/dark preference (switched by darkman)
+      theme = "light:TokyoNight Day,dark:TokyoNight Night";
     };
   };
 }

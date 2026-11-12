@@ -30,5 +30,12 @@ vim.keymap.set('n', '<leader>ef', ':Neotree focus<CR>', { desc = '[E]xplorer [F]
 
 -- User interface
 vim.keymap.set('n', '<leader>ut', ':Telescope colorscheme<CR>', { desc = '[U]ser Interface [T]heme' })
-vim.keymap.set('n', '<leader>ud', ':colorscheme tokyonight-night<CR>', { desc = '[U]ser Interface [D]ark theme' })
-vim.keymap.set('n', '<leader>ul', ':colorscheme tokyonight-day<CR>', { desc = '[U]ser Interface [L]ight theme' })
+-- Picking a theme by hand stops it following the terminal (see plugins/colorscheme.lua)
+vim.keymap.set('n', '<leader>ud', function()
+    vim.g.follow_terminal_bg = false
+    vim.o.background = 'dark'
+end, { desc = '[U]ser Interface [D]ark theme' })
+vim.keymap.set('n', '<leader>ul', function()
+    vim.g.follow_terminal_bg = false
+    vim.o.background = 'light'
+end, { desc = '[U]ser Interface [L]ight theme' })
