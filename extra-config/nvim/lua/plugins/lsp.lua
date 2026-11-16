@@ -138,6 +138,7 @@ return {
                 },
                 zls = {}, -- installed by each project's Nix flake, not Mason
                 nixd = {}, -- installed by Nix, see modules/home-manager/neovim.nix
+                dafny = {}, -- installed by Nix, see modules/home-manager/neovim.nix
             }
 
             for name, server in pairs(servers) do
