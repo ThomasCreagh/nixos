@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
 
@@ -41,7 +41,6 @@
     codex
     screen
     wakeonlan
-    claude-code
     # system
     pavucontrol
     home-manager
@@ -52,7 +51,6 @@
     bluetui
     alsa-utils
     hyprlock
-    #ghostty.terminfo
     # desktop
     thunar
     obsidian
@@ -68,6 +66,10 @@
     obs-studio
     pcmanfm
     ungoogled-chromium
+    # AI
+    claude-code
+    bubblewrap
+    socat
     #opencode
     # last
   ];

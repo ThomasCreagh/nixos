@@ -28,9 +28,6 @@
         "docker"
         "realtime"
         "jackaudio"
-        # for claude sandboxing system wide
-        "bubblewrap"
-        "socat"
       ];
     };
   };
