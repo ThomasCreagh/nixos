@@ -5,7 +5,7 @@
     "allowUnsandboxedCommands": false,
     "failIfUnavailable": true,
     "filesystem": {
-      "denyRead": ["~/.ssh", "~/.claude/.credentials.json", "~/.claude.json", "./.env"]
+      "denyRead": ["~/.ssh", "~/.claude/.credentials.json", "~/.claude.json"]
     }
   }
 }
