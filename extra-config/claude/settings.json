@@ -1,3 +1,11 @@
 {
-  "theme": "auto"
+  "theme": "auto",
+  "sandbox": {
+    "enabled": true,
+    "allowUnsandboxedCommands": false,
+    "failIfUnavailable": true,
+    "filesystem": {
+      "denyRead": ["~/.ssh", "~/.claude/.credentials.json", "~/.claude.json", "./.env"]
+    }
+  }
 }
