@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../modules/home-manager/claude-code.nix
     ../modules/home-manager/firefox.nix
     ../modules/home-manager/fish.nix
     ../modules/home-manager/ghostty.nix

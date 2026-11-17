@@ -5,6 +5,7 @@
     ../modules/nixos/audio.nix
     ../modules/nixos/desktop.nix
     ../modules/nixos/networking.nix
+    ../modules/nixos/claude-code.nix
     ../modules/nixos/packages.nix
     ../modules/nixos/postgresql.nix
     ../modules/nixos/syncthing.nix
