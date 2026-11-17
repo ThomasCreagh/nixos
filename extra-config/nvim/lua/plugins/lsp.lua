@@ -136,6 +136,21 @@ return {
                         },
                     },
                 },
+                -- Completion, go-to-definition and docs. Linting and formatting are left to ruff.
+                pylsp = {
+                    settings = {
+                        pylsp = {
+                            plugins = {
+                                autopep8 = { enabled = false },
+                                mccabe = { enabled = false },
+                                pycodestyle = { enabled = false },
+                                pyflakes = { enabled = false },
+                                yapf = { enabled = false },
+                            },
+                        },
+                    },
+                },
+                ruff = {}, -- installed by Nix, see modules/home-manager/neovim.nix
                 zls = {}, -- installed by each project's Nix flake, not Mason
                 nixd = {}, -- installed by Nix, see modules/home-manager/neovim.nix
                 dafny = {}, -- installed by Nix, see modules/home-manager/neovim.nix
@@ -151,6 +166,7 @@ return {
             require('mason-tool-installer').setup {
                 ensure_installed = {
                     'lua_ls',
+                    'pylsp',
                     'stylua', -- Used to format Lua code
                 },
             }

@@ -15,6 +15,7 @@
       nixd
       tree-sitter
       dafny
+      ruff
     ];
   };
   home.file.".config/nvim".source = ../../extra-config/nvim;
