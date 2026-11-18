@@ -4,9 +4,10 @@
   programs.git = {
     enable = true;
     ignores = [
-      "/.claude/"
-      "/.mcp.json"
+      "**/.claude/"
       "**/.claude/.cc-writes/"
+      "**/.claude/settings.local.json"
+      "**/.mcp.json"
     ];
     settings.user = {
       name = "Thomas Creagh";
