@@ -34,6 +34,29 @@ let
   };
 
   port = 5005;
+
+  # Speaks the text on stdin through the piper server.
+  piperSay = pkgs.writeShellApplication {
+    name = "piper-say";
+    runtimeInputs = with pkgs; [ coreutils jq curl alsa-utils ];
+    text = ''
+      # piper treats each line as a separate utterance, so join lines
+      text=$(tr '\n' ' ')
+
+      # Skip text with nothing pronounceable (e.g. "}" lines in code blocks):
+      # piper produces no audio and the server returns an error instead.
+      case "$text" in
+        *[[:alnum:]]*) ;;
+        *) exit 0 ;;
+      esac
+
+      printf '%s' "$text" \
+        | jq -Rs '{text: .}' \
+        | curl -sf -H 'Content-Type: application/json' --data-binary @- \
+            http://127.0.0.1:${toString port}/synthesize \
+        | aplay -q -
+    '';
+  };
 in
 {
   # Loading the voice takes ~2s, so keep one piper running with it loaded
@@ -57,10 +80,8 @@ in
       DefaultModule piper
       DefaultLanguage "en"
     '';
-    # Send each message to the piper server as JSON and play the WAV it
-    # returns. piper treats each line as a separate utterance, so join lines.
     modules.piper = ''
-      GenericExecuteSynth "printf %s \'$DATA\' | ${pkgs.coreutils}/bin/tr \'\\n\' \' \' | ${lib.getExe pkgs.jq} -Rs \'{text: .}\' | ${lib.getExe pkgs.curl} -sf -H \'Content-Type: application/json\' --data-binary @- http://127.0.0.1:${toString port}/synthesize | ${pkgs.alsa-utils}/bin/aplay -q -"
+      GenericExecuteSynth "printf %s \'$DATA\' | ${lib.getExe piperSay}"
       AddVoice "en" "FEMALE1" "${voiceName}"
     '';
   };
