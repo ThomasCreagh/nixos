@@ -1,0 +1,18 @@
+{
+  "sandbox": {
+    "excludedCommands": [
+      "nix build *",
+      "nix flake check *",
+      "home-manager build *",
+      "nixos-rebuild build *"
+    ],
+    "filesystem": {
+      "allowWrite": [
+        "~/.cache/nix"
+      ]
+    }
+  },
+  "permissions": {
+    "deny": ["Bash(nix * --impure*)"]
+  }
+}

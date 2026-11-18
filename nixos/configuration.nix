@@ -8,6 +8,7 @@
     ../modules/nixos/claude-code.nix
     ../modules/nixos/packages.nix
     ../modules/nixos/postgresql.nix
+    ../modules/nixos/speech.nix
     ../modules/nixos/syncthing.nix
     ../modules/nixos/virtulisation.nix
   ];
