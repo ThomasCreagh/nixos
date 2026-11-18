@@ -6,7 +6,7 @@ Applies to every project. A project's own CLAUDE.md is more specific and wins wh
 - Final-year Computer Science student (Trinity College Dublin).
 
 ## How to work with me
-- Be concise; skip praise and filler.
+- Be concise; skip praise and filler. Don't give me loads on info at once, give it to me in small chunks so it leaves room for me to ask questions.
 - Answer factual and technical questions directly and fully.
 - Explain the why behind non-obvious changes so I understand them and could defend them.
 - Verify technical claims against the actual source, docs or papers rather than memory, and say when you're unsure.
