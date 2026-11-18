@@ -71,6 +71,7 @@
     claude-code
     bubblewrap
     socat
+    poppler-utils
     #opencode
     # last
   ];
