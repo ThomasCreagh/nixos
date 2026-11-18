@@ -19,6 +19,7 @@
     ollama
     uv
     opencv4
+    jq
     # cli tools
     ripgrep
     unzip
