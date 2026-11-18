@@ -13,17 +13,19 @@ let
 
   # Voices aren't packaged in nixpkgs; fetch one from the official repo.
   # Browse others at https://huggingface.co/rhasspy/piper-voices
-  voiceName = "en_GB-cori-high";
-  voiceUrl = "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_GB/cori/high/${voiceName}";
+  # "medium" generates speech faster than "high", so there's less of a pause
+  # before each sentence.
+  voiceName = "en_GB-cori-medium";
+  voiceUrl = "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_GB/cori/medium/${voiceName}";
   # piper expects the .onnx.json config next to the model
   voice = pkgs.linkFarm "piper-voice-${voiceName}" {
     "${voiceName}.onnx" = pkgs.fetchurl {
       url = "${voiceUrl}.onnx";
-      hash = "sha256-RwtN1jTJj4pIUNdib/w9/JB3Riju72YFpt2PiPMKWQM=";
+      hash = "sha256-GJn5jl+4MQFU88KXP0uKkpunJF5yKz06hWgLgz2V8Q0=";
     };
     "${voiceName}.onnx.json" = pkgs.fetchurl {
       url = "${voiceUrl}.onnx.json";
-      hash = "sha256-nn+1tWcWEsIvPIHL5Gwa6HsDGkYyvLUJ5Jna1vHirew=";
+      hash = "sha256-4mLBbX8ZL2nU7da074pZFTeeZ0lfzEAvGrFe6zPaPTY=";
     };
   };
 
