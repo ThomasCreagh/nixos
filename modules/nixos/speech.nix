@@ -15,21 +15,21 @@ let
   # Browse others at https://huggingface.co/rhasspy/piper-voices
   # Lower quality means less of a pause before each sentence: "low" (16 kHz)
   # is ~25-30% faster than "medium", which is 2-6x faster than "high".
-  # en_GB-cori-medium sounds crisper, if the pause is acceptable:
-  #   .../en/en_GB/cori/medium/en_GB-cori-medium
-  #   onnx: sha256-GJn5jl+4MQFU88KXP0uKkpunJF5yKz06hWgLgz2V8Q0=
-  #   json: sha256-4mLBbX8ZL2nU7da074pZFTeeZ0lfzEAvGrFe6zPaPTY=
-  voiceName = "en_GB-southern_english_female-low";
-  voiceUrl = "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_GB/southern_english_female/low/${voiceName}";
+  # en_GB-southern_english_female-low is faster, but sounds more muffled:
+  #   .../en/en_GB/southern_english_female/low/en_GB-southern_english_female-low
+  #   onnx: sha256-8vN67Rs6CTR29xnRN5ugwLGxz28e+ZKI4uv1ApcaB8M=
+  #   json: sha256-oa9DMQ+HVhYVBuhJooY9NCqYsIU6+eJDdYHTnpki0OU=
+  voiceName = "en_GB-cori-medium";
+  voiceUrl = "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_GB/cori/medium/${voiceName}";
   # piper expects the .onnx.json config next to the model
   voice = pkgs.linkFarm "piper-voice-${voiceName}" {
     "${voiceName}.onnx" = pkgs.fetchurl {
       url = "${voiceUrl}.onnx";
-      hash = "sha256-8vN67Rs6CTR29xnRN5ugwLGxz28e+ZKI4uv1ApcaB8M=";
+      hash = "sha256-GJn5jl+4MQFU88KXP0uKkpunJF5yKz06hWgLgz2V8Q0=";
     };
     "${voiceName}.onnx.json" = pkgs.fetchurl {
       url = "${voiceUrl}.onnx.json";
-      hash = "sha256-oa9DMQ+HVhYVBuhJooY9NCqYsIU6+eJDdYHTnpki0OU=";
+      hash = "sha256-4mLBbX8ZL2nU7da074pZFTeeZ0lfzEAvGrFe6zPaPTY=";
     };
   };
 
