@@ -36,10 +36,17 @@ let
   port = 5005;
 
   # Speaks the text on stdin through the piper server.
+  # Optional argument: speech-dispatcher rate, -100 (slow) to 100 (fast).
   piperSay = pkgs.writeShellApplication {
     name = "piper-say";
-    runtimeInputs = with pkgs; [ coreutils jq curl alsa-utils ];
+    runtimeInputs = with pkgs; [ coreutils gawk jq curl alsa-utils ];
     text = ''
+      rate=''${1:-0}
+      # Undo Firefox's mapping of its speed (0.5x-2.5x) onto rate, giving
+      # back the speed multiplier. Piper's length_scale is 1/speed.
+      length_scale=$(awk -v r="$rate" \
+        'BEGIN { print 1 / (r >= 0 ? 2.5 ^ (r / 100) : 2 ^ (r / 100)) }')
+
       # piper treats each line as a separate utterance, so join lines
       text=$(tr '\n' ' ')
 
@@ -51,10 +58,22 @@ let
       esac
 
       printf '%s' "$text" \
-        | jq -Rs '{text: .}' \
+        | jq -Rs --argjson ls "$length_scale" '{text: ., length_scale: $ls}' \
         | curl -sf -H 'Content-Type: application/json' --data-binary @- \
             http://127.0.0.1:${toString port}/synthesize \
         | aplay -q -
+    '';
+  };
+
+  # Reads the highlighted text aloud; run again while speaking to stop.
+  readSelection = pkgs.writeShellApplication {
+    name = "read-selection";
+    runtimeInputs = with pkgs; [ procps wl-clipboard piperSay ];
+    text = ''
+      if pkill -f 'aplay -q -$'; then
+        exit 0
+      fi
+      wl-paste --primary --no-newline | piper-say
     '';
   };
 in
@@ -81,10 +100,14 @@ in
       DefaultLanguage "en"
     '';
     modules.piper = ''
-      GenericExecuteSynth "printf %s \'$DATA\' | ${lib.getExe piperSay}"
+      GenericExecuteSynth "printf %s \'$DATA\' | ${lib.getExe piperSay} $RATE"
+      # Pass the rate through unchanged (multiply is in hundredths)
+      GenericRateAdd 0
+      GenericRateMultiply 100
+      GenericRateForceInteger 1
       AddVoice "en" "FEMALE1" "${voiceName}"
     '';
   };
 
-  environment.systemPackages = [ piper ];
+  environment.systemPackages = [ piper piperSay readSelection ];
 }

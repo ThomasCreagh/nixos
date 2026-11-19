@@ -145,6 +145,7 @@ bind("E", hl.dsp.exec_cmd(fileManager))
 bind("R", hl.dsp.exec_cmd(menu))
 bind("S", hl.dsp.exec_cmd("signal-desktop"))
 bind("U", hl.dsp.exec_cmd("hyprlock"))
+bind("N", hl.dsp.exec_cmd("read-selection")) -- press again to stop
 
 -- Windows
 bind("C", hl.dsp.window.close())
