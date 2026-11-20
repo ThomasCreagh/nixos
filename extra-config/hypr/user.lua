@@ -24,8 +24,25 @@ hl.monitor({ output = "", mode = "preferred", position = "auto-center-up", scale
 -- Workspaces
 ------------------------------------------------------------------------------
 
+-- The rule and monitor each workspace is currently assigned to
+local workspaceRules = {}
+local workspaceMonitors = {}
+
+-- Assign a workspace to a monitor: replace its rule (used whenever it's
+-- created) and move it there now if it already exists.
+local function assignWorkspace(ws, monitor, default)
+	if workspaceRules[ws] then
+		workspaceRules[ws]:set_enabled(false)
+	end
+	workspaceRules[ws] = hl.workspace_rule({ workspace = tostring(ws), monitor = monitor, default = default })
+	workspaceMonitors[ws] = monitor
+	if hl.get_workspace(ws) then
+		hl.dispatch(hl.dsp.workspace.move({ workspace = ws, monitor = monitor }))
+	end
+end
+
 for i, ws in ipairs(laptopWorkspaces) do
-	hl.workspace_rule({ workspace = tostring(ws), monitor = laptop, default = i == 1 })
+	assignWorkspace(ws, laptop, i == 1)
 end
 
 -- Pin externalWorkspaces to the first non-laptop monitor and move any that
@@ -44,15 +61,39 @@ local function pinExternalWorkspaces()
 	end
 
 	for i, ws in ipairs(externalWorkspaces) do
-		hl.workspace_rule({ workspace = tostring(ws), monitor = external, default = i == 1 })
-		if hl.get_workspace(ws) then
-			hl.dispatch(hl.dsp.workspace.move({ workspace = ws, monitor = external }))
-		end
+		assignWorkspace(ws, external, i == 1)
 	end
 end
 
 pinExternalWorkspaces()
 hl.on("monitor.added", pinExternalWorkspaces)
+
+-- Move a workspace to the next monitor in ID order, wrapping round to the
+-- first. Lasts until the config reloads or a monitor is plugged in, which
+-- put the defaults above back.
+local function cycleWorkspaceMonitor(ws)
+	local monitors = hl.get_monitors()
+	if #monitors < 2 then
+		return
+	end
+	table.sort(monitors, function(a, b)
+		return a.id < b.id
+	end)
+
+	local existing = hl.get_workspace(ws)
+	local current = existing and existing.monitor and existing.monitor.name
+		or workspaceMonitors[ws]
+		or hl.get_active_monitor().name
+
+	local target = monitors[1]
+	for i, m in ipairs(monitors) do
+		if m.name == current then
+			target = monitors[i % #monitors + 1]
+			break
+		end
+	end
+	assignWorkspace(ws, target.name, false)
+end
 
 ------------------------------------------------------------------------------
 -- Look and feel
@@ -170,11 +211,15 @@ bind("L", hl.dsp.focus({ direction = "right" }))
 bind("K", hl.dsp.focus({ direction = "up" }))
 bind("J", hl.dsp.focus({ direction = "down" }))
 
--- Switch workspaces / move the active window to one (0 is workspace 10)
+-- Switch workspaces / move the active window to one / move the workspace to
+-- the next monitor (0 is workspace 10)
 for i = 1, 10 do
 	local key = i % 10
 	bind(key, hl.dsp.focus({ workspace = i }))
 	bind("SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+	bind("CTRL + SHIFT + " .. key, function()
+		cycleWorkspaceMonitor(i)
+	end)
 end
 
 -- Left drag moves windows, right drag resizes them
