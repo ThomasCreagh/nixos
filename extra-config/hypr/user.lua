@@ -117,6 +117,8 @@ hl.config({
 	},
 	input = {
 		kb_layout = "us",
+		-- Right Alt is a Compose key: tap it, then e.g. - - . for an en dash
+		kb_options = "compose:ralt",
 		touchpad = {
 			natural_scroll = true,
 		},
