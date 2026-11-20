@@ -30,10 +30,18 @@
       '';
       extensions = {
         force = true;
-        packages = with inputs.firefox-addons.packages."x86_64-linux"; [
+        packages = with pkgs.firefox-addons; [
           ublock-origin
           sponsorblock
           youtube-shorts-block
+          bitwarden
+          duckduckgo-privacy-essentials
+          justdeleteme
+          libkey-nomad
+          read-aloud
+          return-youtube-dislikes
+          tab-session-manager
+          tranquility-1
           #vimium
         ];
       };
@@ -169,6 +177,10 @@
                    {
                      name = "dublin buses on bustimes.org";
                      url = "https://bustimes.org/operators/dublin-bus/map";
+                   }
+                   {
+                     name = "read aloud pdf viewer";
+                     url = "https://assets.lsdsoftware.com/read-aloud/pdf-viewer-2/web/readaloud.html";
                    }
                  ];
               }

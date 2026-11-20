@@ -20,7 +20,14 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
   let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+    # Home Manager's packages. NixOS sets allowUnfree in its own config, but
+    # Home Manager doesn't see that, so it's set here too. The overlay builds
+    # the Firefox add-ons with these pkgs, so they get allowUnfree as well.
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+      overlays = [ inputs.firefox-addons.overlays.default ];
+    };
   in
   {
     nixosConfigurations = {
