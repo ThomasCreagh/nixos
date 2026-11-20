@@ -7,6 +7,7 @@
       "**/.claude/"
       "**/.claude/.cc-writes/"
       "**/.claude/settings.local.json"
+      "**/CLAUDE.local.md"
       "**/.mcp.json"
       "**/.env"
       "**/.env.*"

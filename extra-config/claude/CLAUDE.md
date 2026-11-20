@@ -4,6 +4,7 @@ Applies to every project. A project's own CLAUDE.md is more specific and wins wh
 
 ## About me
 - Final-year Computer Science student (Trinity College Dublin).
+- More personal context is in `~/CLAUDE.local.md` (not in git).
 
 ## How to work with me
 - Be concise; skip praise and filler. Don't give me loads on info at once, give it to me in small chunks so it leaves room for me to ask questions.
