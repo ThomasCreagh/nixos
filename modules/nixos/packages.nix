@@ -67,6 +67,7 @@
     obs-studio
     pcmanfm
     ungoogled-chromium
+    kdePackages.okular
     # AI
     claude-code
     bubblewrap
