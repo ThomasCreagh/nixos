@@ -67,6 +67,7 @@
     obs-studio
     pcmanfm
     ungoogled-chromium
+    tor-browser
     # AI
     claude-code
     bubblewrap

@@ -3,7 +3,6 @@
 Applies to every project. A project's own CLAUDE.md is more specific and wins where they conflict.
 
 ## About me
-- Final-year Computer Science student (Trinity College Dublin).
 - More personal context is in `~/CLAUDE.local.md` (not in git).
 
 ## How to work with me
