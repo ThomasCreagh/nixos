@@ -19,6 +19,10 @@ in
 #  "amdgpu.deep_color=0"
 #];
 
+# Testing: the SSD drops off after suspend ("command not found" for
+# everything). Keep it out of its deepest power-saving states.
+boot.kernelParams = [ "nvme_core.default_ps_max_latency_us=0" ];
+
 #hardware.enableRedistributableFirmware = true;
 
   hardware = {
