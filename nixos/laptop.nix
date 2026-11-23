@@ -41,6 +41,8 @@ in
 
   services.logind.settings.Login.HandleLidSwitch = "ignore";
   services.logind.settings.Login.HandleLidSwitchDocked = "ignore";
+  # Suspend breaks this laptop (see journal), so the Fn sleep key does nothing
+  services.logind.settings.Login.HandleSuspendKey = "ignore";
   services.power-profiles-daemon.enable = true;
   services.xserver.xkb = {
     layout = "us";
