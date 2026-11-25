@@ -151,13 +151,6 @@ return {
                     },
                 },
                 ruff = {}, -- installed by Nix, see modules/home-manager/neovim.nix
-                -- Grammar check, installed by Nix. Only starts on prose; toggle it anywhere with <leader>tg
-                harper_ls = {
-                    filetypes = { 'markdown', 'text', 'gitcommit', 'tex', 'plaintex', 'typst' },
-                    settings = {
-                        ['harper-ls'] = { dialect = 'British' },
-                    },
-                },
                 zls = {}, -- installed by each project's Nix flake, not Mason
                 nixd = {}, -- installed by Nix, see modules/home-manager/neovim.nix
                 dafny = {}, -- installed by Nix, see modules/home-manager/neovim.nix
@@ -168,6 +161,14 @@ return {
                 vim.lsp.config(name, server)
                 vim.lsp.enable(name)
             end
+
+            -- Grammar check, installed by Nix. Configured but not enabled: <leader>ts starts it
+            vim.lsp.config('harper_ls', {
+                capabilities = capabilities,
+                settings = {
+                    ['harper-ls'] = { dialect = 'British' },
+                },
+            })
 
             -- Tools for Mason to install
             require('mason-tool-installer').setup {

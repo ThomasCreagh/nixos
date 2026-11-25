@@ -26,19 +26,18 @@ vim.keymap.set('n', '<leader>tu', '<cmd>Undotree<CR>', { desc = '[T]oggle [U]ndo
 
 -- Spell and grammar checks. z= suggests fixes for a misspelling, zg adds a word to your dictionary
 vim.keymap.set('n', '<leader>ts', function()
-    vim.wo.spell = not vim.wo.spell
-    vim.notify('Spell check ' .. (vim.wo.spell and 'on' or 'off'))
-end, { desc = '[T]oggle [S]pell check' })
+    local on = not vim.wo.spell
+    vim.opt_local.spell = on
 
-vim.keymap.set('n', '<leader>tg', function()
     local client = vim.lsp.get_clients({ bufnr = 0, name = 'harper_ls' })[1]
-    if client then
-        vim.lsp.buf_detach_client(0, client.id)
-    else
+    if on and not client then
         vim.lsp.start(vim.lsp.config.harper_ls, { bufnr = 0 })
+    elseif not on and client then
+        vim.lsp.buf_detach_client(0, client.id)
     end
-    vim.notify('Grammar check ' .. (client and 'off' or 'on'))
-end, { desc = '[T]oggle [G]rammar check' })
+
+    vim.notify('Spell and grammar check ' .. (on and 'on' or 'off'))
+end, { desc = '[T]oggle [S]pell and grammar check' })
 
 -- Explorer
 vim.keymap.set('n', '<leader>et', ':Neotree toggle<CR>', { desc = '[E]xplorer [T]oggle' })

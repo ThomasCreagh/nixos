@@ -19,7 +19,7 @@ end)
 
 vim.o.breakindent = true
 
--- Spell check language. On by default for prose (see autocmds.lua); toggle with <leader>ts
+-- Spell check language. Off by default; <leader>ts toggles it along with grammar check
 vim.o.spelllang = 'en_gb'
 
 -- Indent with 4 spaces by default. Filetypes that need tabs (e.g. make, go) override this in their ftplugin
