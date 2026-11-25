@@ -16,6 +16,7 @@
       tree-sitter
       dafny
       ruff
+      harper
     ];
   };
   home.file.".config/nvim".source = ../../extra-config/nvim;

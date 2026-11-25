@@ -9,12 +9,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.api.nvim_create_autocmd('FileType', {
-    desc = 'Wrap prose at word boundaries instead of mid-word',
+    desc = 'Wrap prose at word boundaries and check spelling',
     group = vim.api.nvim_create_augroup('prose-wrap', { clear = true }),
     pattern = { 'markdown', 'text', 'gitcommit', 'rst', 'tex', 'plaintex', 'typst' },
     callback = function()
         vim.opt_local.wrap = true
         vim.opt_local.linebreak = true
+        vim.opt_local.spell = true
     end,
 })
 

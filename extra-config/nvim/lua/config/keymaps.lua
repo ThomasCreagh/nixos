@@ -24,6 +24,22 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Undo tree. Moving the cursor in its window jumps the buffer to that undo state.
 vim.keymap.set('n', '<leader>tu', '<cmd>Undotree<CR>', { desc = '[T]oggle [U]ndo tree' })
 
+-- Spell and grammar checks. z= suggests fixes for a misspelling, zg adds a word to your dictionary
+vim.keymap.set('n', '<leader>ts', function()
+    vim.wo.spell = not vim.wo.spell
+    vim.notify('Spell check ' .. (vim.wo.spell and 'on' or 'off'))
+end, { desc = '[T]oggle [S]pell check' })
+
+vim.keymap.set('n', '<leader>tg', function()
+    local client = vim.lsp.get_clients({ bufnr = 0, name = 'harper_ls' })[1]
+    if client then
+        vim.lsp.buf_detach_client(0, client.id)
+    else
+        vim.lsp.start(vim.lsp.config.harper_ls, { bufnr = 0 })
+    end
+    vim.notify('Grammar check ' .. (client and 'off' or 'on'))
+end, { desc = '[T]oggle [G]rammar check' })
+
 -- Explorer
 vim.keymap.set('n', '<leader>et', ':Neotree toggle<CR>', { desc = '[E]xplorer [T]oggle' })
 vim.keymap.set('n', '<leader>ef', ':Neotree focus<CR>', { desc = '[E]xplorer [F]ocus' })

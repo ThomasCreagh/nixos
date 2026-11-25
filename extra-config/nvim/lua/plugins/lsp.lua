@@ -151,6 +151,13 @@ return {
                     },
                 },
                 ruff = {}, -- installed by Nix, see modules/home-manager/neovim.nix
+                -- Grammar check, installed by Nix. Only starts on prose; toggle it anywhere with <leader>tg
+                harper_ls = {
+                    filetypes = { 'markdown', 'text', 'gitcommit', 'tex', 'plaintex', 'typst' },
+                    settings = {
+                        ['harper-ls'] = { dialect = 'British' },
+                    },
+                },
                 zls = {}, -- installed by each project's Nix flake, not Mason
                 nixd = {}, -- installed by Nix, see modules/home-manager/neovim.nix
                 dafny = {}, -- installed by Nix, see modules/home-manager/neovim.nix
