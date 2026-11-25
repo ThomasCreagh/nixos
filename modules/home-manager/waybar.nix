@@ -186,9 +186,9 @@
           if pactl -f json list cards \
             | jq -e '[.[].ports[] | select(.type == "Headphones" and .availability == "available")] | length > 0' >/dev/null
           then
-            echo '{"text": "<span color='"'${c.purple}'"'>󰋋</span>", "tooltip": "Headphones plugged in", "class": "plugged"}'
+            echo '{"text": "<span color='"'${c.purple}'"'>󱡬</span>", "tooltip": "Headphones plugged in", "class": "plugged"}'
           else
-            echo '{"text": "<span color='"'${c.dim}'"'>󰟎</span>", "tooltip": "No headphones plugged in", "class": "unplugged"}'
+            echo '{"text": "<span color='"'${c.dim}'"'>󱡬</span>", "tooltip": "No headphones plugged in", "class": "unplugged"}'
           fi
         '';
       };
