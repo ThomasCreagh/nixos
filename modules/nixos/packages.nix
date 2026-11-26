@@ -52,7 +52,7 @@
     bluetui
     alsa-utils
     hyprlock
-    # desktop
+    # desktop apps
     thunar
     obsidian
     discord
@@ -68,6 +68,7 @@
     pcmanfm
     ungoogled-chromium
     tor-browser
+    inkscape
     # AI
     claude-code
     bubblewrap
