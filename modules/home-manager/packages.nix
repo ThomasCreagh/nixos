@@ -1,8 +1,12 @@
 { config, pkgs, inputs, ... }:
 
 {
+  # Lets apps find fonts installed through home.packages
+  fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+    inter
     wbg
     brightnessctl
     swaylock
