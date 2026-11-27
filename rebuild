@@ -5,7 +5,7 @@ system=true
 home=true
 git=true
 
-while getopts "shn" opt; do
+while getopts "smn" opt; do
     case "$opt" in
         s) home=false ;;
         m) system=false ;;
