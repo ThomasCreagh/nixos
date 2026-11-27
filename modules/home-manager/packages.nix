@@ -34,7 +34,7 @@
 
     # rebuild command
     (writeShellScriptBin "rebuild" ''
-      bash ~/.dotfiles/rebuild
+      bash ~/.dotfiles/rebuild "$@"
     '')
 
     # clean command

@@ -14,6 +14,13 @@
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Weekly clean-up of old system generations and unused store paths
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 15d";
+  };
   nixpkgs.config.allowUnfree = true;
 
   users.users = {

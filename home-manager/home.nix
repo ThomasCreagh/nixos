@@ -30,6 +30,13 @@
   # Don't print/notify about unread news on every switch.
   news.display = "silent";
 
+  # Weekly clean-up of old Home Manager generations
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 15d";
+  };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

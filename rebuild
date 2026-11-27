@@ -1,14 +1,38 @@
 #!/bin/bash
 set -e
+
+system=true
+home=true
+git=true
+
+while getopts "shn" opt; do
+    case "$opt" in
+        s) home=false ;;
+        m) system=false ;;
+        n) git=false ;;
+        *) echo "usage: $0 [-s (system only)] [-m (home only)] [-n (no git)]" >&2; exit 1 ;;
+    esac
+done
+shift $((OPTIND - 1))
+
 pushd ~/.dotfiles >> /dev/null
-# nvim flake.nix
 echo "Rebuilding Nixos..."
-sudo nixos-rebuild switch --flake path:.#laptop
-home-manager switch --flake path:.
-gen=$(nixos-rebuild list-generations | grep True | grep -o "[0-9]*-[0-9]*-[0-9]* [0-9]*:[0-9]*:[0-9]*  [0-9\.a-zA-Z]*")
-git add .
-git commit -m "$gen"
-git pull
-git push
+
+if [[ "$system" == true ]]; then
+    sudo nixos-rebuild switch --flake path:.#laptop
+fi
+
+if [[ "$home" == true ]]; then
+    home-manager switch --flake path:.
+fi
+
+if [[ "$git" == true ]]; then
+    gen=$(nixos-rebuild list-generations | grep True | grep -o "[0-9]*-[0-9]*-[0-9]* [0-9]*:[0-9]*:[0-9]*  [0-9\.a-zA-Z]*")
+    git add .
+    git commit -m "$gen" || true
+    git pull
+    git push
+fi
+
 popd >> /dev/null
 echo "Complete."
